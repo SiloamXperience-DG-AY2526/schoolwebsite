@@ -1,0 +1,10 @@
+/* Only affects Site Editor */
+.editor-styles-wrapper .mission-img.wp-block-image {
+  max-width: 70% !important;
+  height: auto !important;
+}
+
+.editor-styles-wrapper .mission-container {
+  transform: scale(0.8);
+  transform-origin: top left;
+}

@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "styles": {
+    
+    "elements": {
+      "button": {
+        "color": {
+          "background": "dark-green",
+          "text": "#ffffff"
+        }
+      }
+    }
+  },
+  "settings": {
+    "custom": {
+      "editorStyle": "assets/css/main.css"
+    },
+    "color": {
+      "palette": [
+        { "slug": "brand", "color": "#1C8A6A", "name": "Brand Green" },
+        { "slug": "dark-green", "color": "#195D4B", "name": "Dark Green" },
+        { "slug": "light-green", "color": "#A2E7D499", "name": "Light Green" },
+        { "slug": "light-blue", "color": "#C9EDFC", "name": "Light Blue" },
+        { "slug": "white", "color": "#ffffff", "name": "White" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "fontFamily": "DM Sans, system-ui, sans-serif",
+          "name": "DM Sans"
+        },
+        {
+          "slug": "inter",
+          "fontFamily": "Inter, system-ui, sans-serif",
+          "name": "Inter"
+        }
+      ]
+    }
+  },
+  "customTemplates": [],
+  "templateParts": [
+    { "name": "header", "title": "Header", "area": "header" },
+    { "name": "footer", "title": "Footer", "area": "footer" }
+  ]
+}

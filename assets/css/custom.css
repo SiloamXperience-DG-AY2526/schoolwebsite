@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation hover state */
+.site-nav li:hover {
+  color: var(--wp--preset--color--dark-green, #174C3F);
+}
+
+.site-nav li {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.site-nav li::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--wp--preset--color--dark-green);
+  transition: width 0.5s ease-in-out;
+}
+
+
+.site-nav li:hover::after {
+  width: 100%;
+}
+
+  
+  
+
+/* IMAGE BLOCK */
+.is-style-default {
+  display: block; /* instead of inline-block */
+  width: auto;
+}
+  
+
+/* Vision pill transition */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Header navigation dropdown */
+.wp-block-navigation__submenu-icon {
+  display: none !important;
+}
+
+.wp-block-navigation__submenu-container a {
+  border-bottom: 1px solid #B0C8D4;
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+  font-weight: 500;
+  background-color: #CEDFDB;
+  justify-content: center;
+}
+
+/* Dropdown container*/
+.wp-block-navigation__submenu-container {
+  flex: justify-center;
+  background-color: #CEDFDB;
+  overflow: hidden !important;
+  color: #515160 !important;
+} 
+
+.wp-block-navigation__submenu-container li:hover {
+  color: #2C89A5;
+}
+
+.wp-block-navigation ul li {
+  flex: auto !important;
+  justify-content: center !important;
+  text-color: #515160
+}
+
+.wp-block-navigation ul li > ul {
+  left: -40% !important;
+}
+
+/* Show submenu on hover */
+.wp-block-navigation li:hover > ul {
+  display: block;
+}
