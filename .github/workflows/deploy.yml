@@ -17,6 +17,7 @@ jobs:
     - name: Sync Files
       uses: SamKirkland/web-deploy@v1
       with:
+        source-path: ./
         target-server: 54.169.31.68
         remote-user: bitnami
         private-ssh-key: ${{ secrets.SSH_KEY }}
