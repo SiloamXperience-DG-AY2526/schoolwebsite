@@ -3,7 +3,7 @@ name: Deploy SVLTI Website
 on:
   push:
     branches:
-      - main
+      - master
 
 
 jobs:
