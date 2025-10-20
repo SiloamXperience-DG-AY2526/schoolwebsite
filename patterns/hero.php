@@ -35,8 +35,8 @@
   <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
   <div class="wp-block-buttons">
   <!-- wp:button {"className":"text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]"} -->
-  <div class="wp-block-button text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]">
-    <a class="wp-block-button__link wp-element-button bg-transparent rounded-md hover:bg-[#7EDDC3B2] duration-300"> Learn more </a>
+  <div class="wp-block-button hero-button text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]">
+    <a class="wp-block-button__link wp-element-button"> Learn more </a>
   </div>
   <!-- /wp:button -->
   </div>
