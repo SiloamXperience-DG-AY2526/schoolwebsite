@@ -2,7 +2,6 @@
 /**
  * Title: History Section
  * Slug: svlti/history
- * Categories: featured
  */
 ?>
 

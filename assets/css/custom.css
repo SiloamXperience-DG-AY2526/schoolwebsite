@@ -1,5 +1,5 @@
-html {
-  @apply scroll-smooth;
+html { 
+  scroll-behavior: smooth; 
 }
 
 /* Navigation hover state */
