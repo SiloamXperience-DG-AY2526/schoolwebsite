@@ -651,16 +651,8 @@ html {
   margin-bottom: 2rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
-}
-
-.block {
-  display: block;
 }
 
 .inline-block {
@@ -724,10 +716,6 @@ html {
   width: 100%;
 }
 
-.w-\[10rem\] {
-  width: 10rem;
-}
-
 .w-\[18rem\] {
   width: 18rem;
 }
@@ -759,10 +747,6 @@ html {
 
 .w-full {
   width: 100%;
-}
-
-.min-w-\[180px\] {
-  min-width: 180px;
 }
 
 .min-w-\[280px\] {
@@ -810,10 +794,6 @@ html {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-
-.list-none {
-  list-style-type: none;
 }
 
 .grid-cols-1 {
@@ -868,6 +848,10 @@ html {
   gap: 3rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -880,16 +864,8 @@ html {
   gap: 1.5rem;
 }
 
-.gap-16 {
-  gap: 4rem;
-}
-
 .overflow-hidden {
   overflow: hidden;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-2xl {
@@ -904,16 +880,23 @@ html {
   border-radius: 0.375rem;
 }
 
+.rounded-b-md {
+  border-bottom-right-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-b-lg {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-b {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 .border {
   border-width: 1px;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
-.border-transparent {
-  border-color: transparent;
 }
 
 .bg-\[\#3C8163\] {
@@ -929,11 +912,6 @@ html {
 .bg-\[\#A6DCCB\] {
   --tw-bg-opacity: 1;
   background-color: rgb(166 220 203 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#E1EBED\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(225 235 237 / var(--tw-bg-opacity, 1));
 }
 
 .bg-dark-green {
@@ -978,10 +956,6 @@ html {
 
 .to-\[\#2C89A5\] {
   --tw-gradient-to: #2C89A5 var(--tw-gradient-to-position);
-}
-
-.to-\[rgba\(213\2c 240\2c 255\)\] {
-  --tw-gradient-to: rgba(213,240,255) var(--tw-gradient-to-position);
 }
 
 .to-light-blue {
@@ -1047,6 +1021,11 @@ html {
   padding-bottom: 1.5rem;
 }
 
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -1074,6 +1053,11 @@ html {
   line-height: 2.5rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1082,11 +1066,6 @@ html {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -1132,10 +1111,6 @@ html {
   text-decoration-line: underline;
 }
 
-.no-underline {
-  text-decoration-line: none;
-}
-
 .opacity-80 {
   opacity: 0.8;
 }
@@ -1152,28 +1127,8 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-transform {
   transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-all {
-  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1204,52 +1159,9 @@ html {
   background-color: #7EDDC3B2;
 }
 
-.hover\:bg-\[\#D5F0FF\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(213 240 255 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:from-\[\#2C89A5\]:hover {
-  --tw-gradient-from: #2C89A5 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(44 137 165 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.hover\:from-light-green:hover {
-  --tw-gradient-from: var(--wp--preset--color--light-green) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.hover\:to-\[\#2CA585\]:hover {
-  --tw-gradient-to: #2CA585 var(--tw-gradient-to-position);
-}
-
-.hover\:to-light-green:hover {
-  --tw-gradient-to: var(--wp--preset--color--light-green) var(--tw-gradient-to-position);
-}
-
-.hover\:font-bold:hover {
-  font-weight: 700;
-}
-
 .hover\:text-\[\#2C89A5\]:hover {
   --tw-text-opacity: 1;
   color: rgb(44 137 165 / var(--tw-text-opacity, 1));
-}
-
-.hover\:no-underline:hover {
-  text-decoration-line: none;
-}
-
-.group:hover .group-hover\:block {
-  display: block;
-}
-
-@media (min-width: 640px) {
-  .sm\:block {
-    display: block;
-  }
 }
 
 @media (min-width: 768px) {
