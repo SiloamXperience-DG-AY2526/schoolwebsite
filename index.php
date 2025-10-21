@@ -1,0 +1,21 @@
+<?php
+/**
+ * Title: Index
+ */
+get_header();
+?>
+
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding: 40px 20px;">
+  <!-- wp:post-title {"textAlign":"center"} /-->
+  <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->
+
+<?php
+get_footer();
+?>

@@ -1,0 +1,24 @@
+name: Deploy SVLTI Website
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  web-deploy:
+    name: Deploy SVLTI Website
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Latest Code
+      uses: actions/checkout@v4
+    
+    - name: Sync Files
+      uses: SamKirkland/web-deploy@v1
+      with:
+        source-path: ./
+        target-server: 54.169.31.68
+        remote-user: bitnami
+        private-ssh-key: ${{ secrets.SSH_KEY }}
+        destination-path: /opt/bitnami/wordpress/wp-content/themes/svlti-theme/
