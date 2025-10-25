@@ -2,7 +2,7 @@
 
 /**
  * Title: Contact Error Message
- * Slug: svlti/contact-error
+ * Slug: svlti/contactError
  * Categories: featured
  */
 ?>
