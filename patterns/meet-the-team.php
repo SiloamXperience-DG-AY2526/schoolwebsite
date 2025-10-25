@@ -6,8 +6,8 @@
  */
 ?>
 
-<!-- wp:group {"className":"bg-svlti-light-blue py-12 sm:py-16 lg:py-20","layout":{"type":"constrained"}} -->
-<div class="wp-block-group bg-svlti-light-blue py-12 sm:py-16 lg:py-20">
+<!-- wp:group {"className":"bg-light-blue py-12 sm:py-16 lg:py-20","layout":{"type":"constrained"}} -->
+<div class="wp-block-group py-12 sm:py-16 lg:py-20">
   <!-- wp:group {"className":"max-w-6xl mx-auto px-4 sm:px-6","layout":{"type":"constrained"}} -->
   <div class="wp-block-group max-w-6xl mx-auto px-4 sm:px-6">
     
