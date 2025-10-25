@@ -2,6 +2,7 @@
 /**
  * Title: Vision Section
  * Slug: svlti/vision
+ * Categories: featured
  */
 ?>
 

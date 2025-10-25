@@ -2,6 +2,7 @@
 /**
  * Title: Mission Section
  * Slug: svlti/mission
+ * Categories: featured
  */
 ?>
 
