@@ -7,20 +7,19 @@
  */
 ?>
 
-<!-- wp:group {"className":" min-h-screen","layout":{"type":"constrained"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"className":"min-h-screen","layout":{"type":"constrained"}} -->
+<div class="wp-block-group min-h-screen">
 
     <!-- wp:group {"className":"max-w-7xl mx-auto px-6 py-12","layout":{"type":"constrained"}} -->
     <div class="wp-block-group max-w-7xl mx-auto px-6 py-12">
-        
 
-        <!-- Projects Grid -->
         <!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-3 gap-8 mb-12","layout":{"type":"constrained"}} -->
         <div class="wp-block-group grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
 
-            <!-- Project Card 1 -->
             <!-- wp:group {"className":"bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full","layout":{"type":"constrained"}} -->
             <div class="wp-block-group bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full">
+
+                <!-- wp:html -->
                 <div class="w-full h-64 overflow-hidden">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/listing/students.png" alt="Students" class="w-full h-full object-cover" />
                 </div>
@@ -36,12 +35,15 @@
                         I'm interested
                     </a>
                 </div>
+                <!-- /wp:html -->
+
             </div>
             <!-- /wp:group -->
 
-            <!-- Project Card 2 -->
             <!-- wp:group {"className":"bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full","layout":{"type":"constrained"}} -->
             <div class="wp-block-group bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full">
+
+                <!-- wp:html -->
                 <div class="w-full h-64 overflow-hidden">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/listing/kids.png" alt="Kids" class="w-full h-full object-cover" />
                 </div>
@@ -57,12 +59,15 @@
                         I'm interested
                     </a>
                 </div>
+                <!-- /wp:html -->
+
             </div>
             <!-- /wp:group -->
 
-            <!-- Project Card 3 -->
             <!-- wp:group {"className":"bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full","layout":{"type":"constrained"}} -->
             <div class="wp-block-group bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full">
+
+                <!-- wp:html -->
                 <div class="w-full h-64 overflow-hidden">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/listing/kids-2.png" alt="Admin Support" class="w-full h-full object-cover" />
                 </div>
@@ -78,6 +83,8 @@
                         I'm interested
                     </a>
                 </div>
+                <!-- /wp:html -->
+
             </div>
             <!-- /wp:group -->
 

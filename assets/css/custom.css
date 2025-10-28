@@ -89,3 +89,7 @@ html {
 .hero-button a:hover {
   background-color: #7EDDC3B2;
 }
+
+.error-button a {
+    padding : 15px 80px;
+}
