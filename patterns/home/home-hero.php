@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Hero Section
- * Slug: svlti/hero
+ * Slug: svlti/home-hero
  */
 ?>
 
@@ -45,7 +45,7 @@
   <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
   <figure class="wp-block-image size-large is-style-default">
   <img 
-    src="<?php echo get_template_directory_uri(); ?>/assets/images/home/hero-image.png" 
+    src="<?php echo get_template_directory_uri(); ?>/assets/images/home/hero.png" 
     alt="SVLTI Students"
   />
   </figure>

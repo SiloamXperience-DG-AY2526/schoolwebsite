@@ -9,6 +9,7 @@ html {
 .site-nav li {
   position: relative;
   transition: color 0.3s ease-in-out;
+  font-weight: 500;
 }
 .site-nav li::after {
   content: "";
@@ -68,6 +69,7 @@ html {
   flex: auto !important;
   justify-content: center !important;
   text-color: #515160;
+
 }
 
 
@@ -81,6 +83,10 @@ html {
   @apply px-4 py-2;
 }
 
+.navigation-link {
+  list-style-type: none !important;
+}
+
 .hero-button a {
   border-radius: 0.375rem;
   transition: background-color 0.5s ease, color 0.3s ease;
@@ -89,3 +95,57 @@ html {
 .hero-button a:hover {
   background-color: #7EDDC3B2;
 }
+
+/* Policy side-menu */
+.policy-menu {
+  width: 180px !important;
+  flex: 0 0 220px !important;
+  align-self: flex-start;
+}
+
+/* Remove default bullets and spacing */
+.policy-menu ul,
+.policy-menu li {
+  list-style-type: none;
+}
+
+/* Ensure every item is consistent */
+.policy-menu .wp-block-navigation-item {
+  width: 100%;                   /* ensures li fills menu width */
+  border: none; /* remove inconsistent default WP borders */
+}
+
+/* Each link spans full width and owns its divider */
+.policy-menu .wp-block-navigation-link a,
+.policy-menu .wp-block-navigation-item__content {
+  display: block;
+  width: 100%;
+  padding: 0 0 10px 10px; /* left padding for text */
+  color: #747480;
+  font-weight: 450;
+  border-bottom: 1px solid #ccc; /* clean, equal-width divider */
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+/* Hover and active states */
+.policy-menu .wp-block-navigation-item:hover a,
+.policy-menu .wp-block-navigation-item__content:hover,
+.policy-menu .wp-block-navigation-item.current-menu-item a
+.policy-menu .wp-block-navigation-item__content[aria-current="page"],
+.policy-menu .wp-block-navigation-item__content[aria-current="true"]{
+  color: var(--wp--preset--color--dark-green, #174c3f);
+  font-weight: 500;
+}
+
+/* Remove bottom border from the last link */
+.policy-menu .wp-block-navigation-item:last-child .wp-block-navigation-item__content {
+  border-bottom: none;
+}
+
+/* Policy section icons */
+.policy-icon img {
+  width: 3rem !important;
+  height: auto;
+}
+
+
