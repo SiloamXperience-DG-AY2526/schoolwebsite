@@ -1,0 +1,50 @@
+<!-- wp:template-part {"slug":"header"} /-->
+
+<div class="wp-block-group flex bg-gradient-to-b from-white to-light-blue min-h-screen overflow-hidden max-w-screen">
+
+  <!-- Sidebar -->
+  <aside class="shadow-sm px-4 py-10 flex flex-col">
+    <nav class="flex flex-col space-y-1">
+
+      <button class="sidebar-btn text-xs font-semibold py-2 px-2 active:text-teal-900 active:drop-shadow" data-section="highlights">
+        Highlights
+      </button>
+
+      <button class="sidebar-btn text-xs font-semibold py-2 px-2 active:text-teal-900 active:drop-shadow" data-section="upcoming-events">
+        Upcoming Events
+      </button>
+
+      <button class="sidebar-btn text-xs font-semibold py-2 px-2 active:text-teal-900 active:drop-shadow" data-section="announcements">
+        Announcements to Parents
+      </button>
+
+    </nav>
+  </aside>
+
+  <!-- Content -->
+  <div class="flex-1 p-6 md:p-10">
+    <div id="highlights" class="hidden">
+      <h2 class="text-sm font-bold mb-2">Highlights (Dummy)</h2>
+      <p>Placeholder content for Highlights.</p>
+    </div>
+
+    <div id="upcoming-events">
+      <!-- wp:pattern {"slug":"svlti/upcoming-events"} /-->
+    </div>
+
+    <div id="announcements" class="hidden">
+      <h2 class="text-sm font-bold mb-2">Announcements (Dummy)</h2>
+      <p>Placeholder content for Announcements.</p>
+    </div>
+  </div>
+
+</div>
+
+<style>
+
+.sidebar-btn.active {
+  @apply text-teal-900 drop-shadow border-b-2 border-teal-900;
+}
+</style>
+
+

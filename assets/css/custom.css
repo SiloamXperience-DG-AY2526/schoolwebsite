@@ -1,15 +1,17 @@
-html { 
-  scroll-behavior: smooth; 
+html {
+  scroll-behavior: smooth;
 }
 
 /* Navigation hover state */
 .site-nav li:hover {
   color: var(--wp--preset--color--dark-green, #174c3f);
 }
+
 .site-nav li {
   position: relative;
   transition: color 0.3s ease-in-out;
 }
+
 .site-nav li::after {
   content: "";
   position: absolute;
@@ -20,6 +22,7 @@ html {
   background-color: var(--wp--preset--color--dark-green);
   transition: width 0.5s ease-in-out;
 }
+
 .site-nav li:hover::after {
   width: 100%;
 }
@@ -71,7 +74,7 @@ html {
 }
 
 
-.wp-block-navigation ul li > ul {
+.wp-block-navigation ul li>ul {
   left: -50% !important;
 }
 
@@ -88,4 +91,13 @@ html {
 
 .hero-button a:hover {
   background-color: #7EDDC3B2;
+}
+
+/* blog */
+
+.blogNav .wp-block-navigation ul li>ul  {
+
+  right: 50% !important;
+  justify-items: center;
+
 }
