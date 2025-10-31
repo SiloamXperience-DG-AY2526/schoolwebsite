@@ -40,7 +40,7 @@
         <div class="wp-block-buttons justify-center mt-10">
             <!-- wp:button {"className":"text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]"} -->
             <div class="wp-block-button hero-button text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]">
-                <a class="wp-block-button__link wp-element-button" href="/">Back to main page</a>
+                <a class="wp-block-button__link wp-element-button" href="/home">Back to main page</a>
             </div>
             <!-- /wp:button -->
         </div>

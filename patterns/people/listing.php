@@ -47,7 +47,7 @@
                     <div class="wp-block-buttons mt-auto w-full flex justify-end">
                         <!-- wp:button -->
                         <div class="wp-block-button listing-button text-button-normal">
-                            <a href="/join-us"
+                            <a href="/people/join-us"
                                 class="wp-block-button__link">
                                 I'm interested
                             </a>
@@ -92,7 +92,7 @@
                     <div class="wp-block-buttons mt-auto w-full flex justify-end">
                         <!-- wp:button -->
                         <div class="wp-block-button listing-button text-button-normal">
-                            <a href="/join-us"
+                            <a href="/people/join-us"
                                 class="wp-block-button__link">
                                 I'm interested
                             </a>
@@ -137,7 +137,7 @@
                     <div class="wp-block-buttons mt-auto w-full flex justify-end">
                         <!-- wp:button -->
                         <div class="wp-block-button listing-button text-button-normal">
-                            <a href="/join-us"
+                            <a href="/people/join-us"
                                 class="wp-block-button__link">
                                 I'm interested
                             </a>
