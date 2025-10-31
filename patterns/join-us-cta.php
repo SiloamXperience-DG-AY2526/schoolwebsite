@@ -89,7 +89,7 @@
                 <div class="wp-block-buttons join-button flex justify-center lg:justify-start">
                     <!-- wp:button -->
                     <div class="wp-block-button hero-button">
-                        <a href="#"
+                        <a href="http://localhost/mywordpress/people/listings"
                             class="wp-block-button__link">
                             Find out more
                         </a>
