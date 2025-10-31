@@ -40,8 +40,8 @@
                 <!-- wp:buttons -->
                 <div class="wp-block-buttons">
                     <!-- wp:button {"className":"join-button"} -->
-                    <div class="wp-block-button join-button">
-                        <a href="#join" class="wp-block-button__link">
+                    <div class="wp-block-button join-button cursor-pointer">
+                        <a href="/listings/all-categories" class="wp-block-button__link">
                             Join us
                         </a>
                     </div>
