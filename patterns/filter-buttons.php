@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Filter Buttons
  * Slug: svlti/filter-buttons
@@ -6,44 +7,44 @@
  */
 ?>
 
-<!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 w-full","layout":{"type":"constrained"}} -->
-<div class="wp-block-group grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 w-full">
-  
-  <!-- wp:html -->
-  <button class="px-8 py-3 rounded-full border-2 border-neutral-40 text-neutral-200 font-medium hover:bg-eucalyptus-90 hover:border-eucalyptus-90 hover:text-white transition-colors w-full" aria-pressed="false" aria-label="Teaching">
-    Teaching
-  </button>
-  <!-- /wp:html -->
+<!-- wp:buttons {"className":"!grid grid-cols-3 gap-4 mb-12 w-full"} -->
+<div class="wp-block-buttons !grid  grid-cols-3 gap-4 mb-12 w-full">
 
-  <!-- wp:html -->
-  <button class="px-8 py-3 rounded-full border-2 border-neutral-40 text-neutral-200 font-medium hover:bg-eucalyptus-90 hover:border-eucalyptus-90 hover:text-white transition-colors w-full" aria-pressed="false" aria-label="Mentoring">
-    Mentoring
-  </button>
-  <!-- /wp:html -->
+    <!-- wp:button {"className":"filter-button w-full"} -->
+    <div class="wp-block-button filter-button w-full">
+        <a class="wp-block-button__link wp-element-button" href="#">Teaching</a>
+    </div>
+    <!-- /wp:button -->
 
-  <!-- wp:html -->
-  <button class="px-8 py-3 rounded-full border-2 border-neutral-40 text-neutral-200 font-medium hover:bg-eucalyptus-90 hover:border-eucalyptus-90 hover:text-white transition-colors w-full" aria-pressed="false" aria-label="Admin">
-    Admin
-  </button>
-  <!-- /wp:html -->
+    <!-- wp:button {"className":"filter-button w-full"} -->
+    <div class="wp-block-button filter-button w-full">
+        <a class="wp-block-button__link wp-element-button" href="#">Mentoring</a>
+    </div>
+    <!-- /wp:button -->
 
-  <!-- wp:html -->
-  <button class="px-8 py-3 rounded-full border-2 border-neutral-40 text-neutral-200 font-medium hover:bg-eucalyptus-90 hover:border-eucalyptus-90 hover:text-white transition-colors w-full" aria-pressed="false" aria-label="Fundraising">
-    Fundraising
-  </button>
-  <!-- /wp:html -->
+    <!-- wp:button {"className":"filter-button w-full"} -->
+    <div class="wp-block-button filter-button w-full">
+        <a class="wp-block-button__link wp-element-button" href="#">Admin</a>
+    </div>
+    <!-- /wp:button -->
 
-  <!-- wp:html -->
-  <button class="px-8 py-3 rounded-full border-2 border-neutral-40 text-neutral-200 font-medium hover:bg-eucalyptus-90 hover:border-eucalyptus-90 hover:text-white transition-colors w-full" aria-pressed="false" aria-label="Events">
-    Events
-  </button>
-  <!-- /wp:html -->
+    <!-- wp:button {"className":"filter-button w-full"} -->
+    <div class="wp-block-button filter-button w-full">
+        <a class="wp-block-button__link wp-element-button" href="#">Fundraising</a>
+    </div>
+    <!-- /wp:button -->
 
-  <!-- wp:html -->
-  <button class="px-8 py-3 rounded-full border-2 border-neutral-40 text-neutral-200 font-medium hover:bg-eucalyptus-90 hover:border-eucalyptus-90 hover:text-white transition-colors w-full" aria-pressed="false" aria-label="All Categories">
-    All Categories
-  </button>
-  <!-- /wp:html -->
+    <!-- wp:button {"className":"filter-button w-full"} -->
+    <div class="wp-block-button filter-button w-full">
+        <a class="wp-block-button__link wp-element-button" href="#">Events</a>
+    </div>
+    <!-- /wp:button -->
+
+    <!-- wp:button {"className":"filter-button w-full"} -->
+    <div class="wp-block-button filter-button w-full">
+        <a class="wp-block-button__link wp-element-button" href="#">All Categories</a>
+    </div>
+    <!-- /wp:button -->
 
 </div>
-<!-- /wp:group -->
+<!-- /wp:buttons -->

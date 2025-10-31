@@ -82,13 +82,19 @@
                 </div>
                 <!-- /wp:group -->
 
+                <!-- wp:group {"className":"flex gap-3 pt-4"} -->
+                <div class="wp-block-group flex gap-3 pt-4">
 
-                <!-- wp:html -->
-                <div class="flex gap-3 pt-4">
-                    <span class="px-4 py-2 rounded-full bg-eucalyptus-70 text-neutral-100 text-paragraph-xsm">Teaching</span>
-                    <span class="px-4 py-2 rounded-full bg-eucalyptus-70 text-neutral-100 text-paragraph-xsm">Admin</span>
+                    <!-- wp:paragraph {"className":"px-4 py-2 rounded-full bg-eucalyptus-70 text-neutral-100 text-paragraph-xsm"} -->
+                    <p class="px-4 py-2 rounded-full bg-eucalyptus-70 text-neutral-100 text-paragraph-xsm">Teaching</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"className":"px-4 py-2 rounded-full bg-eucalyptus-70 text-neutral-100 text-paragraph-xsm"} -->
+                    <p class="px-4 py-2 rounded-full bg-eucalyptus-70 text-neutral-100 text-paragraph-xsm">Admin</p>
+                    <!-- /wp:paragraph -->
+
                 </div>
-                <!-- /wp:html -->
+                <!-- /wp:group -->
 
             </div>
             <!-- /wp:group -->
