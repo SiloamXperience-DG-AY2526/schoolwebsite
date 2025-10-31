@@ -25,55 +25,72 @@
                 </h2>
                 <!-- /wp:heading -->
 
-                <!-- wp:html -->
-                <div class="ml-0">
-                    <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/underline.png"
-                        alt="underline"
-                        class="w-[250px]" />
+                <!-- wp:image {"align":"left","sizeSlug":"large","className":"w-[250px] mt-1"} -->
+                <figure class="wp-block-image size-large alignleft w-[250px] mt-1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/underline.png" alt="underline" />
+                </figure>
+                <!-- /wp:image -->
 
-                </div>
-                <!-- /wp:html -->
 
                 <!-- wp:paragraph {"className":"text-gray-800 font-semibold mb-6 mt-8"} -->
-                <p class="text-gray-800 font-semibold mb-6 mt-8">Are you:</p>
+                <p class="text-gray-800 font-semibold mb-6 mt-8 pt-6">Are you:</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:html -->
-                <div class="space-y-4 mb-8">
-                    <div class="flex items-start gap-3">
-                        <img
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/tick.png"
-                            alt="tick"
-                            class="w-[24px]" />
+                <!-- wp:group {"className":"space-y-4 mb-8","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group space-y-4 mb-8">
+
+                    <!-- wp:group {"className":"flex items-start gap-3","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group flex items-start gap-3">
+                        <!-- wp:image {"sizeSlug":"thumbnail","className":"w-[24px]"} -->
+                        <figure class="wp-block-image size-thumbnail w-[24px]">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/tick.png" alt="tick" />
+                        </figure>
+                        <!-- /wp:image -->
+                        <!-- wp:paragraph {"className":"text-paragraph-normal"} -->
                         <p class="text-paragraph-normal">a good listener and communicator?</p>
+                        <!-- /wp:paragraph -->
                     </div>
-                    <div class="flex items-start gap-3">
-                        <img
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/tick.png"
-                            alt="tick"
-                            class="w-[24px]" />
+                    <!-- /wp:group -->
+
+                    <!-- wp:group {"className":"flex items-start gap-3","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group flex items-start gap-3">
+                        <!-- wp:image {"sizeSlug":"thumbnail","className":"w-[24px]"} -->
+                        <figure class="wp-block-image size-thumbnail w-[24px]">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/tick.png" alt="tick" />
+                        </figure>
+                        <!-- /wp:image -->
+                        <!-- wp:paragraph {"className":"text-paragraph-normal"} -->
                         <p class="text-paragraph-normal">open to new experiences and learning opportunities?</p>
+                        <!-- /wp:paragraph -->
                     </div>
-                    <div class="flex items-start gap-3">
-                        <img
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/tick.png"
-                            alt="tick"
-                            class="w-[24px]" />
+                    <!-- /wp:group -->
+
+                    <!-- wp:group {"className":"flex items-start gap-3","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group flex items-start gap-3">
+                        <!-- wp:image {"sizeSlug":"thumbnail","className":"w-[24px]"} -->
+                        <figure class="wp-block-image size-thumbnail w-[24px]">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/tick.png" alt="tick" />
+                        </figure>
+                        <!-- /wp:image -->
+                        <!-- wp:paragraph {"className":"text-paragraph-normal"} -->
                         <p class="text-paragraph-normal">passionate about inspiring and motivating others to learn and explore?</p>
+                        <!-- /wp:paragraph -->
                     </div>
+                    <!-- /wp:group -->
+
                 </div>
-                <!-- /wp:html -->
+                <!-- /wp:group -->
 
                 <!-- wp:paragraph {"className":"text-eucalyptus-110 text-paragraph-normal mb-6"} -->
                 <p class="text-eucalyptus-110 text-paragraph-normal mb-6">Take the first step towards volunteering.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:buttons -->
-                <div class="wp-block-buttons">
-                    <!-- wp:button {"className":"bg-gradient-to-r from-elm-80 to-eucalyptus-80 text-white px-20 py-3 rounded-lg font-button-sm mt-8 hover:bg-opacity-90 transition-all"} -->
-                    <div class="wp-block-button bg-gradient-to-r from-elm-80 to-eucalyptus-80 text-white px-20 py-3 rounded-lg font-button-sm mt-8 hover:bg-opacity-90 transition-all">
-                        <a class="wp-block-button__link wp-element-button">
+                <!-- wp:buttons {"className":"join-button flex justify-center lg:justify-start"} -->
+                <div class="wp-block-buttons join-button flex justify-center lg:justify-start">
+                    <!-- wp:button -->
+                    <div class="wp-block-button hero-button">
+                        <a href="#"
+                            class="wp-block-button__link">
                             Find out more
                         </a>
                     </div>
@@ -81,19 +98,16 @@
                 </div>
                 <!-- /wp:buttons -->
 
-
             </div>
             <!-- /wp:group -->
 
             <!-- wp:group {"className":"flex justify-center","layout":{"type":"constrained"}} -->
             <div class="wp-block-group flex justify-center">
-
-                <!-- wp:html -->
-                <div class="w-[484px] h-[484px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/team.png" alt="SVLTI Volunteers" class="w-full h-full object-cover">
-                </div>
-                <!-- /wp:html -->
-
+                <!-- wp:image {"sizeSlug":"large","className":"w-[484px] h-[484px] rounded-full overflow-hidden border-4 border-white shadow-2xl"} -->
+                <figure class="wp-block-image size-large w-[484px] h-[484px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/team.png" alt="SVLTI Volunteers" />
+                </figure>
+                <!-- /wp:image -->
             </div>
             <!-- /wp:group -->
 

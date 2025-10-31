@@ -15,13 +15,12 @@
 
         <!-- wp:group {"layout":{"type":"constrained"}} -->
         <div class="wp-block-group">
-
-            <!-- wp:html -->
-            <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/cross.png"
-                alt="Cross"
-                class="mx-auto mb-8 w-24 h-24 object-contain drop-shadow-lg">
-            <!-- /wp:html -->
+            
+            <!-- wp:image {"sizeSlug":"full","className":"mx-auto mb-8 w-24 h-24 object-contain drop-shadow-lg"} -->
+            <figure class="wp-block-image size-full mx-auto mb-8 w-24 h-24 object-contain drop-shadow-lg">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/cross.png" alt="Cross" />
+            </figure>
+            <!-- /wp:image -->
 
             <!-- wp:heading {"level":2,"className":"text-header-lg text-black mb-6"} -->
             <h2 class="wp-block-heading text-header-lg text-black mb-6">Submission unsuccessful.</h2>
