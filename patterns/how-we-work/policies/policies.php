@@ -92,7 +92,7 @@
       <!-- /wp:group -->
 
       <!-- wp:paragraph {"align":"right","className":"text-gray-800 leading-relaxed"} -->
-      <p class="text-gray-800 leading-relaxed has-text-align-right ">
+      <p class="text-gray-800 leading-relaxed has-text-align-right">
         Uniform helps children feel part of the school family. We ask families to support our dress code. 
         If you have difficulties, please talk to us — we’re here to help.
       </p>

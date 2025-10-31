@@ -35,3 +35,8 @@
 .policies-row {
   flex-wrap: nowrap !important;
 }
+
+.editor-styles-wrapper .assessment-container {
+  width: 100% !important;
+  max-width: 100% !important;
+}

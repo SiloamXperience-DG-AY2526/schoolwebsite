@@ -14,8 +14,8 @@
   <!-- wp:group {"className":"md:w-[52%]","layout":{"type":"flex"}} -->
   <div class="wp-block-group flex-col items-start p-12 md:w-[52%]"> 
 
-    <!-- wp:heading {"className":"text-4xl font-semibold mb-6"} -->
-    <h2 class="wp-block-heading text-[60px] text-left font-semibold mb-6">
+    <!-- wp:heading {"className":"text-[56px] font-semibold mb-6"} -->
+    <h2 class="wp-block-heading text-[56px] text-left font-semibold mb-6">
       <span class="drop-shadow text-[#333333]">Our</span>
       <span class="text-dark-green drop-shadow"> Policies</span>
     </h2>
