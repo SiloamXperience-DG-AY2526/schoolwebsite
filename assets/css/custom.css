@@ -95,9 +95,71 @@ html {
 
 /* blog */
 
-.blogNav .wp-block-navigation ul li>ul  {
+.blogNav .wp-block-navigation ul li>ul {
 
   right: 50% !important;
   justify-items: center;
 
+}
+
+/* Upcoming event css */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 36px;
+}
+
+/* responsive */
+@media(min-width: 640px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* easier to edit styling from event-card instead of inline */
+.event-card {
+  width: 230px;
+  height: 278px;
+  padding: 16px 21px;
+  gap: 22px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.event-card:hover {
+  background-color: #7EDDC3 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.event-card.closest {
+  background-color: #7EDDC3;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ccc;
+  margin-top: 25px;
+}
+
+.upcoming-events-title {
+  font-size: 1.875rem !important;
+  font-weight: 800 !important;
+  color: #207860 !important;
+  margin-bottom: 10px !important;
+  line-height: 1.2 !important;
 }

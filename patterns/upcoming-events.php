@@ -3,13 +3,18 @@
 /**
  * Title: Upcoming Events
  * Slug: svlti/upcoming-events
+ * Description: Dynamically displays upcoming events, grouped by category.
+ * Categories: featured, events
  */
 ?>
 
-<div class="wp-block-group flex-1 p-6 md:p-10">
+<!-- wp:group {"className":"p-6 md:p-10"} -->
+<div class="wp-block-group p-6 md:p-10">
 
-    <h2 class="text-3xl font-bold text-[#2CA585] mb-8">Upcoming Events</h2>
-    <!-- dynamic event data -->
+    <!-- wp:heading {"level":2,"className":"upcoming-events-title"} -->
+    <h2 class="upcoming-events-title">Upcoming Events</h2>
+    <!-- /wp:heading -->
+
     <?php
     $event_sections = [
         'All Events' => [
@@ -31,7 +36,7 @@
             ['date' => 15, 'month' => 'July', 'title' => 'Family Volunteer Day', 'time' => '9:00 AM – 1:00 PM', 'location' => 'School Grounds'],
         ],
     ];
-    //mapping months to numerical for sorting purposes
+
     $months = [
         'January' => 1,
         'February' => 2,
@@ -49,6 +54,7 @@
 
     $today = time();
 
+    // Sort and find nearest date
     foreach ($event_sections as $section_title => &$events) {
         foreach ($events as &$e) {
             $ts = strtotime("{$e['date']}-{$months[$e['month']]}-" . date('Y'));
@@ -57,10 +63,8 @@
         }
         unset($e);
 
-        // sorting date by ascending order to give nearest date
         usort($events, fn($a, $b) => $a['timestamp'] <=> $b['timestamp']);
 
-        // checking which date is closer to today date
         $closest_idx = null;
         $min_diff = PHP_INT_MAX;
         foreach ($events as $idx => $ev) {
@@ -75,80 +79,32 @@
     unset($events);
     ?>
 
-    <style>
-        /* tailwind css had issues so used css directly */
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 36px;
-        }
-
-        /* responsive */
-        @media(min-width: 640px) {
-            .events-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media(min-width: 1024px) {
-            .events-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        /* easier to edit styling from event-card instead of inline */
-        .event-card {
-            width: 230px;
-            height: 278px;
-            padding: 16px 21px;
-            gap: 22px;
-            border-radius: 12px;
-            border: 1px solid #ccc;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            transition: all 0.3s ease;
-            background-color: #fff;
-        }
-
-        .event-card:hover {
-            background-color: #7EDDC3 !important;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .event-card.closest {
-            background-color: #7EDDC3;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid #ccc;
-        }
-    </style>
-
+    <!-- wp:html -->
     <?php foreach ($event_sections as $section_title => $events) : ?>
         <div class="wp-block-group mb-12">
-            <h3 class="section-title" style="color: <?= $section_title === 'All Events' ? '#2CA585' : '#207860' ?>">
+            <h3 class="mb-6 section-title" style="color: <?= $section_title === 'All Events' ? '#2CA585' : '#207860' ?>">
                 <?= esc_html($section_title) ?>
             </h3>
 
-            <div class="events-grid">
+            <div class="events-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <?php foreach ($events as $event) :
-                    $closest_class = $event['closest'] ?? false ? 'closest' : '';
+                    $closest_class = !empty($event['closest']) ? 'closest' : '';
                 ?>
-                    <div class="event-card <?= $closest_class ?>">
-                        <div class="text-3xl font-bold text-black mb-3"><?= esc_html($event['date']) ?></div>
-                        <div class="text-lg font-semibold text-black mb-2"><?= esc_html($event['month']) ?></div>
-                        <h4 class="text-sm font-bold mb-2"><?= esc_html($event['title']) ?></h4>
-                        <p class="text-sm opacity-80 mb-1"><?= esc_html($event['time']) ?></p>
-                        <p class="text-sm opacity-80"><?= esc_html($event['location']) ?></p>
+                    <div class="wp-block-column">
+                        <div class="event-card <?= esc_attr($closest_class) ?> p-4 rounded-lg shadow-sm border border-gray-100 bg-white hover:shadow-md transition-shadow">
+                            <div class="text-3xl font-bold text-black mb-2"><?= esc_html($event['date']) ?></div>
+                            <div class="text-lg font-semibold text-black mb-2"><?= esc_html($event['month']) ?></div>
+                            <h4 class="text-sm font-bold mb-2"><?= esc_html($event['title']) ?></h4>
+                            <p class="text-sm opacity-80 mb-1"><?= esc_html($event['time']) ?></p>
+                            <p class="text-sm opacity-80"><?= esc_html($event['location']) ?></p>
+                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
     <?php endforeach; ?>
+    <!-- /wp:html -->
+
+
 </div>
+<!-- /wp:group -->

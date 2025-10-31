@@ -1,50 +1,63 @@
 <!-- wp:template-part {"slug":"header"} /-->
 
+<!-- wp:group {"className":"flex bg-gradient-to-b from-white to-light-blue min-h-screen overflow-hidden max-w-screen"} -->
 <div class="wp-block-group flex bg-gradient-to-b from-white to-light-blue min-h-screen overflow-hidden max-w-screen">
 
-  <!-- Sidebar -->
-  <aside class="shadow-sm px-4 py-10 flex flex-col">
-    <nav class="flex flex-col space-y-1">
 
-      <button class="sidebar-btn text-xs font-semibold py-2 px-2 active:text-teal-900 active:drop-shadow" data-section="highlights">
-        Highlights
-      </button>
+  <!-- wp:group {"className":"shadow-sm p-6 md:p-10 flex flex-col "} -->
+  <div class="wp-block-group shadow-sm p-6 md:p-10 flex flex-col">
 
-      <button class="sidebar-btn text-xs font-semibold py-2 px-2 active:text-teal-900 active:drop-shadow" data-section="upcoming-events">
-        Upcoming Events
-      </button>
+    <!-- wp:navigation {"orientation":"vertical","className":"flex flex-col space-y-1"} -->
+      <!-- wp:navigation-link {"label":"Highlights","url":"#highlights","className":" text-xs font-semibold mb-1 active:text-teal-900 active:drop-shadow"} /-->
+      <!-- wp:navigation-link {"label":"Upcoming Events","url":"#upcoming-events","className":"text-xs font-semibold mb-1  active:text-teal-900 active:drop-shadow"} /-->
+      <!-- wp:navigation-link {"label":"Announcements to Parents","url":"#announcements","className":"text-xs font-semibold mb-1 active:text-teal-900 active:drop-shadow"} /-->
+    
+    <!-- /wp:navigation -->
+  </div>
+  <!-- /wp:group -->
 
-      <button class="sidebar-btn text-xs font-semibold py-2 px-2 active:text-teal-900 active:drop-shadow" data-section="announcements">
-        Announcements to Parents
-      </button>
 
-    </nav>
-  </aside>
+  <!-- wp:group {"className":"flex-1 p-3 md:p-4"} -->
+  <div class="wp-block-group flex-1 p-2 md:p-2">
 
-  <!-- Content -->
-  <div class="flex-1 p-6 md:p-10">
-    <div id="highlights" class="hidden">
-      <h2 class="text-sm font-bold mb-2">Highlights (Dummy)</h2>
+   
+    <!-- wp:group {"className":"hidden","htmlAnchor":"highlights"} -->
+    <div id="highlights" class="wp-block-group hidden">
+      <!-- wp:heading {"level":2,"className":"text-sm font-bold mb-2"} -->
+      <h2 class="text-sm font-bold mb-2">Highlights</h2>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph -->
       <p>Placeholder content for Highlights.</p>
+      <!-- /wp:paragraph -->
     </div>
+    <!-- /wp:group -->
 
-    <div id="upcoming-events">
+
+    <!-- wp:group {"htmlAnchor":"upcoming-events"} -->
+    <div id="upcoming-events" class="wp-block-group">
       <!-- wp:pattern {"slug":"svlti/upcoming-events"} /-->
     </div>
+    <!-- /wp:group -->
 
-    <div id="announcements" class="hidden">
-      <h2 class="text-sm font-bold mb-2">Announcements (Dummy)</h2>
+    
+    <!-- wp:group {"className":"hidden","htmlAnchor":"announcements"} -->
+    <div id="announcements" class="wp-block-group hidden">
+      <!-- wp:heading {"level":2,"className":"text-sm font-bold mb-2"} -->
+      <h2 class="text-sm font-bold mb-2">Announcements</h2>
+      <!-- /wp:heading -->
+
+      <!-- wp:paragraph -->
       <p>Placeholder content for Announcements.</p>
+      <!-- /wp:paragraph -->
     </div>
+    <!-- /wp:group -->
+
   </div>
+  <!-- /wp:group -->
 
 </div>
-
-<style>
-
-.sidebar-btn.active {
-  @apply text-teal-900 drop-shadow border-b-2 border-teal-900;
-}
-</style>
+<!-- /wp:group -->
 
 
+<!-- wp:template-part {"slug":"footer"} /-->
