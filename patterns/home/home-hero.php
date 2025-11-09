@@ -1,7 +1,12 @@
 <?php
 /**
  * Title: Hero Section
+<<<<<<< HEAD:patterns/home/home-hero.php
  * Slug: svlti/home-hero
+=======
+ * Slug: svlti/hero
+ * Categories: featured
+>>>>>>> dda249b0aaf73dbcfbb5daa6d5b0659b27614817:patterns/hero.php
  */
 ?>
 
