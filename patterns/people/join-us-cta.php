@@ -88,8 +88,8 @@
                 <!-- wp:buttons {"className":"join-button flex justify-center lg:justify-start"} -->
                 <div class="wp-block-buttons join-button flex justify-center lg:justify-start">
                     <!-- wp:button -->
-                    <div class="wp-block-button hero-button">
-                        <a href="http://localhost/mywordpress/people/listings"
+                    <div class="wp-block-button hero-button cursor-pointer">
+                        <a href="/people/projects"
                             class="wp-block-button__link">
                             Find out more
                         </a>

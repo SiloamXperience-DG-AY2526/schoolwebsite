@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Title: Contact Success Message
- * Slug: svlti/contactSuccess
+ * Title: Contact Error Message
+ * Slug: svlti/contactError
  * Categories: featured
  */
 ?>
@@ -15,21 +15,26 @@
 
         <!-- wp:group {"layout":{"type":"constrained"}} -->
         <div class="wp-block-group">
-
+            
             <!-- wp:image {"sizeSlug":"full","className":"mx-auto mb-8 w-24 h-24 object-contain drop-shadow-lg"} -->
             <figure class="wp-block-image size-full mx-auto mb-8 w-24 h-24 object-contain drop-shadow-lg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/hour-glass.png" alt="Hour Glass" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/abstract/cross.png" alt="Cross" />
             </figure>
             <!-- /wp:image -->
 
-
             <!-- wp:heading {"level":2,"className":"text-header-lg text-black mb-6"} -->
-            <h2 class="wp-block-heading text-header-lg text-black my-6">We got your inquiry.</h2>
+            <h2 class="wp-block-heading text-header-lg text-black mb-6">Submission unsuccessful.</h2>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph {"className":"text-paragraph-lg"} -->
             <p class="text-paragraph-lg">
-                We've received your message and our team will get back to you shortly if needed. We appreciate you taking the time to contact us.
+                We were unable to process your submission at this time. Please check your details and try again.
+            </p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:paragraph {"className":"text-paragraph-lg mt-5"} -->
+            <p class="text-paragraph-lg mt-5">
+                If the issue persists, contact our team for assistance at siloamcambodia@gmail.com
             </p>
             <!-- /wp:paragraph -->
 
@@ -39,8 +44,8 @@
         <!-- wp:buttons {"layout":{"type":"flex"}} -->
         <div class="wp-block-buttons justify-center mt-10">
             <!-- wp:button {"className":"text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]"} -->
-            <div class="wp-block-button hero-button text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]">
-                <a class="wp-block-button__link wp-element-button">Back to main page</a>
+            <div class="wp-block-button error-button text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]">
+                <a class="wp-block-button__link wp-element-button" href="/contact">Try again</a>
             </div>
             <!-- /wp:button -->
         </div>
