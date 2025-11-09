@@ -34,7 +34,7 @@
       <div class="wp-block-group flex items-center gap-3">
         <!-- wp:image {"sizeSlug":"thumbnail","className":"policy-icon rounded-lg"} -->
         <figure class="wp-block-image policy-icon rounded-lg">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/shield.png" alt="Teacher helping students" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/safeguard-icon.png" alt="Teacher helping students" />
         </figure>
         <!-- /wp:image -->
 
@@ -56,7 +56,7 @@
     <!-- /wp:group -->
 
     <!-- wp:image {"sizeSlug":"large","className":"md:w-1/2 shadow-md"} -->
-    <figure class="wp-block-image size-large md:w-1/2 shadow-md ml-auto">
+    <figure class="wp-block-image policy-img md:w-1/2 shadow-md ml-auto">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/policy-1.png" alt="Teacher helping students" />
     </figure>
     <!-- /wp:image -->
@@ -69,8 +69,8 @@
   <div class="wp-block-group policies-row flex flex-row items-center flex-nowrap gap-12 max-w-6xl mx-auto">
 
     <!-- wp:image {"sizeSlug":"large","className":"md:w-1/2 shadow-md"} -->
-    <figure class="wp-block-image size-large md:w-1/2 shadow-md ml-auto">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/policy-1.png" alt="Teacher helping students" />
+    <figure class="wp-block-image policy-img md:w-1/2 shadow-md ml-auto">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/uniform.png" alt="Teacher helping students" />
     </figure>
     <!-- /wp:image -->
 
@@ -81,7 +81,7 @@
       <div class="wp-block-group flex items-center gap-3">
         <!-- wp:image {"sizeSlug":"thumbnail","className":"policy-icon rounded-lg"} -->
         <figure class="wp-block-image policy-icon rounded-lg">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/shield.png" alt="Teacher helping students" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/uniform-icon.png" alt="Teacher helping students" />
         </figure>
         <!-- /wp:image -->
 
@@ -92,7 +92,7 @@
       <!-- /wp:group -->
 
       <!-- wp:paragraph {"align":"right","className":"text-gray-800 leading-relaxed"} -->
-      <p class="text-gray-800 leading-relaxed has-text-align-right ">
+      <p class="text-gray-800 leading-relaxed has-text-align-right">
         Uniform helps children feel part of the school family. We ask families to support our dress code. 
         If you have difficulties, please talk to us — we’re here to help.
       </p>
@@ -115,7 +115,7 @@
       <div class="wp-block-group flex items-center gap-3">
         <!-- wp:image {"sizeSlug":"thumbnail","className":"policy-icon rounded-lg"} -->
         <figure class="wp-block-image policy-icon rounded-lg">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/shield.png" alt="Teacher helping students" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/inclusion-icon.png" alt="Teacher helping students" />
         </figure>
         <!-- /wp:image -->
 
@@ -135,9 +135,9 @@
     </div>
     <!-- /wp:group -->
 
-    <!-- wp:image {"sizeSlug":"large","className":"md:w-1/2 shadow-md"} -->
-    <figure class="wp-block-image size-large md:w-1/2 shadow-md ml-auto">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/policy-1.png" alt="Teacher helping students" />
+    <!-- wp:image {"sizeSlug":"large","className":"policy-img md:w-1/2 shadow-md"} -->
+    <figure class="wp-block-image policy-img size-large md:w-1/2 shadow-md ml-auto">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/inclusion.png" alt="Teacher helping students" />
     </figure>
     <!-- /wp:image -->
 
@@ -148,9 +148,9 @@
   <!-- wp:group {"className":"items-center flex-nowrap gap-12 max-w-6xl mx-auto","layout":{"type":"flex","orientation":"horizontal"}} -->
   <div class="wp-block-group policies-row flex flex-row items-center flex-nowrap gap-12 max-w-6xl mx-auto">
 
-    <!-- wp:image {"sizeSlug":"large","className":"md:w-1/2 shadow-md"} -->
-    <figure class="wp-block-image size-large md:w-1/2 shadow-md ml-auto">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/policy-1.png" alt="Teacher helping students" />
+    <!-- wp:image {"sizeSlug":"large","className":"policy-img md:w-1/2 shadow-md"} -->
+    <figure class="wp-block-image policy-img size-large md:w-1/2 shadow-md ml-auto overflow-hidden">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/behaviour.png" alt="Teacher helping students"/>
     </figure>
     <!-- /wp:image -->
 
@@ -161,7 +161,7 @@
       <div class="wp-block-group flex items-center gap-3">
         <!-- wp:image {"sizeSlug":"thumbnail","className":"policy-icon rounded-lg"} -->
         <figure class="wp-block-image policy-icon rounded-lg">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/shield.png" alt="Teacher helping students" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/behaviour-icon.png" alt="Teacher helping students" />
         </figure>
         <!-- /wp:image -->
 
@@ -196,7 +196,7 @@
       <div class="wp-block-group flex items-center gap-3">
         <!-- wp:image {"sizeSlug":"thumbnail","className":"policy-icon rounded-lg"} -->
         <figure class="wp-block-image policy-icon rounded-lg">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/shield.png" alt="Teacher helping students" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/homework-icon.png" alt="Teacher helping students" />
         </figure>
         <!-- /wp:image -->
 
@@ -217,8 +217,8 @@
     <!-- /wp:group -->
 
     <!-- wp:image {"sizeSlug":"large","className":"md:w-1/2 shadow-md"} -->
-    <figure class="wp-block-image size-large md:w-1/2 shadow-md ml-auto">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/policy-1.png" alt="Teacher helping students" />
+    <figure class="wp-block-image policy-img size-large md:w-1/2 shadow-md ml-auto">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/homework.png" alt="Teacher helping students" />
     </figure>
     <!-- /wp:image -->
 

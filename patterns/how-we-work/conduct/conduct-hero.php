@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Our Policies Hero Section
- * Slug: svlti/policy-hero
+ * Title: Our Conduct Hero Section
+ * Slug: svlti/conduct-hero
  */
 ?>
 
@@ -14,17 +14,16 @@
   <!-- wp:group {"className":"md:w-[52%]","layout":{"type":"flex"}} -->
   <div class="wp-block-group flex-col items-start p-12 md:w-[52%]"> 
 
-    <!-- wp:heading {"className":"text-[56px] font-semibold mb-6"} -->
-    <h2 class="wp-block-heading text-[56px] text-left font-semibold mb-6">
-      <span class="drop-shadow text-[#333333]">Our</span>
-      <span class="text-dark-green drop-shadow"> Policies</span>
+  <!-- wp:heading {"level":2,"align":"left","className":"text-[56px] font-semibold"} -->
+    <h2 class="wp-block-heading text-[56px] font-semibold">
+      <span class="text-dark-green drop-shadow">Conduct</span> <span class="drop-shadow text-black">&amp;</span> <span class="text-dark-green drop-shadow">Discipline</span>
     </h2>
     <!-- /wp:heading -->
   
     <!-- wp:paragraph {"className":"text-gray-800 leading-relaxed"} -->
     <p class="text-gray-800 font-medium leading-relaxed">
-      We care for children and support families by keeping our school safe, welcoming, and fair.
-      These guidelines show what we value and how we work together for every child’s best.
+      Our approach to conduct and discipline is about learning and restoration. 
+      We encourage everyone to take responsibility for their actions, repair harm, and grow together as a community.
     </p>
     <!-- /wp:paragraph -->
 
@@ -35,7 +34,7 @@
 
   <!-- wp:image {"sizeSlug":"large","className":"shadow-lg z-10"} -->
   <figure class="wp-block-image size-large absolute -top-4 right-4 w-[28rem] shadow-lg z-10">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/policy.png" alt="Children in classroom" />
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/conduct.png" alt="Children in classroom" />
   </figure>
   <!-- /wp:image -->
 
