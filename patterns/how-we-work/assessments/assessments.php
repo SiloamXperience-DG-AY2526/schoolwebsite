@@ -8,8 +8,8 @@
 <!-- wp:group {"className":"relative max-w-7xl min-h-[90vh]","layout":{"type":"flex"}} -->
 <div class="wp-block-group relative flex max-w-7xl min-h-[90vh] w-full">
 
-  <!-- wp:group {"className":"items-end justify-center h-[75vh] bg-light-blue","layout":{"type":"flex","orientation":"vertical"}} -->
-  <div class="wp-block-group flex flex-col items-end justify-center h-[75vh] bg-light-blue">
+  <!-- wp:group {"className":"items-end justify-center h-[75vh] bg-[#7EDDC3]/60","layout":{"type":"flex","orientation":"vertical"}} -->
+  <div class="wp-block-group flex flex-col items-end justify-center h-[75vh] bg-[#7EDDC3]/60">
 
   <!-- wp:group {"className":"items-start p-12 md:w-[52%] assessment-container","layout":{"type":"flex","orientation":"vertical"}} -->
   <div class="wp-block-group flex-col items-start p-12 md:w-[52%]"> 
