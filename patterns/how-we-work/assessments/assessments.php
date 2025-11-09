@@ -33,8 +33,8 @@
   <!-- /wp:group -->
 
   <!-- wp:image {"sizeSlug":"large","className":"shadow-lg z-10"} -->
-  <figure class="wp-block-image size-large absolute -top-4 left-4 w-[28rem] shadow-lg z-10">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/policy.png" alt="Children in classroom" />
+  <figure class="wp-block-image size-large absolute -top-4 left-4 shadow-lg z-10">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/assessment.png" alt="Children in classroom" />
   </figure>
   <!-- /wp:image -->
 
