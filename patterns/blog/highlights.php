@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Blog Highlights Page
  * Slug: svlti/blog-highlights
