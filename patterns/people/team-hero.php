@@ -39,7 +39,7 @@
                 <div class="wp-block-buttons">
                     <!-- wp:button {"className":"join-button"} -->
                     <div class="wp-block-button join-button cursor-pointer">
-                        <a href="/join-us" class="wp-block-button__link">
+                        <a href="/projects" class="wp-block-button__link">
                             Join us
                         </a>
                     </div>
