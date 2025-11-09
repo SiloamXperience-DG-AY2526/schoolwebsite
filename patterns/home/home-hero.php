@@ -16,7 +16,7 @@
 
       <!-- wp:image {"sizeSlug":"full","className":"absolute left-1/2 -translate-x-1/2 pointer-events-none select-none max-w-full"} -->
       <figure class="wp-block-image size-full absolute left-1/2 -translate-x-1/2 pointer-events-none select-none max-w-full">
-        <img src="http://localhost/mywordpress/wp-content/themes/svlti-theme-v1/assets/images/home/underline.png" alt="underline" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/underline.png" alt="underline" />
       </figure>
       <!-- /wp:image -->
 
