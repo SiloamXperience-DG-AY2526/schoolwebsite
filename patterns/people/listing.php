@@ -1,9 +1,7 @@
 <?php
-
 /**
  * Title: Volunteer Project Listing
  * Slug: svlti/listings
- * Categories: featured
  */
 ?>
 

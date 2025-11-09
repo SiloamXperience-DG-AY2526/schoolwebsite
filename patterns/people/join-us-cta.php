@@ -1,9 +1,7 @@
 <?php
-
 /**
  * Title: Join Us CTA Section
  * Slug: svlti/join-us-cta
- * Categories: featured
  */
 ?>
 

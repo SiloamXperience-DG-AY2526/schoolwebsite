@@ -1,9 +1,7 @@
 <?php
-
 /**
  * Title: Filter Buttons
  * Slug: svlti/filter-buttons
- * Categories: featured
  */
 ?>
 

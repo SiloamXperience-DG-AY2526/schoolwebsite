@@ -1,9 +1,7 @@
 <?php
-
 /**
  * Title: Meet the Team Grid
  * Slug: svlti/meet-the-team
- * Categories: featured
  */
 ?>
 

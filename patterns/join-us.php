@@ -1,9 +1,7 @@
 <?php
-
 /**
  * Title: Join Us Detail Card
  * Slug: svlti/join-us
- * Categories: featured
  */
 ?>
 

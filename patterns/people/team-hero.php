@@ -1,9 +1,7 @@
 <?php
-
 /**
  * Title: Hero - Our People
  * Slug: svlti/team-hero
- * Categories: featured
  */
 ?>
 
