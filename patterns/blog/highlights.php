@@ -38,7 +38,7 @@
 
                         <!-- wp:image {"sizeSlug":"large","className":"w-full h-64 overflow-hidden flex-shrink-0"} -->
                         <figure class="wp-block-image size-large w-full h-64 overflow-hidden flex-shrink-0">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/highlight/cherish.png" alt="cherish" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/cherish.png" alt="cherish" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -73,7 +73,7 @@
 
                         <!-- wp:image {"className":"w-full md:w-2/3 h-64 md:h-40 object-scale-down flex-shrink-0"} -->
                         <figure class="wp-block-image w-full md:w-2/3 h-64 md:h-20 flex-shrink-0">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/highlight/speaker.png" alt="speaker" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/speaker.png" alt="speaker" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -108,7 +108,7 @@
 
                         <!-- wp:image {"className":"w-full md:w-1/2 h-64 md:h-auto object-cover"} -->
                         <figure class="wp-block-image w-full md:w-1/2 h-64 md:h-auto object-cover">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/highlight/build.png" alt="build" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/build.png" alt="build" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -143,7 +143,7 @@
 
                         <!-- wp:image {"className":"w-full object-cover rounded-t-[10px] h-[357px]"} -->
                         <figure class="wp-block-image w-full object-cover rounded-t-[10px] h-[357px]">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/highlight/teach.png" alt="teach" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/teach.png" alt="teach" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -178,7 +178,7 @@
 
                         <!-- wp:image {"className":"w-full object-cover rounded-t-[10px] h-[199px] md:h-[280px]"} -->
                         <figure class="wp-block-image w-full object-cover rounded-t-[10px] h-[199px] md:h-[280px]">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/highlight/group.png" alt="group" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/group.png" alt="group" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -213,7 +213,7 @@
 
                         <!-- wp:image {"className":"w-full object-cover rounded-t-[10px] h-[199px] md:h-[280px]"} -->
                         <figure class="wp-block-image w-full object-cover rounded-t-[10px] h-[199px] md:h-[280px]">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/highlight/farm.png" alt="farm" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/farm.png" alt="farm" />
                         </figure>
                         <!-- /wp:image -->
 

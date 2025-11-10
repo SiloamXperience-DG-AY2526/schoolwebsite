@@ -11,12 +11,13 @@
 <!-- wp:group {"className":"relative w-full","layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group relative flex flex-col w-full">
 
-    <!-- wp:heading {"level":1,"className":"text-[64px] font-bold text-eucalyptus-110 mb-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"} -->
+    <!-- wp:heading {"level":1,"className":"text-header-xxxl font-bold text-eucalyptus-100 mb-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"} -->
     <h1 class="wp-block-heading text-header-xxxl font-bold text-eucalyptus-100 mb-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
         Announcements to Parents
     </h1>
     <!-- /wp:heading -->
 
+    <!-- wp:html -->
     <?php
     $announcements = [
         [
@@ -37,9 +38,9 @@
         ]
     ];
     ?>
-    <!-- wp:html -->
-    <div class="accordion-container space-y-4 w-full flex flex-col items-start">
 
+
+    <div class="accordion-container space-y-4 w-full flex flex-col items-start">
         <?php foreach ($announcements as $announcement): ?>
             <div class="accordion-item border-b-2 border-eucalyptus-120 overflow-hidden w-full transition-colors duration-300">
                 <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
@@ -55,39 +56,36 @@
                 </div>
             </div>
         <?php endforeach; ?>
-
     </div>
 
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const accordions = document.querySelectorAll(".accordion-toggle");
+
+            accordions.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const content = btn.nextElementSibling;
+                    const parent = btn.parentElement;
+                    const icon = btn.querySelector(".icon");
+                    const expanded = !content.classList.contains("hidden");
+
+                    document.querySelectorAll(".accordion-content").forEach(el => el.classList.add("hidden"));
+                    document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate-180"));
+                    document.querySelectorAll(".accordion-toggle").forEach(t => t.classList.remove("text-white"));
+
+                    if (!expanded) {
+                        content.classList.remove("hidden");
+                        btn.classList.add("text-black");
+                        icon.classList.add("rotate-180")
+                    }
+                });
+            });
+        });
+    </script>
     <!-- /wp:html -->
 
 </div>
-<!-- /wp:column -->
-
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const accordions = document.querySelectorAll(".accordion-toggle");
-
-        accordions.forEach(btn => {
-            btn.addEventListener("click", () => {
-                const content = btn.nextElementSibling;
-                const parent = btn.parentElement;
-                const icon = btn.querySelector(".icon");
-                const expanded = !content.classList.contains("hidden");
-
-                // Reset all accordions
-                document.querySelectorAll(".accordion-content").forEach(el => el.classList.add("hidden"));
-                document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate-180"));
-                document.querySelectorAll(".accordion-toggle").forEach(t => t.classList.remove("text-white"));
-
-                // Expand current accordion
-                if (!expanded) {
-                    content.classList.remove("hidden");
-                    btn.classList.add("text-black");
-                    icon.classList.add("rotate-180")
-                }
-            });
-        });
-    });
-</script>
+<!-- /wp:group -->
