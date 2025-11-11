@@ -986,6 +986,10 @@ video {
   width: 80%;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .min-w-\[280px\] {
   min-width: 280px;
 }
