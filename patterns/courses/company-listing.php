@@ -66,29 +66,80 @@
 
   <!-- wp:paragraph {"className":"text-gray-700"} -->
   <p class="text-gray-700">
-    As a Tour Product Development Intern at <strong>WanderLinx Travel</strong>, you will play an active role in shaping exciting travel experiences for customers. This internship offers a hands-on introduction to the tourism industry, where you will assist in researching new destinations, designing creative itineraries, and collaborating with local suppliers to bring innovative travel packages to life. You’ll support the team through market research, budgeting, and field-testing tours while learning how a travel product moves from concept to launch.
+    As a Tour Product Development Intern at <strong>WanderLinx Travel</strong>, you will play an active role in shaping exciting travel experiences for customers. 
+    This internship offers a hands-on introduction to the tourism industry, where you will assist in researching new destinations, designing creative itineraries, and collaborating with local suppliers to bring innovative travel packages to life.
+     You’ll support the team through market research, budgeting, and field-testing tours while learning how a travel product moves from concept to launch.
   </p>
   <!-- /wp:paragraph -->
 
   <!-- wp:group {"className":"space-y-2"} -->
   <div class="wp-block-group space-y-2">
-    <!-- wp:paragraph {"className":"flex items-center gap-2 text-gray-800"} -->
-    <p class="flex items-center gap-2 text-gray-800">🏢 <strong>WanderLinx Travel</strong></p>
-    <!-- /wp:paragraph -->
-    <!-- wp:paragraph {"className":"flex items-center gap-2 text-gray-800"} -->
-    <p class="flex items-center gap-2 text-gray-800">📍 Clarke Quay</p>
-    <!-- /wp:paragraph -->
-    <!-- wp:paragraph {"className":"flex items-center gap-2 text-gray-800"} -->
-    <p class="flex items-center gap-2 text-gray-800">💰 SGD850/month + transportation allowance for field visits</p>
-    <!-- /wp:paragraph -->
-    <!-- wp:paragraph {"className":"flex items-center gap-2 text-gray-800"} -->
-    <p class="flex items-center gap-2 text-gray-800">🕒 3 Months (Full-time preferred)</p>
-    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"layout":{"type":"flex","orientation":"horizontal"}} -->
+    <div class="wp-block-group flex flex-row">
+      <!-- wp:image {"sizeSlug":"small"} -->
+      <figure class="wp-block-image size-small">
+          <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/admin/company-icon.png"
+              alt="Volunteer teaching students" />
+      </figure>
+      <!-- /wp:image -->
+      <!-- wp:paragraph {"className":"flex items-center gap-2 text-gray-400"} -->
+      <p class="flex items-center gap-2 text-gray-400 font-semibold">WanderLinx Travel</p>
+      <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"layout":{"type":"flex","orientation":"horizontal"}} -->
+    <div class="wp-block-group flex flex-row">
+      <!-- wp:image {"sizeSlug":"small"} -->
+      <figure class="wp-block-image size-small">
+          <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/admin/location-icon.png"
+              alt="Volunteer teaching students" />
+      </figure>
+      <!-- /wp:image -->
+      <!-- wp:paragraph {"className":"flex items-center gap-2 text-gray-400"} -->
+      <p class="flex items-center gap-2 text-gray-400 font-semibold">Clarke Quay</p>
+      <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"layout":{"type":"flex","orientation":"horizontal"}} -->
+    <div class="wp-block-group flex flex-row">
+      <!-- wp:image {"sizeSlug":"small"} -->
+      <figure class="wp-block-image size-small">
+          <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/admin/price-icon.png"
+              alt="Volunteer teaching students" />
+      </figure>
+      <!-- /wp:image -->
+      <!-- wp:paragraph {"className":"flex items-center gap-2 text-gray-400"} -->
+      <p class="flex items-center gap-2 text-gray-400 font-semibold">SGD850/month + transportation allowance for field visits</p>
+      <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"layout":{"type":"flex","orientation":"horizontal"}} -->
+    <div class="wp-block-group flex flex-row">
+      <!-- wp:image {"sizeSlug":"small"} -->
+      <figure class="wp-block-image size-small">
+          <img
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/admin/calendar-icon.png"
+              alt="Volunteer teaching students" />
+      </figure>
+      <!-- /wp:image -->
+      <!-- wp:paragraph {"className":"flex items-center gap-2 text-gray-400"} -->
+      <p class="flex items-center gap-2 text-gray-400 font-semibold">3 Months (Full-time preferred)</p>
+      <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+
   </div>
   <!-- /wp:group -->
 
-  <!-- wp:separator {"className":"border-gray-200"} -->
-  <hr class="wp-block-separator border-gray-200"/>
+  <!-- wp:separator {"className":"border-gray-300"} -->
+  <hr class="wp-block-separator border-gray-300"/>
   <!-- /wp:separator -->
 
   <!-- wp:heading {"level":3,"className":"text-lg font-semibold"} -->
@@ -96,7 +147,8 @@
   <!-- /wp:heading -->
   <!-- wp:paragraph {"className":"text-gray-700"} -->
   <p class="text-gray-700">
-    As a Tour Product Development Intern, you will assist the product team in <strong>researching, designing, and testing</strong> new travel itineraries and packages. You will gain hands-on exposure to the <strong>end-to-end process</strong> of creating a market-ready tour—from idea generation and competitor analysis to supplier negotiations and digital marketing preparation.
+    As a Tour Product Development Intern, you will assist the product team in <strong>researching, designing, and testing </strong>new travel itineraries and packages. 
+    You will gain hands-on exposure to the <strong>end-to-end process</strong> of creating a market-ready tour—from idea generation and competitor analysis to supplier negotiations and digital marketing preparation.
   </p>
   <!-- /wp:paragraph -->
 
@@ -127,19 +179,19 @@
   </ul>
   <!-- /wp:list -->
 
-  <!-- wp:group {"className":"border border-emerald-200 bg-emerald-50 rounded-lg p-4 space-y-3"} -->
-  <div class="wp-block-group border border-emerald-200 bg-emerald-50 rounded-lg p-4 space-y-3">
+  <!-- wp:group {"className":"border border-eucalyptus-120 border-2 rounded-lg p-4 space-y-3"} -->
+  <div class="wp-block-group border border-eucalyptus-120 border-2 rounded-lg p-4 space-y-3">
     <!-- wp:heading {"level":4,"className":"font-semibold"} -->
     <h4 class="font-semibold">About the company</h4>
     <!-- /wp:heading -->
     <!-- wp:paragraph -->
     <p><strong>WanderLinx Travel Services</strong></p>
     <!-- /wp:paragraph -->
-    <!-- wp:paragraph -->
-    <p><em>Dynamic Boutique Travel Agency</em></p>
+    <!-- wp:paragraph {"className":"underline"} -->
+    <p class="underline">Dynamic Boutique Travel Agency</p>
     <!-- /wp:paragraph -->
-    <!-- wp:paragraph {"className":"text-gray-700"} -->
-    <p class="text-gray-700">
+    <!-- wp:paragraph {"className":"text-gray-500"} -->
+    <p class="text-gray-500">
       WanderLinx Travel specializes in customized experiential tours across Asia. The company focuses on creating innovative travel products such as eco-adventure packages, heritage city walks, culinary experiences, and luxury wellness retreats.
     </p>
     <!-- /wp:paragraph -->
@@ -157,9 +209,9 @@
 
   <!-- wp:buttons {"className":"flex justify-end gap-3 pt-4"} -->
   <div class="wp-block-buttons flex justify-end gap-3 pt-4">
-    <!-- wp:button {"className":"bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300"} -->
+    <!-- wp:button {"className":"border border-gray-800 text-gray-800 rounded-md hover:bg-gray-300"} -->
     <div class="wp-block-button">
-      <a class="wp-block-button__link bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 px-4 py-2">Reject</a>
+      <a class="wp-block-button__link border border-gray-800 text-gray-800 rounded-md hover:bg-gray-300 px-4 py-2">Reject</a>
     </div>
     <!-- /wp:button -->
     <!-- wp:button {"className":"bg-emerald-600 text-white rounded-md hover:bg-emerald-700"} -->
