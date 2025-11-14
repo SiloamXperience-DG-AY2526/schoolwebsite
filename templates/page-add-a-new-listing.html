@@ -1,228 +1,286 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add a New Listing</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="min-h-screen bg-gradient-to-b from-gray-100 to-slate-100 font-sans">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","right":"2rem","bottom":"3rem","left":"2rem"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:3rem;padding-right:2rem;padding-bottom:3rem;padding-left:2rem"><!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"2.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"2rem"}}}} -->
+    <h1 class="wp-block-heading" style="margin-bottom:2rem;font-size:2.5rem;font-weight:700">Add a New Listing</h1>
+    <!-- /wp:heading -->
 
-  <div class="max-w-4xl mx-auto px-8 py-12">
-    <h1 class="text-4xl font-bold text-emerald-900 mb-8">Add a New Listing</h1>
+    <!-- wp:group {"className":"progress-steps","style":{"spacing":{"margin":{"bottom":"2rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group progress-steps" style="margin-bottom:2rem"><!-- wp:paragraph {"className":"step-item active","style":{"typography":{"fontSize":"14px"}}} -->
+    <p class="step-item active" style="font-size:14px">✓ Company Details</p>
+    <!-- /wp:paragraph -->
 
-    <!-- Progress Steps -->
-    <div class="flex flex-wrap justify-between gap-4 mb-8">
-      <p class="flex-1 bg-emerald-500 text-white text-sm text-center py-3 rounded-lg min-w-[150px]">✓ Company Details</p>
-      <p class="flex-1 bg-gray-100 text-gray-400 text-sm text-center py-3 rounded-lg min-w-[150px]">✓ Internship Information</p>
-      <p class="flex-1 bg-gray-100 text-gray-400 text-sm text-center py-3 rounded-lg min-w-[150px]">✓ Description & Responsibilities</p>
-      <p class="flex-1 bg-gray-100 text-gray-400 text-sm text-center py-3 rounded-lg min-w-[150px]">Preview and Submission</p>
+    <!-- wp:paragraph {"className":"step-item","style":{"typography":{"fontSize":"14px"}}} -->
+    <p class="step-item" style="font-size:14px">✓ Internship Information</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"step-item","style":{"typography":{"fontSize":"14px"}}} -->
+    <p class="step-item" style="font-size:14px">✓ Description & Responsibilities</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"step-item","style":{"typography":{"fontSize":"14px"}}} -->
+    <p class="step-item" style="font-size:14px">Preview and Submission</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:html -->
+    <form id="job-listing-form" method="post" action="/submission-success">
+
+    <!-- SECTION 1: COMPANY DETAILS -->
+    <div class="accordion-section">
+      <button type="button" class="accordion-header active">
+        Company Details
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="accordion-content" style="display:block;">
+        <h3 style="margin-top:1.5rem;margin-bottom:1rem;font-size:1.25rem;font-weight:600;">Company Details</h3>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Company Name *</label>
+            <input type="text" name="company_name" required placeholder="Your Company Name" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Company Address *</label>
+            <input type="text" name="company_address" required placeholder="Your Company Address" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Industry / Sector *</label>
+            <input type="text" name="industry" required placeholder="e.g., Tourism" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Company Website</label>
+            <input type="url" name="company_website" placeholder="Your Company Website" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Brief Description about the Company</label>
+          <textarea name="company_description" rows="4" placeholder="Tell us more..." style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;"></textarea>
+        </div>
+
+        <h3 style="margin-top:2rem;margin-bottom:1rem;font-size:1.25rem;font-weight:600;">PoC Details</h3>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">PoC Name *</label>
+            <input type="text" name="poc_name" required placeholder="Your PoC Name" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">PoC Email Address *</label>
+            <input type="email" name="poc_email" required placeholder="Your PoC Email Address" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">PoC Contact Number *</label>
+            <input type="tel" name="poc_phone" required placeholder="Your PoC Contact Number" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">PoC Designation *</label>
+            <input type="text" name="poc_designation" required placeholder="Your PoC Designation" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+      </div>
     </div>
 
-    <form id="job-listing-form" method="post" action="/submission-success" class="space-y-4">
+    <!-- SECTION 2: INTERNSHIP DETAILS -->
+    <div class="accordion-section">
+      <button type="button" class="accordion-header">
+        Internship Details
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="accordion-content">
+        <h3 style="margin-top:1.5rem;margin-bottom:1rem;font-size:1.25rem;font-weight:600;">Administrative Internship Details</h3>
 
-      <!-- Accordion Section -->
-      <div>
-        <!-- Company Details -->
-        <button type="button"
-          class="accordion-header w-full bg-emerald-700 hover:bg-emerald-600 text-white px-6 py-4 rounded-xl font-semibold text-lg flex justify-between items-center transition">
-          Company Details
-          <span class="accordion-icon transition-transform rotate-180">▼</span>
-        </button>
-        <div class="accordion-content block bg-white border border-gray-200 rounded-b-xl px-6 py-6 -mt-3">
-          <h3 class="text-xl font-semibold text-emerald-900 mb-4 mt-2">Company Details</h3>
-
-          <!-- Company Info -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">Company Name *</label>
-              <input type="text" name="company_name" required placeholder="Your Company Name"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">Company Address *</label>
-              <input type="text" name="company_address" required placeholder="Your Company Address"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">Industry / Sector *</label>
-              <input type="text" name="industry" required placeholder="e.g., Tourism"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">Company Website</label>
-              <input type="url" name="company_website" placeholder="Your Company Website"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-          </div>
-
-          <div class="mb-6">
-            <label class="block mb-2 text-sm font-medium text-gray-700">Brief Description about the Company</label>
-            <textarea name="company_description" rows="4" placeholder="Tell us more..."
-              class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none"></textarea>
-          </div>
-
-          <h3 class="text-xl font-semibold text-emerald-900 mb-4 mt-8">PoC Details</h3>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">PoC Name *</label>
-              <input type="text" name="poc_name" required placeholder="Your PoC Name"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">PoC Email Address *</label>
-              <input type="email" name="poc_email" required placeholder="Your PoC Email Address"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">PoC Contact Number *</label>
-              <input type="tel" name="poc_phone" required placeholder="Your PoC Contact Number"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">PoC Designation *</label>
-              <input type="text" name="poc_designation" required placeholder="Your PoC Designation"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Internship Details -->
-      <div>
-        <button type="button"
-          class="accordion-header w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-4 rounded-xl font-semibold text-lg flex justify-between items-center transition">
-          Internship Details
-          <span class="accordion-icon transition-transform">▼</span>
-        </button>
-        <div class="accordion-content hidden bg-white border border-gray-200 rounded-b-xl px-6 py-6 -mt-3">
-          <h3 class="text-xl font-semibold text-emerald-900 mb-4 mt-2">Administrative Internship Details</h3>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">Internship Title *</label>
-              <input type="text" name="internship_title" required placeholder="Internship Title"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">Location *</label>
-              <input type="text" name="location" required placeholder="Your Company Location"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">Internship Mode *</label>
-              <select name="internship_mode" required
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-                <option value="">On-site / Fully remote / Hybrid</option>
-                <option value="onsite">On-site</option>
-                <option value="remote">Fully remote</option>
-                <option value="hybrid">Hybrid</option>
-              </select>
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-700">Allowance *</label>
-              <input type="text" name="allowance" required placeholder="$"
-                class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <label class="block mb-2 text-sm font-medium text-gray-700">Duration *</label>
-            <input type="text" name="duration" required placeholder="3 months / 4 months / 6 months"
-              class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
-          </div>
-        </div>
-      </div>
-
-      <!-- Description & Responsibilities -->
-      <div>
-        <button type="button"
-          class="accordion-header w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-4 rounded-xl font-semibold text-lg flex justify-between items-center transition">
-          Description & Responsibilities
-          <span class="accordion-icon transition-transform">▼</span>
-        </button>
-        <div class="accordion-content hidden bg-white border border-gray-200 rounded-b-xl px-6 py-6 -mt-3">
-          <h3 class="text-xl font-semibold text-emerald-900 mb-4 mt-2">Further Internship Details</h3>
-
-          <div class="mb-6">
-            <label class="block mb-2 text-sm font-medium text-gray-700">Job Description *</label>
-            <textarea name="job_description" rows="5" required placeholder="Describe the role..."
-              class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none"></textarea>
-          </div>
-
-          <div class="mb-6">
-            <label class="block mb-2 text-sm font-medium text-gray-700">Key Responsibilities *</label>
-            <textarea name="key_responsibilities" rows="5" required placeholder="Use bullet points (one per line)"
-              class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none"></textarea>
-          </div>
-
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
           <div>
-            <label class="block mb-2 text-sm font-medium text-gray-700">Requirements *</label>
-            <textarea name="requirements" rows="5" required placeholder="Use bullet points (one per line)"
-              class="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none"></textarea>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Internship Title *</label>
+            <input type="text" name="internship_title" required placeholder="Internship Title" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Location *</label>
+            <input type="text" name="location" required placeholder="Your Company Location" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
           </div>
         </div>
-      </div>
 
-      <!-- Preview -->
-      <div>
-        <button type="button"
-          class="accordion-header w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-4 rounded-xl font-semibold text-lg flex justify-between items-center transition">
-          Preview and Submission
-          <span class="accordion-icon transition-transform">▼</span>
-        </button>
-        <div class="accordion-content hidden bg-white border border-gray-200 rounded-b-xl px-6 py-6 -mt-3">
-          <div id="preview-content" class="bg-gray-50 rounded-lg p-6 mt-4 text-center text-gray-400">
-            Fill in the form above to see a preview
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Internship Mode *</label>
+            <select name="internship_mode" required style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+              <option value="">On-site / Fully remote / Hybrid</option>
+              <option value="onsite">On-site</option>
+              <option value="remote">Fully remote</option>
+              <option value="hybrid">Hybrid</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Allowance *</label>
+            <input type="text" name="allowance" required placeholder="$" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
           </div>
         </div>
-      </div>
 
-      <div class="text-right mt-8">
-        <button type="submit"
-          class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-full font-semibold text-base transition">
-          Submit
-        </button>
+        <div style="margin-top:1rem;">
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Duration *</label>
+          <input type="text" name="duration" required placeholder="3 months / 4 months / 6 months" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+        </div>
       </div>
+    </div>
+
+    <!-- SECTION 3: DESCRIPTION & RESPONSIBILITIES -->
+    <div class="accordion-section">
+      <button type="button" class="accordion-header">
+        Description & Responsibilities
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="accordion-content">
+        <h3 style="margin-top:1.5rem;margin-bottom:1rem;font-size:1.25rem;font-weight:600;">Further Internship Details</h3>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Job Description *</label>
+          <textarea name="job_description" rows="5" required placeholder="Describe the role, background..." style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;"></textarea>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Key Responsibilities *</label>
+          <textarea name="key_responsibilities" rows="5" required placeholder="Use bullet points (one per line)" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;"></textarea>
+        </div>
+
+        <div>
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Requirements *</label>
+          <textarea name="requirements" rows="5" required placeholder="Use bullet points (one per line)" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: PREVIEW AND SUBMISSION -->
+    <div class="accordion-section">
+      <button type="button" class="accordion-header">
+        Preview and Submission
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div id="preview-content" style="padding:2rem;background:#f9f9f9;border-radius:8px;margin-top:1.5rem;">
+          <p style="text-align:center;color:#999;">Fill in the form above to see a preview</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:right;margin-top:2rem;">
+      <button type="submit" style="background:#3eb489;color:white;padding:0.75rem 2rem;border:none;border-radius:24px;font-size:16px;font-weight:600;cursor:pointer;">Submit</button>
+    </div>
 
     </form>
-  </div>
+    <!-- /wp:html --></div>
+    <!-- /wp:group -->
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    <!-- wp:html -->
+    <style>
+    .accordion-section {
+      margin-bottom: 1rem;
+    }
+
+    .accordion-header {
+      width: 100%;
+      background: #3eb489;
+      color: white;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background: #35a077;
+    }
+
+    .accordion-header.active {
+      background: #2d8a66;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 1.5rem;
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 0 0 12px 12px;
+      margin-top: -12px;
+    }
+
+    .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .step-item {
+      flex: 1;
+      padding: 0.75rem;
+      background: #f0f0f0;
+      border-radius: 8px;
+      text-align: center;
+      color: #999;
+    }
+
+    .step-item.active {
+      background: #3eb489;
+      color: white;
+    }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Accordion functionality
       const headers = document.querySelectorAll('.accordion-header');
-      headers.forEach(header => {
-        header.addEventListener('click', function () {
+
+      headers.forEach(function(header) {
+        header.addEventListener('click', function() {
           const content = this.nextElementSibling;
-          const icon = this.querySelector('.accordion-icon');
-          const isActive = !content.classList.contains('hidden');
+          const isActive = this.classList.contains('active');
 
-          document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
-          document.querySelectorAll('.accordion-icon').forEach(i => i.classList.remove('rotate-180'));
+          // Close all accordions
+          document.querySelectorAll('.accordion-header').forEach(function(h) {
+            h.classList.remove('active');
+          });
+          document.querySelectorAll('.accordion-content').forEach(function(c) {
+            c.style.display = 'none';
+          });
 
+          // Open clicked accordion if it wasn't active
           if (!isActive) {
-            content.classList.remove('hidden');
-            icon.classList.add('rotate-180');
+            this.classList.add('active');
+            content.style.display = 'block';
           }
         });
       });
 
-      document.getElementById('job-listing-form').addEventListener('submit', function (e) {
+      // Form submission (prevents actual submission for now)
+      document.getElementById('job-listing-form').addEventListener('submit', function(e) {
         e.preventDefault();
+        // Redirect to success page
         window.location.href = '/submission-success';
       });
     });
-  </script>
+    </script>
+    <!-- /wp:html -->
 
-</body>
-</html>
+    <!-- wp:paragraph -->
+    <p></p>
+    <!-- /wp:paragraph -->
