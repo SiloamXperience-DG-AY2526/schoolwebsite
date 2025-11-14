@@ -42,7 +42,9 @@
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
-                    <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">Community Service</p>
+                    <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
+                        <a href="/blog/highlights/expanded">Community Service</a>
+                    </p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
@@ -68,7 +70,9 @@
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
-                    <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">Community Service</p>
+                    <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
+                        <a href="/blog/highlights/expanded">Community Service</a>
+                    </p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
@@ -99,7 +103,9 @@
                 <!-- /wp:heading -->
 
                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
-                <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">Community Service</p>
+                <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
+                    <a href="/blog/highlights/expanded">Community Service</a>
+                </p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->

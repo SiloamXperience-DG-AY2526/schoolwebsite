@@ -43,7 +43,7 @@
                 <div class="wp-block-group mt-6">
                     <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                     <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                        Learning Journeys
+                        <a href="/blog/highlights/expanded">Learning Journeys</a>
                     </p>
                     <!-- /wp:paragraph -->
                 </div>
