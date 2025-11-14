@@ -1,31 +1,46 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","right":"2rem","bottom":"6rem","left":"2rem"}}},"layout":{"type":"constrained","contentSize":"600px"}} -->
-<div class="wp-block-group" style="padding-top:6rem;padding-right:2rem;padding-bottom:6rem;padding-left:2rem"><!-- wp:group {"style":{"spacing":{"blockGap":"2rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-    <div class="wp-block-group"><!-- wp:html -->
-    <div style="text-align:center;">
-      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="45" stroke="#3eb489" stroke-width="4" fill="none"/>
-        <path d="M30 50 L45 65 L70 35" stroke="#3eb489" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
+<div class="wp-block-group" style="padding-top:6rem; padding-right:2rem; padding-bottom:6rem; padding-left:2rem; max-width:600px; margin:0 auto;">
+
+    <!-- wp:group {"style":{"spacing":{"blockGap":"2rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+    <div class="wp-block-group" style="display:flex; flex-direction:column; justify-content:center; gap:2rem;">
+
+        <!-- wp:html -->
+        <div style="text-align:center;">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="45" stroke="#3eb489" stroke-width="4" fill="none"/>
+                <path d="M30 48 L45 63 L70 33" stroke="#3eb489" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+        </div>
+        <!-- /wp:html -->
+
+        <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"2rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"1rem"}}}} -->
+        <h1 class="has-text-align-center" style="margin-bottom:1rem; font-size:2rem; font-weight:700; color:#2d5a4a;">
+            Thank you for submitting.
+        </h1>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1rem"},"spacing":{"margin":{"bottom":"2rem"}}}} -->
+        <p class="has-text-align-center" style="margin-bottom:2rem; font-size:1rem; color:#666;">
+            We have received the information and will review it shortly. A confirmation email will be sent to the address you provided.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+        <div class="wp-block-buttons" style="display:flex; justify-content:center;">
+            <!-- wp:button {"style":{"border":{"radius":"24px"}}} -->
+            <div class="wp-block-button">
+                <a class="wp-block-button__link wp-element-button"
+                   href="/courses"
+                   style="display:inline-block; padding:10px 26px; background:#3eb489; color:#ffffff; border:none; border-radius:24px; text-decoration:none; font-weight:500;">
+                   Back to Main Page
+                </a>
+            </div>
+            <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
+
     </div>
-    <!-- /wp:html -->
-    
-  <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"2rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"1rem"}}}} -->
-  <h1 class="has-text-align-center" style="margin-bottom:1rem;font-size:2rem;font-weight:700;color:#2d5a4a;">Thank you for submitting.</h1>
-    <!-- /wp:heading -->
-    
-  <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1rem"},"spacing":{"margin":{"bottom":"2rem"}}}} -->
-  <p class="has-text-align-center" style="margin-bottom:2rem;font-size:1rem;color:#666;">We have received the information and will review it shortly. A confirmation email will be sent to the address you provided.</p>
-    <!-- /wp:paragraph -->
-    
-    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-  <div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"24px"}}} -->
-  <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/courses" style="display:inline-block;padding:10px 26px;background:#3eb489;color:#ffffff;border:none;border-radius:24px;text-decoration:none;font-weight:500;outline:none;">Back to Main Page</a></div>
-  <!-- /wp:button --></div>
-    <!-- /wp:buttons --></div>
-    <!-- /wp:group --></div>
     <!-- /wp:group -->
-    
-    <!-- wp:paragraph -->
-    <p></p>
-    <!-- /wp:paragraph -->
-    
+
+</div>
+<!-- /wp:group -->
