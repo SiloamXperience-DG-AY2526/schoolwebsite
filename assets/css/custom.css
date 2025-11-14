@@ -303,3 +303,18 @@ html {
   margin-bottom: 10px !important;
   line-height: 1.2 !important;
 }
+
+.details-button a {
+    padding: 10px 10px;
+}
+
+.listing-action-reject-button a {
+    padding: 10px 25px;
+    color: gray;
+    display: block; 
+}
+
+.listing-action-reject-button:hover a {
+  color: white; 
+  transition: color 0.5s ease;
+}

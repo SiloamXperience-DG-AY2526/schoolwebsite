@@ -28,7 +28,6 @@
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/courses/bell.png"
           alt="Bell icon"
-          class="w-10 h-10 object-contain"
         />
       </figure>
       <!-- /wp:image -->
@@ -38,7 +37,6 @@
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/courses/profile.png"
           alt="Profile icon"
-          class="w-10 h-10 object-contain"
         />
       </figure>
       <!-- /wp:image -->
@@ -48,7 +46,6 @@
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/images/courses/setting.png"
           alt="Settings icon"
-          class="w-10 h-10 object-contain"
         />
       </figure>
       <!-- /wp:image -->
@@ -197,9 +194,9 @@
     <!-- /wp:paragraph -->
     <!-- wp:buttons -->
     <div class="wp-block-buttons">
-      <!-- wp:button {"className":"bg-emerald-600 text-white rounded-md hover:bg-emerald-700"} -->
-      <div class="wp-block-button">
-        <a class="wp-block-button__link bg-emerald-600 text-white rounded-md hover:bg-emerald-700 px-4 py-2">Visit Website</a>
+      <!-- wp:button {"className":"bg-emerald-600 text-white text-sm font-medium rounded-md hover:bg-emerald-700 transition"} -->
+      <div class="wp-block-button details-button bg-emerald-600 text-white text-sm font-medium rounded-md hover:bg-emerald-700 transition">
+        <a class="wp-block-button__link wp-element-button">Visit Website</a>
       </div>
       <!-- /wp:button -->
     </div>
@@ -209,14 +206,14 @@
 
   <!-- wp:buttons {"className":"flex justify-end gap-3 pt-4"} -->
   <div class="wp-block-buttons flex justify-end gap-3 pt-4">
-    <!-- wp:button {"className":"border border-gray-800 text-gray-800 rounded-md hover:bg-gray-300"} -->
-    <div class="wp-block-button">
-      <a class="wp-block-button__link border border-gray-800 text-gray-800 rounded-md hover:bg-gray-300 px-4 py-2">Reject</a>
+    <!-- wp:button {"className":"border border-gray-400 text-sm font-medium rounded-md hover:bg-gray-400 transition"} -->
+    <div class="wp-block-button listing-action-reject-button border border-gray-400 text-sm font-medium rounded-md hover:bg-gray-400 transition">
+      <a class="wp-block-button__link wp-element-button">Reject</a>
     </div>
     <!-- /wp:button -->
-    <!-- wp:button {"className":"bg-emerald-600 text-white rounded-md hover:bg-emerald-700"} -->
-    <div class="wp-block-button">
-      <a class="wp-block-button__link bg-emerald-600 text-white rounded-md hover:bg-emerald-700 px-4 py-2">Approve</a>
+    <!-- wp:button {"className":"bg-emerald-600 text-sm font-medium rounded-md hover:bg-emerald-700 transition"} -->
+    <div class="wp-block-button listing-action-button bg-emerald-600 text-sm font-medium rounded-md hover:bg-emerald-700 transition">
+      <a class="wp-block-button__link wp-element-button">Approve</a>
     </div>
     <!-- /wp:button -->
   </div>

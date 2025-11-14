@@ -11,7 +11,7 @@
 
     <?php
     $buttons = [
-        ['title' => 'All', 'url' => '/blog/highlights/all'],
+        ['title' => 'All', 'url' => '/blog'],
         ['title' => 'Reflections', 'url' => '/blog/highlights/reflections'],
         ['title' => 'Student Projects', 'url' => '/blog/highlights/student-projects'],
         ['title' => 'Community Service', 'url' => '/blog/highlights/community-service'],
