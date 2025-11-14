@@ -46,6 +46,10 @@ html {
     display: none !important;
 }
 
+.wp-block-navigation-submenu .wp-block-navigation-item__content {
+  font-weight: 500;
+}
+
 .wp-block-navigation__submenu-container a {
     border-bottom: 1px solid #b0c8d4;
 }
