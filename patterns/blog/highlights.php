@@ -27,7 +27,7 @@
                 </h1>
                 <!-- /wp:heading -->
 
-               <!-- wp:pattern {"slug":"svlti/highlight-buttons"} /-->
+                <!-- wp:pattern {"slug":"svlti/highlight-buttons"} /-->
 
                 <!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-auto","layout":{"type":"constrained"}} -->
                 <div class="wp-block-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-auto">
@@ -55,7 +55,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Community Service
+                                    <a href="/blog/highlights/expanded">Community Service</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -90,7 +90,7 @@
                             <div class="wp-block-group mt-7">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Community Service
+                                    <a href="/blog/highlights/expanded">Community Service</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -125,7 +125,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Student Projects
+                                    <a href="/blog/highlights/expanded">Student Projects</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -160,7 +160,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Community Service
+                                    <a href="/blog/highlights/expanded">Community Service</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -195,7 +195,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Reflections
+                                    <a href="/blog/highlights/expanded">Reflections</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -230,7 +230,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Learning Journeys
+                                    <a href="/blog/highlights/expanded">Learning Journeys</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
