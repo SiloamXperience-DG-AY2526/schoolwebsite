@@ -2,7 +2,7 @@
 
 /**
  * Title: Highlight Student Projects Page
- * Slug: svlti/highlightStudentProjects
+ * Slug: svlti/highlightLearningJourneys
  * Categories: page
  */
 ?>
@@ -35,7 +35,7 @@
 
                 <!-- wp:heading {"level":2,"className":"text-header-xl text-black mb-8 py-3"} -->
                 <h2 class="wp-block-heading text-header-xl text-black mb-8 py-3">
-                    When Teamwork Meets Technology with the Rover Team
+                    Where Learning Meets the Land at Battambang
                 </h2>
                 <!-- /wp:heading -->
 
@@ -43,7 +43,7 @@
                 <div class="wp-block-group mt-6">
                     <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                     <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                        <a href="/blog/highlights/expanded">Student Projects</a>
+                        <a href="/blog/highlights/expanded">Learning Journeys</a>
                     </p>
                     <!-- /wp:paragraph -->
                 </div>
@@ -56,7 +56,7 @@
 
         <!-- wp:image {"className":"w-2/3 h-full object-cover rounded-xl"} -->
         <figure class="wp-block-image w-2/3 h-full object-cover rounded-xl">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/student-project.png" alt="Farm" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/farm.png" alt="Farm" />
         </figure>
         <!-- /wp:image -->
 
