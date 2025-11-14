@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title: Blog Highlights Page
  * Slug: svlti/blog-highlights
@@ -26,41 +27,7 @@
                 </h1>
                 <!-- /wp:heading -->
 
-                <!-- wp:buttons {"className":"!grid grid-cols-5 gap-4 mb-12 w-full"} -->
-                <div class="wp-block-buttons !grid grid-cols-5 gap-4 mb-12 w-full">
-
-                    <!-- wp:button {"className":"filter-button w-full"} -->
-                    <div class="wp-block-button filter-button w-full">
-                        <a class="wp-block-button__link wp-element-button" href="/blog/highlights/all">All</a>
-                    </div>
-                    <!-- /wp:button -->
-
-                    <!-- wp:button {"className":"filter-button w-full"} -->
-                    <div class="wp-block-button filter-button w-full">
-                        <a class="wp-block-button__link wp-element-button" href="/blog/highlights/reflections">Reflections</a>
-                    </div>
-                    <!-- /wp:button -->
-
-                    <!-- wp:button {"className":"filter-button w-full"} -->
-                    <div class="wp-block-button filter-button w-full">
-                        <a class="wp-block-button__link wp-element-button" href="/blog/highlights/student-projects">Student Projects</a>
-                    </div>
-                    <!-- /wp:button -->
-
-                    <!-- wp:button {"className":"filter-button w-full"} -->
-                    <div class="wp-block-button filter-button w-full">
-                        <a class="wp-block-button__link wp-element-button" href="/blog/highlights/community-service">Community Service</a>
-                    </div>
-                    <!-- /wp:button -->
-
-                    <!-- wp:button {"className":"filter-button w-full"} -->
-                    <div class="wp-block-button filter-button w-full">
-                        <a class="wp-block-button__link wp-element-button" href="/blog/highlights/learning-journeys">Learning Journeys</a>
-                    </div>
-                    <!-- /wp:button -->
-
-                </div>
-                <!-- /wp:buttons -->
+                <!-- wp:pattern {"slug":"svlti/highlight-buttons"} /-->
 
                 <!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-auto","layout":{"type":"constrained"}} -->
                 <div class="wp-block-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-auto">
@@ -71,7 +38,7 @@
 
                         <!-- wp:image {"sizeSlug":"large","className":"w-full h-64 overflow-hidden flex-shrink-0"} -->
                         <figure class="wp-block-image size-large w-full h-64 overflow-hidden flex-shrink-0">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/highlight/cherish.png" alt="cherish" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/cherish.png" alt="cherish" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -88,7 +55,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Community Service
+                                    <a href="/blog/highlights/expanded">Community Service</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -106,7 +73,7 @@
 
                         <!-- wp:image {"className":"w-full md:w-2/3 h-64 md:h-40 object-scale-down flex-shrink-0"} -->
                         <figure class="wp-block-image w-full md:w-2/3 h-64 md:h-20 flex-shrink-0">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/highlight/speaker.png" alt="speaker" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/speaker.png" alt="speaker" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -123,7 +90,7 @@
                             <div class="wp-block-group mt-7">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Community Service
+                                    <a href="/blog/highlights/expanded">Community Service</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -141,7 +108,7 @@
 
                         <!-- wp:image {"className":"w-full md:w-1/2 h-64 md:h-auto object-cover"} -->
                         <figure class="wp-block-image w-full md:w-1/2 h-64 md:h-auto object-cover">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/highlight/build.png" alt="build" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/build.png" alt="build" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -158,7 +125,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Student Projects
+                                    <a href="/blog/highlights/expanded">Student Projects</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -176,7 +143,7 @@
 
                         <!-- wp:image {"className":"w-full object-cover rounded-t-[10px] h-[357px]"} -->
                         <figure class="wp-block-image w-full object-cover rounded-t-[10px] h-[357px]">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/highlight/teach.png" alt="teach" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/teach.png" alt="teach" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -193,7 +160,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Community Service
+                                    <a href="/blog/highlights/expanded">Community Service</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -211,7 +178,7 @@
 
                         <!-- wp:image {"className":"w-full object-cover rounded-t-[10px] h-[199px] md:h-[280px]"} -->
                         <figure class="wp-block-image w-full object-cover rounded-t-[10px] h-[199px] md:h-[280px]">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/highlight/group.png" alt="group" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/group.png" alt="group" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -228,7 +195,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Reflections
+                                    <a href="/blog/highlights/expanded">Reflections</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
@@ -246,7 +213,7 @@
 
                         <!-- wp:image {"className":"w-full object-cover rounded-t-[10px] h-[199px] md:h-[280px]"} -->
                         <figure class="wp-block-image w-full object-cover rounded-t-[10px] h-[199px] md:h-[280px]">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/highlight/farm.png" alt="farm" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/farm.png" alt="farm" />
                         </figure>
                         <!-- /wp:image -->
 
@@ -263,7 +230,7 @@
                             <div class="wp-block-group mt-6">
                                 <!-- wp:paragraph {"className":"inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl"} -->
                                 <p class="inline-block px-6 py-1.5 text-xs font-medium text-eucalyptus-120 border border-eucalyptus-120 rounded-3xl">
-                                    Learning Journeys
+                                    <a href="/blog/highlights/expanded">Learning Journeys</a>
                                 </p>
                                 <!-- /wp:paragraph -->
                             </div>
