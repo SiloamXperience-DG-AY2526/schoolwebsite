@@ -1,725 +1,880 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVLTI - Courses, Internships & Life Skills</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
-<body class="bg-gradient-to-b from-gray-50 to-blue-50 min-h-screen font-sans">
+<!-- wp:columns {"className":"p-8"} -->
+<div class="wp-block-columns p-8"><!-- wp:column {"width":"20%","className":"pr-6"} -->
+    <div class="wp-block-column pr-6 w-1/5"><!-- wp:group {"className":"flex flex-col gap-2"} -->
+    <div class="wp-block-group flex flex-col gap-2"><!-- wp:heading {"level":4,"className":"tab-link active font-semibold"} -->
+    <h4 class="wp-block-heading tab-link active font-semibold"><a href="#courses">Courses</a></h4>
+    <!-- /wp:heading -->
 
-<div class="wp-block-columns flex flex-wrap max-w-7xl mx-auto p-8">
-    
-    <!-- LEFT SIDEBAR -->
-    <div class="wp-block-column pr-6 w-full md:w-1/5">
-        <div class="wp-block-group flex flex-col gap-2">
-            
-            <h4 class="wp-block-heading tab-link active text-green-900 border-b-4 border-green-900 pb-2 font-semibold text-base m-0 cursor-pointer">
-                <a href="#courses" class="text-green-900 no-underline">Courses</a>
-            </h4>
-            
-            <hr class="border-t border-green-900 opacity-30 my-2" />
-            
-            <p class="tab-link py-2 text-sm m-0 cursor-pointer">
-                <a href="#internships" class="text-gray-600 no-underline transition-colors duration-300 hover:text-emerald-500">Internship and Job Opportunities</a>
-            </p>
-            
-            <p class="tab-link py-2 text-sm m-0 cursor-pointer">
-                <a href="#life-skills" class="text-gray-600 no-underline transition-colors duration-300 hover:text-emerald-500">Life Skills</a>
-            </p>
-            
-        </div>
-    </div>
-    
-    <!-- MAIN CONTENT AREA -->
-    <div class="wp-block-column w-full md:w-4/5">
-        
-        <!-- COURSES TAB -->
-        <div class="wp-block-group tab-content tab-courses block">
-            
-            <h1 class="wp-block-heading text-green-900 text-4xl font-bold mb-6">Courses</h1>
-            
-            <!-- Category Filter Buttons -->
-            <div class="wp-block-buttons course-filter-buttons flex flex-wrap gap-2 mb-4 justify-center">
-                
-                <div class="wp-block-button filter-btn filter-all active">
-                    <a class="wp-block-button__link inline-block bg-emerald-500 border-2 border-emerald-500 text-white rounded-full px-6 py-2 font-medium no-underline transition-all duration-300 hover:bg-emerald-600" href="#all">All</a>
-                </div>
-                
-                <div class="wp-block-button filter-btn filter-tourism-hospitality">
-                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-6 py-2 font-medium no-underline transition-all duration-300 hover:bg-green-50 hover:border-emerald-500 hover:text-emerald-500" href="#tourism-hospitality">Tourism &amp; Hospitality</a>
-                </div>
-                
-                <div class="wp-block-button filter-btn filter-computer">
-                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-6 py-2 font-medium no-underline transition-all duration-300 hover:bg-green-50 hover:border-emerald-500 hover:text-emerald-500" href="#computer">Computer</a>
-                </div>
-                
-                <div class="wp-block-button filter-btn filter-english">
-                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-6 py-2 font-medium no-underline transition-all duration-300 hover:bg-green-50 hover:border-emerald-500 hover:text-emerald-500" href="#english">English Competencies</a>
-                </div>
-                
-                <div class="wp-block-button filter-btn filter-empathy">
-                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-6 py-2 font-medium no-underline transition-all duration-300 hover:bg-green-50 hover:border-emerald-500 hover:text-emerald-500" href="#empathy">Empathy &amp; Community</a>
-                </div>
-                
-            </div>
-            
-            <!-- Filters Button -->
-            <div class="wp-block-buttons mb-8">
-                <div class="wp-block-button">
-                    <a class="wp-block-button__link inline-block border-2 border-sky-400 text-sky-400 bg-transparent rounded-full px-6 py-2 font-medium no-underline transition-all duration-300 hover:bg-sky-50" href="#">🔍 Filters</a>
-                </div>
-            </div>
-            
-            <!-- FIRST ROW OF COURSES -->
-            <div class="wp-block-columns course-grid flex gap-6 flex-wrap">
-                
-                <!-- Course Card 1: Sales and Service -->
-                <div class="wp-block-column course-item tourism-hospitality flex-1 min-w-[280px] transition-opacity duration-300 opacity-100">
-                    <div class="wp-block-group course-card bg-white shadow-md border border-gray-300 rounded-xl p-0 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <figure class="wp-block-image m-0">
-                            <img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-190024-1024x762.png" alt="" class="w-full h-auto object-cover rounded-t-xl" />
-                        </figure>
-                        
-                        <div class="wp-block-group p-4 flex flex-col gap-3">
-                            
-                            <h3 class="wp-block-heading text-green-900 text-xl font-semibold m-0">Sales and Service</h3>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Pillars:</strong> Tourism &amp; Hospitality Sk...</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">⭐ Certificate IV in Travel Agencies</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">💡 Learn to sell travel packages and provide excellent customer service.</p>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Prerequisites:</strong> None</p>
-                            
-                            <div class="wp-block-group flex justify-between gap-4 mt-4 pt-4 border-t border-gray-200">
-                                <p class="text-xs m-0">🕐 4 Weeks</p>
-                                <p class="text-xs m-0">💻 Online</p>
-                                <p class="text-xs m-0">📝 Sales Simulation</p>
-                            </div>
-                            
-                            <div class="wp-block-buttons flex justify-end">
-                                <div class="wp-block-button">
-                                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="http://siloamxperience.local/courses/sales-and-service">Enroll</a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course Card 2: Guiding -->
-                <div class="wp-block-column course-item tourism-hospitality flex-1 min-w-[280px] transition-opacity duration-300 opacity-100">
-                    <div class="wp-block-group course-card bg-white shadow-md border border-gray-300 rounded-xl p-0 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <figure class="wp-block-image m-0">
-                            <img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-190042-1024x766.png" alt="" class="w-full h-auto object-cover rounded-t-xl" />
-                        </figure>
-                        
-                        <div class="wp-block-group p-4 flex flex-col gap-3">
-                            
-                            <h3 class="wp-block-heading text-green-900 text-xl font-semibold m-0">Guiding</h3>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Pillars:</strong> Tourism &amp; Hospitality Sk...</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">⭐ Certificate IV in Tour Operations</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">💡 Train to lead and manage guided tours with cultural and safety knowledge.</p>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Prerequisites:</strong> Basic English Communication</p>
-                            
-                            <div class="wp-block-group flex justify-between gap-4 mt-4 pt-4 border-t border-gray-200">
-                                <p class="text-xs m-0">🕐 6 Weeks</p>
-                                <p class="text-xs m-0">🏫 Hybrid</p>
-                                <p class="text-xs m-0">📝 Guided Tour Dem...</p>
-                            </div>
-                            
-                            <div class="wp-block-buttons flex justify-end">
-                                <div class="wp-block-button">
-                                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="http://siloamxperience.local/guiding">Enroll</a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course Card 3: Beverages -->
-                <div class="wp-block-column course-item tourism-hospitality flex-1 min-w-[280px] transition-opacity duration-300 opacity-100">
-                    <div class="wp-block-group course-card bg-white shadow-md border border-gray-300 rounded-xl p-0 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <figure class="wp-block-image m-0">
-                            <img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-190100-1024x762.png" alt="" class="w-full h-auto object-cover rounded-t-xl" />
-                        </figure>
-                        
-                        <div class="wp-block-group p-4 flex flex-col gap-3">
-                            
-                            <h3 class="wp-block-heading text-green-900 text-xl font-semibold m-0">Beverages</h3>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Pillars:</strong> Tourism &amp; Hospitality Sk...</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">⭐ Certificate IV in Food and Beverage Service</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">💡 Covers bar operations, beverage preparation, and service supervision.</p>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Prerequisites:</strong> Food Safety Certificate</p>
-                            
-                            <div class="wp-block-group flex justify-between gap-4 mt-4 pt-4 border-t border-gray-200">
-                                <p class="text-xs m-0">🕐 5 Months</p>
-                                <p class="text-xs m-0">🏫 Hybrid</p>
-                                <p class="text-xs m-0">📝 Practical Service D...</p>
-                            </div>
-                            
-                            <div class="wp-block-buttons flex justify-end">
-                                <div class="wp-block-button">
-                                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="http://siloamxperience.local/courses/beverages">Enroll</a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-            <!-- SECOND ROW OF COURSES -->
-            <div class="wp-block-columns course-grid flex gap-6 flex-wrap mt-6">
-                
-                <!-- Course Card 4: Digital Office Applications -->
-                <div class="wp-block-column course-item computer flex-1 min-w-[280px] transition-opacity duration-300 opacity-100">
-                    <div class="wp-block-group course-card bg-white shadow-md border border-gray-300 rounded-xl p-0 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <figure class="wp-block-image m-0">
-                            <img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-190123-1024x765.png" alt="" class="w-full h-auto object-cover rounded-t-xl" />
-                        </figure>
-                        
-                        <div class="wp-block-group p-4 flex flex-col gap-3">
-                            
-                            <h3 class="wp-block-heading text-green-900 text-xl font-semibold m-0">Digital Office Applications</h3>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Pillars:</strong> Computer Skills</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">⭐ Certificate III in Digital Office Apps</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">💡 Covers Microsoft Office Suite, data entry, and cloud collaboration tools for administr...</p>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Prerequisites:</strong> Basic Computer Literacy</p>
-                            
-                            <div class="wp-block-group flex justify-between gap-4 mt-4 pt-4 border-t border-gray-200">
-                                <p class="text-xs m-0">🕐 4 Weeks</p>
-                                <p class="text-xs m-0">💻 Online</p>
-                                <p class="text-xs m-0">📝 Project-Based As...</p>
-                            </div>
-                            
-                            <div class="wp-block-buttons flex justify-end">
-                                <div class="wp-block-button">
-                                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="http://siloamxperience.local/courses/digital-office-applications">Enroll</a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course Card 5: Web Design & Development -->
-                <div class="wp-block-column course-item computer flex-1 min-w-[280px] transition-opacity duration-300 opacity-100">
-                    <div class="wp-block-group course-card bg-white shadow-md border border-gray-300 rounded-xl p-0 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <figure class="wp-block-image m-0">
-                            <img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-1901381-1024x768.png" alt="" class="w-full h-auto object-cover rounded-t-xl" />
-                        </figure>
-                        
-                        <div class="wp-block-group p-4 flex flex-col gap-3">
-                            
-                            <h3 class="wp-block-heading text-green-900 text-xl font-semibold m-0">Web Design &amp; Development</h3>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Pillars:</strong> Computer Skills</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">⭐ Certificate III in Digital Web Design</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">💡 Teaches HTML, CSS, and basic JavaScript for simple website creation.</p>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Prerequisites:</strong> None</p>
-                            
-                            <div class="wp-block-group flex justify-between gap-4 mt-4 pt-4 border-t border-gray-200">
-                                <p class="text-xs m-0">🕐 6 Weeks</p>
-                                <p class="text-xs m-0">🏫 Hybrid</p>
-                                <p class="text-xs m-0">📝 Website-building p...</p>
-                            </div>
-                            
-                            <div class="wp-block-buttons flex justify-end">
-                                <div class="wp-block-button">
-                                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="http://siloamxperience.local/courses/web-design-and-development">Enroll</a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course Card 6: Automation Basics -->
-                <div class="wp-block-column course-item computer flex-1 min-w-[280px] transition-opacity duration-300 opacity-100">
-                    <div class="wp-block-group course-card bg-white shadow-md border border-gray-300 rounded-xl p-0 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <figure class="wp-block-image m-0">
-                            <img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-1902001-1024x756.png" alt="" class="w-full h-auto object-cover rounded-t-xl" />
-                        </figure>
-                        
-                        <div class="wp-block-group p-4 flex flex-col gap-3">
-                            
-                            <h3 class="wp-block-heading text-green-900 text-xl font-semibold m-0">Automation Basics</h3>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Pillars:</strong> Computer Skills</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">⭐ Certificate III in Digital Automation</p>
-                            
-                            <p class="text-sm m-0 leading-relaxed">💡 Learn to use AI workflow automation to enhance productivity.</p>
-                            
-                            <p class="text-gray-600 text-xs m-0 leading-relaxed"><strong>Prerequisites:</strong> Basic Computer Literacy</p>
-                            
-                            <div class="wp-block-group flex justify-between gap-4 mt-4 pt-4 border-t border-gray-200">
-                                <p class="text-xs m-0">🕐 5 Months</p>
-                                <p class="text-xs m-0">🏫 Hybrid</p>
-                                <p class="text-xs m-0">📝 Tool-Based Practical</p>
-                            </div>
-                            
-                            <div class="wp-block-buttons flex justify-end">
-                                <div class="wp-block-button">
-                                    <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="http://siloamxperience.local/courses/automation-basics">Enroll</a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-        </div>
-        
-        <!-- INTERNSHIPS TAB -->
-        <div class="wp-block-group tab-content tab-internships hidden">
-            
-            <h1 class="wp-block-heading text-green-900 text-4xl font-bold mb-4">Internships and Job Opportunities</h1>
-            
-            <p class="text-base mb-8 leading-relaxed">Looking for real-world experience? Browse opportunities to gain hands-on skills.</p>
-            
-            <!-- Search Filters -->
-            <div class="wp-block-group search-filters flex flex-wrap gap-4 mb-8">
-                
-                <div class="wp-block-group bg-white border border-gray-300 rounded-lg px-5 py-3 transition-all duration-300 hover:border-emerald-500">
-                    <p class="text-xs font-semibold mb-1">Discipline</p>
-                    <select id="discipline-filter" class="border-0 bg-transparent text-sm outline-none cursor-pointer p-0">
-                        <option value="">All</option>
-                        <option value="consulting">Consulting</option>
-                        <option value="hospitality">Hospitality</option>
-                        <option value="maritime">Maritime</option>
-                        <option value="tourism">Tourism</option>
-                    </select>
-                </div>
-                
-                <div class="wp-block-group bg-white border border-gray-300 rounded-lg px-5 py-3 transition-all duration-300 hover:border-emerald-500">
-                    <p class="text-xs font-semibold mb-1">Job Type</p>
-                    <select id="job-type-filter" class="border-0 bg-transparent text-sm outline-none cursor-pointer p-0">
-                        <option value="">All</option>
-                        <option value="part-time">Part-time Intern</option>
-                        <option value="full-time">Full-time Intern</option>
-                        <option value="fresh-graduate">Fresh Graduate Jobs</option>
-                    </select>
-                </div>
-                
-                <div class="wp-block-group bg-white border border-gray-300 rounded-lg px-5 py-3 transition-all duration-300 hover:border-emerald-500">
-                    <p class="text-xs font-semibold mb-1">Location</p>
-                    <input type="text" id="location-filter" placeholder="Search location..." class="border-0 bg-transparent text-sm outline-none p-0 w-36">
-                </div>
-                
-                <div class="wp-block-buttons">
-                    <div class="wp-block-button search-btn">
-                        <a class="wp-block-button__link inline-block bg-green-900 text-white border-0 rounded-full px-6 py-2 font-medium no-underline transition-all duration-300 hover:bg-green-800" href="#search">Search</a>
-                    </div>
-                </div>
-                
-            </div>
-            
-            <!-- INTERNSHIP CARDS - FIRST ROW -->
-            <div class="wp-block-columns internship-grid flex gap-6 flex-wrap">
-                
-                <!-- Internship 1 -->
-                <div class="wp-block-column internship-item flex-1 min-w-[280px] transition-opacity duration-300 opacity-100" data-discipline="consulting" data-job-type="full-time" data-location="clarke quay">
-                    <div class="wp-block-group internship-card bg-white shadow-md border border-gray-300 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <h3 class="wp-block-heading text-green-900 text-xl font-semibold mb-3">Tour Product Development Intern</h3>
-                        
-                        <p class="text-sm mb-4 leading-relaxed">Good research &amp; writing skills, passion for new travel concepts, basic Photoshop/Canva knowledge</p>
-                        
-                        <div class="wp-block-group flex flex-wrap gap-4 mb-2">
-                            <p class="text-sm m-0">🏢 WanderLink</p>
-                            <p class="text-sm m-0">📍 Clarke Quay</p>
-                        </div>
-                        
-                        <div class="wp-block-group flex flex-wrap gap-4 mb-4">
-                            <p class="text-sm m-0">💵 850/month</p>
-                            <p class="text-sm m-0">📅 6 Months</p>
-                        </div>
-                        
-                        <div class="wp-block-buttons flex justify-end">
-                            <div class="wp-block-button">
-                                <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="/tour-product-development-intern">Learn More</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Internship 2 -->
-                <div class="wp-block-column internship-item flex-1 min-w-[280px] transition-opacity duration-300 opacity-100" data-discipline="consulting" data-job-type="full-time" data-location="bugis">
-                    <div class="wp-block-group internship-card bg-white shadow-md border border-gray-300 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <h3 class="wp-block-heading text-green-900 text-xl font-semibold mb-3">Marketing Intern</h3>
-                        
-                        <p class="text-sm mb-4 leading-relaxed">Strong interest in travel planning and tour operations. Familiarity with social media marketing tools (e.g., Canva, Instagram)</p>
-                        
-                        <div class="wp-block-group flex flex-wrap gap-4 mb-2">
-                            <p class="text-sm m-0">🏢 WanderLink</p>
-                            <p class="text-sm m-0">📍 Bugis</p>
-                        </div>
-                        
-                        <div class="wp-block-group flex flex-wrap gap-4 mb-4">
-                            <p class="text-sm m-0">💵 900/month</p>
-                            <p class="text-sm m-0">📅 6 Months</p>
-                        </div>
-                        
-                        <div class="wp-block-buttons flex justify-end">
-                            <div class="wp-block-button">
-                                <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="#">Learn More</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Internship 3 -->
-                <div class="wp-block-column internship-item flex-1 min-w-[280px] transition-opacity duration-300 opacity-100" data-discipline="hospitality" data-job-type="full-time" data-location="orchard">
-                    <div class="wp-block-group internship-card bg-white shadow-md border border-gray-300 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <h3 class="wp-block-heading text-green-900 text-xl font-semibold mb-3">Hospitality &amp; Guest Relations Intern</h3>
-                        
-                        <p class="text-sm mb-4 leading-relaxed">Strong communication skills in English (Japanese proficiency is a plus). Customer service mindset and positive attitude. Hospitality or Tourism students preferred.</p>
-                        
-                        <div class="wp-block-group flex flex-wrap gap-4 mb-2">
-                            <p class="text-sm m-0">🏢 Himawari</p>
-                            <p class="text-sm m-0">📍 Orchard</p>
-                        </div>
-                        
-                        <div class="wp-block-group flex flex-wrap gap-4 mb-4">
-                            <p class="text-sm m-0">💵 1000/month</p>
-                            <p class="text-sm m-0">📅 6 Months</p>
-                        </div>
-                        
-                        <div class="wp-block-buttons flex justify-end">
-                            <div class="wp-block-button">
-                                <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="#">Learn More</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            
-            <!-- INTERNSHIP CARDS - SECOND ROW -->
-            <div class="wp-block-columns internship-grid flex gap-6 flex-wrap mt-6">
-                
-                <!-- Internship 4 -->
-                <div class="wp-block-column internship-item flex-1 min-w-[280px] transition-opacity duration-300 opacity-100" data-discipline="maritime" data-job-type="part-time" data-location="harbourfront">
-                    <div class="wp-block-group internship-card bg-white shadow-md border border-gray-300 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                        
-                        <h3 class="wp-block-heading text-green-900 text-xl font-semibold mb-3">Cruise Operations Intern</h3>
-                        
-                        <p class="text-sm mb-4 leading-relaxed">Hospitality or maritime management major, able to work flexible hours. Passionate about being onboard.</p>
-                        
-                        <div class="wp-block-group flex flex-wrap gap-4 mb-2">
-                            <p class="text-sm m-0">🏢 Sunset Voyages</p>
-                            <p class="text-sm m-0">📍 HarbourFront</p>
-                        </div>
-                        
-                        <div class="wp-block-group flex flex-wrap gap-4 mb-4">
-                            <p class="text-sm m-0">💵 1000/month</p>
-                            <p class="text-sm m-0">📅 3-5 Months</p>
-                        </div>
-                        
-                        <div class="wp-block-buttons flex justify-end">
-                            <div class="wp-block-button">
-                                <a class="wp-block-button__link inline-block border-2 border-green-900 text-green-900 bg-transparent rounded-full px-5 py-1.5 font-medium text-sm no-underline transition-all duration-300 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white" href="#">Learn More</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <div class="wp-block-column flex-1 min-w-[280px]"></div>
-                <div class="wp-block-column flex-1 min-w-[280px]"></div>
-                
-            </div>
-            
-            <!-- Employer Button -->
-            <div class="wp-block-buttons flex justify-end mt-8">
-                <div class="wp-block-button">
-                    <a class="wp-block-button__link inline-block bg-green-900 text-white border-0 rounded-full px-6 py-2 font-medium no-underline transition-all duration-300 hover:bg-green-800" href="/add-new-listing">I'm an Employer</a>
-                </div>
-            </div>
-            
-        </div>
-        
-        <!-- LIFE SKILLS TAB -->
-        <div class="wp-block-group tab-content tab-life-skills hidden">
-            
-            <h1 class="wp-block-heading text-green-900 text-4xl font-bold mb-4">Life Skills</h1>
-            
-            <p class="text-base mb-12 leading-relaxed">Developing life skills is essential for both personal and professional growth. These courses are designed to help learners build practical abilities that improve communication, problem-solving, and adaptability in everyday situations. By strengthening these competencies, learners position themselves not just as skilled workers, but as well-rounded individuals prepared for long-term success.</p>
-            
-            <!-- Life Skills Section 1: Communication -->
-            <div class="wp-block-columns flex gap-8 mb-12 flex-wrap">
-                
-                <div class="wp-block-column flex-1 min-w-[280px]">
-                    <h2 class="wp-block-heading text-green-900 text-3xl font-semibold mb-4">Effective Communication Skills</h2>
-                    <p class="text-base leading-relaxed">Learn how to express ideas clearly, listen actively, and adapt your communication style to different audiences. This course equips you with tools to improve workplace interactions and strengthen personal relationships.</p>
-                </div>
-                
-                <div class="wp-block-column flex-1 min-w-[280px]">
-                    <figure class="wp-block-image m-0">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&amp;h=500&amp;fit=crop" alt="Business meeting communication" class="rounded-xl w-full h-auto object-cover aspect-video" />
-                    </figure>
-                </div>
-                
-            </div>
-            
-            <!-- Life Skills Section 2: Time Management -->
-            <div class="wp-block-columns flex gap-8 mb-12 flex-wrap">
-                
-                <div class="wp-block-column flex-1 min-w-[280px]">
-                    <figure class="wp-block-image m-0">
-                        <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?w=800&amp;h=500&amp;fit=crop" alt="Time management hourglass" class="rounded-xl w-full h-auto object-cover aspect-video" />
-                    </figure>
-                </div>
-                
-                <div class="wp-block-column flex-1 min-w-[280px]">
-                    <h2 class="wp-block-heading text-green-900 text-3xl font-semibold mb-4">Time Management &amp; Productivity</h2>
-                    <p class="text-base leading-relaxed">Master practical techniques to prioritize tasks, manage deadlines, and overcome procrastination. This course helps you create a balanced schedule that boosts efficiency without burnout.</p>
-                </div>
-                
-            </div>
-            
-            <!-- Life Skills Section 3: Emotional Intelligence -->
-            <div class="wp-block-columns flex gap-8 mb-12 flex-wrap">
-                
-                <div class="wp-block-column flex-1 min-w-[280px]">
-                    <h2 class="wp-block-heading text-green-900 text-3xl font-semibold mb-4">Emotional Intelligence &amp; Resilience</h2>
-                    <p class="text-base leading-relaxed">Build awareness of your emotions and learn how to manage stress, empathy, and relationships effectively. This course strengthens your ability to adapt and thrive in both personal and professional settings.</p>
-                </div>
-                
-                <div class="wp-block-column flex-1 min-w-[280px]">
-                    <figure class="wp-block-image m-0">
-                        <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&amp;h=500&amp;fit=crop" alt="Emotional intelligence concept" class="rounded-xl w-full h-auto object-cover aspect-video" />
-                    </figure>
-                </div>
-                
-            </div>
-            
-            <!-- Life Skills Section 4: Critical Thinking -->
-            <div class="wp-block-columns flex gap-8 flex-wrap">
-                
-                <div class="wp-block-column flex-1 min-w-[280px]">
-                    <figure class="wp-block-image m-0">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&amp;h=500&amp;fit=crop" alt="Problem solving brainstorming" class="rounded-xl w-full h-auto object-cover aspect-video" />
-                    </figure>
-                </div>
-                
-                <div class="wp-block-column flex-1 min-w-[280px]">
-                    <h2 class="wp-block-heading text-green-900 text-3xl font-semibold mb-4">Critical Thinking &amp; Problem Solving</h2>
-                    <p class="text-base leading-relaxed">Develop analytical thinking, decision-making, and creative problem-solving strategies. Through real-world scenarios, you'll learn to evaluate situations, identify solutions, and take confident action.</p>
-                </div>
-                
-            </div>
-            
-        </div>
-        
-    </div>
-    
-</div>
+    <!-- wp:separator {"className":"my-2 opacity-100"} -->
+    <hr class="wp-block-separator my-2 opacity-100"/>
+    <!-- /wp:separator -->
 
-<script>
-(function() {
-    'use strict';
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        
-        // ===== TAB NAVIGATION =====
-        var tabLinks = document.querySelectorAll('.tab-link a');
-        var tabContents = document.querySelectorAll('.tab-content');
-        
-        // Initialize - show courses tab by default
-        if (tabContents.length > 0) {
-            tabContents.forEach(function(content) {
-                content.classList.add('hidden');
-                content.classList.remove('block');
-            });
-            var coursesTab = document.querySelector('.tab-courses');
-            if (coursesTab) {
-                coursesTab.classList.remove('hidden');
-                coursesTab.classList.add('block');
-            }
-        }
-        
-        // Add click handlers to tab links
-        tabLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                var href = this.getAttribute('href');
-                var targetId = href.replace('#', '');
-                
-                document.querySelectorAll('.tab-link').forEach(function(tab) {
-                    tab.classList.remove('active');
-                    tab.classList.remove('border-b-4', 'border-green-900', 'pb-2');
-                });
-                
-                var parentTab = this.closest('.tab-link');
-                if (parentTab) {
-                    parentTab.classList.add('active', 'border-b-4', 'border-green-900', 'pb-2');
-                }
-                
-                // Update link colors
-                document.querySelectorAll('.tab-link a').forEach(function(a) {
-                    a.classList.remove('text-green-900', 'font-semibold');
-                    a.classList.add('text-gray-600');
-                });
-                this.classList.remove('text-gray-600');
-                this.classList.add('text-green-900', 'font-semibold');
-                
+    <!-- wp:paragraph {"className":"tab-link text-sm py-2"} -->
+    <p class="tab-link text-sm py-2"><a href="#internships">Internship and Job Opportunities</a></p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"tab-link text-sm py-2"} -->
+    <p class="tab-link text-sm py-2"><a href="#life-skills">Life Skills</a></p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column -->
+
+    <!-- wp:column {"width":"80%"} -->
+    <div class="wp-block-column w-4/5"><!-- wp:group {"className":"tab-content tab-courses"} -->
+    <div class="wp-block-group tab-content tab-courses"><!-- wp:heading {"level":1,"className":"text-4xl font-bold mb-6"} -->
+    <h1 class="wp-block-heading text-4xl font-bold mb-6">Courses</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:buttons {"className":"course-filter-buttons flex flex-wrap justify-center gap-2 mb-4"} -->
+    <div class="wp-block-buttons course-filter-buttons flex flex-wrap justify-center gap-2 mb-4"><!-- wp:button {"className":"is-style-outline filter-btn filter-all active"} -->
+    <div class="wp-block-button is-style-outline filter-btn filter-all active"><a class="wp-block-button__link wp-element-button" href="#all">All</a></div>
+    <!-- /wp:button -->
+
+    <!-- wp:button {"className":"is-style-outline filter-btn filter-tourism"} -->
+    <div class="wp-block-button is-style-outline filter-btn filter-tourism"><a class="wp-block-button__link wp-element-button" href="#tourism-hospitality">Tourism &amp; Hospitality</a></div>
+    <!-- /wp:button -->
+
+    <!-- wp:button {"className":"is-style-outline filter-btn filter-computer"} -->
+    <div class="wp-block-button is-style-outline filter-btn filter-computer"><a class="wp-block-button__link wp-element-button" href="#computer">Computer</a></div>
+    <!-- /wp:button -->
+
+    <!-- wp:button {"className":"is-style-outline filter-btn filter-english"} -->
+    <div class="wp-block-button is-style-outline filter-btn filter-english"><a class="wp-block-button__link wp-element-button" href="#english">English Competencies</a></div>
+    <!-- /wp:button -->
+
+    <!-- wp:button {"className":"is-style-outline filter-btn filter-empathy"} -->
+    <div class="wp-block-button is-style-outline filter-btn filter-empathy"><a class="wp-block-button__link wp-element-button" href="#empathy">Empathy &amp; Community</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons -->
+
+    <!-- wp:buttons {"className":"mb-8"} -->
+    <div class="wp-block-buttons mb-8"><!-- wp:button {"backgroundColor":"tertiary","className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-tertiary-background-color has-background wp-element-button">🔍 Filters</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons -->
+
+    <!-- wp:columns {"className":"course-grid gap-6"} -->
+    <div class="wp-block-columns course-grid gap-6"><!-- wp:column {"className":"course-item tourism-hospitality"} -->
+    <div class="wp-block-column course-item tourism-hospitality"><!-- wp:group {"className":"course-card border border-gray-300 rounded-xl overflow-hidden","borderColor":"contrast"} -->
+    <div class="wp-block-group course-card border border-gray-300 rounded-xl overflow-hidden has-border-color has-contrast-border-color"><!-- wp:image {"id":21,"sizeSlug":"large","linkDestination":"none","className":"rounded-t-xl"} -->
+    <figure class="wp-block-image size-large rounded-t-xl"><img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-190024-1024x762.png" alt="" class="wp-image-21"/></figure>
+    <!-- /wp:image -->
+
+    <!-- wp:group {"className":"p-4 flex flex-col gap-3"} -->
+    <div class="wp-block-group p-4 flex flex-col gap-3"><!-- wp:heading {"level":3,"className":"text-xl font-semibold"} -->
+    <h3 class="wp-block-heading text-xl font-semibold">Sales and Service</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Pillars:</strong> Tourism &amp; Hospitality Sk...</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">⭐ Certificate IV in Travel Agencies</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💡 Learn to sell travel packages and provide excellent customer service.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Prerequisites:</strong> None</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"className":"flex justify-between pt-4 mt-4 border-t border-gray-200"} -->
+    <div class="wp-block-group flex justify-between pt-4 mt-4 border-t border-gray-200"><!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🕐 4 Weeks</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">💻 Online</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">📝 Sales Simulation</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end"><!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="http://siloamxperience.local/courses/sales-and-service">Enroll</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column -->
+
+    <!-- wp:column {"className":"course-item tourism-hospitality"} -->
+    <div class="wp-block-column course-item tourism-hospitality"><!-- wp:group {"className":"course-card border border-gray-300 rounded-xl overflow-hidden","borderColor":"contrast"} -->
+    <div class="wp-block-group course-card border border-gray-300 rounded-xl overflow-hidden has-border-color has-contrast-border-color"><!-- wp:image {"id":22,"sizeSlug":"large","linkDestination":"none","className":"rounded-t-xl"} -->
+    <figure class="wp-block-image size-large rounded-t-xl"><img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-190042-1024x766.png" alt="" class="wp-image-22"/></figure>
+    <!-- /wp:image -->
+
+    <!-- wp:group {"className":"p-4 flex flex-col gap-3"} -->
+    <div class="wp-block-group p-4 flex flex-col gap-3"><!-- wp:heading {"level":3,"className":"text-xl font-semibold"} -->
+    <h3 class="wp-block-heading text-xl font-semibold">Guiding</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Pillars:</strong> Tourism &amp; Hospitality Sk...</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">⭐ Certificate IV in Tour Operations</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💡 Train to lead and manage guided tours with cultural and safety knowledge.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Prerequisites:</strong> Basic English Communication</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"className":"flex justify-between pt-4 mt-4 border-t border-gray-200"} -->
+    <div class="wp-block-group flex justify-between pt-4 mt-4 border-t border-gray-200"><!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🕐 6 Weeks</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🏫 Hybrid</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">📝 Guided Tour Dem...</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end"><!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="http://siloamxperience.local/guiding">Enroll</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column -->
+
+    <!-- wp:column {"className":"course-item tourism-hospitality"} -->
+    <div class="wp-block-column course-item tourism-hospitality"><!-- wp:group {"className":"course-card border border-gray-300 rounded-xl overflow-hidden","borderColor":"contrast"} -->
+    <div class="wp-block-group course-card border border-gray-300 rounded-xl overflow-hidden has-border-color has-contrast-border-color"><!-- wp:image {"id":23,"sizeSlug":"large","linkDestination":"none","className":"rounded-t-xl"} -->
+    <figure class="wp-block-image size-large rounded-t-xl"><img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-190100-1024x762.png" alt="" class="wp-image-23"/></figure>
+    <!-- /wp:image -->
+
+    <!-- wp:group {"className":"p-4 flex flex-col gap-3"} -->
+    <div class="wp-block-group p-4 flex flex-col gap-3"><!-- wp:heading {"level":3,"className":"text-xl font-semibold"} -->
+    <h3 class="wp-block-heading text-xl font-semibold">Beverages</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Pillars:</strong> Tourism &amp; Hospitality Sk...</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">⭐ Certificate IV in Food and Beverage Service</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💡 Covers bar operations, beverage preparation, and service supervision.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Prerequisites:</strong> Food Safety Certificate</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"className":"flex justify-between pt-4 mt-4 border-t border-gray-200"} -->
+    <div class="wp-block-group flex justify-between pt-4 mt-4 border-t border-gray-200"><!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🕐 5 Months</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🏫 Hybrid</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">📝 Practical Service D...</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end"><!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="http://siloamxperience.local/courses/beverages">Enroll</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column --></div>
+    <!-- /wp:columns -->
+
+    <!-- wp:columns {"className":"course-grid gap-6 mt-6"} -->
+    <div class="wp-block-columns course-grid gap-6 mt-6"><!-- wp:column {"className":"course-item computer"} -->
+    <div class="wp-block-column course-item computer"><!-- wp:group {"className":"course-card border border-gray-300 rounded-xl overflow-hidden","borderColor":"contrast"} -->
+    <div class="wp-block-group course-card border border-gray-300 rounded-xl overflow-hidden has-border-color has-contrast-border-color"><!-- wp:image {"id":24,"sizeSlug":"large","linkDestination":"none","className":"rounded-t-xl"} -->
+    <figure class="wp-block-image size-large rounded-t-xl"><img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-190123-1024x765.png" alt="" class="wp-image-24"/></figure>
+    <!-- /wp:image -->
+
+    <!-- wp:group {"className":"p-4 flex flex-col gap-3"} -->
+    <div class="wp-block-group p-4 flex flex-col gap-3"><!-- wp:heading {"level":3,"className":"text-xl font-semibold"} -->
+    <h3 class="wp-block-heading text-xl font-semibold">Digital Office Applications</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Pillars:</strong> Computer Skills</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">⭐ Certificate III in Digital Office Apps</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💡 Covers Microsoft Office Suite, data entry, and cloud collaboration tools for administr...</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Prerequisites:</strong> Basic Computer Literacy</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"className":"flex justify-between pt-4 mt-4 border-t border-gray-200"} -->
+    <div class="wp-block-group flex justify-between pt-4 mt-4 border-t border-gray-200"><!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🕐 4 Weeks</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">💻 Online</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">📝 Project-Based As...</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end"><!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="http://siloamxperience.local/courses/digital-office-applications">Enroll</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column -->
+
+    <!-- wp:column {"className":"course-item computer"} -->
+    <div class="wp-block-column course-item computer"><!-- wp:group {"className":"course-card border border-gray-300 rounded-xl overflow-hidden","borderColor":"contrast"} -->
+    <div class="wp-block-group course-card border border-gray-300 rounded-xl overflow-hidden has-border-color has-contrast-border-color"><!-- wp:image {"id":25,"sizeSlug":"large","linkDestination":"none","className":"rounded-t-xl"} -->
+    <figure class="wp-block-image size-large rounded-t-xl"><img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-1901381-1024x768.png" alt="" class="wp-image-25"/></figure>
+    <!-- /wp:image -->
+
+    <!-- wp:group {"className":"p-4 flex flex-col gap-3"} -->
+    <div class="wp-block-group p-4 flex flex-col gap-3"><!-- wp:heading {"level":3,"className":"text-xl font-semibold"} -->
+    <h3 class="wp-block-heading text-xl font-semibold">Web Design &amp; Development </h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Pillars:</strong> Computer Skills</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">⭐ Certificate III in Digital Web Design</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💡 Teaches HTML, CSS, and basic JavaScript for simple website creation.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Prerequisites:</strong> None</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"className":"flex justify-between pt-4 mt-4 border-t border-gray-200"} -->
+    <div class="wp-block-group flex justify-between pt-4 mt-4 border-t border-gray-200"><!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🕐 6 Weeks</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🏫 Hybrid</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">📝 Website-building p...</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end"><!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="http://siloamxperience.local/courses/web-design-and-development">Enroll</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column -->
+
+    <!-- wp:column {"className":"course-item computer"} -->
+    <div class="wp-block-column course-item computer"><!-- wp:group {"className":"course-card border border-gray-300 rounded-xl overflow-hidden","borderColor":"contrast"} -->
+    <div class="wp-block-group course-card border border-gray-300 rounded-xl overflow-hidden has-border-color has-contrast-border-color"><!-- wp:image {"id":26,"sizeSlug":"large","linkDestination":"none","className":"rounded-t-xl"} -->
+    <figure class="wp-block-image size-large rounded-t-xl"><img src="http://siloamxperience.local/wp-content/uploads/2025/11/Screenshot-2025-11-02-1902001-1024x756.png" alt="" class="wp-image-26"/></figure>
+    <!-- /wp:image -->
+
+    <!-- wp:group {"className":"p-4 flex flex-col gap-3"} -->
+    <div class="wp-block-group p-4 flex flex-col gap-3"><!-- wp:heading {"level":3,"className":"text-xl font-semibold"} -->
+    <h3 class="wp-block-heading text-xl font-semibold">Automation Basics</h3>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Pillars:</strong> Computer Skills</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">⭐ Certificate III in Digital Automation</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💡 Learn to use AI workflow automation to enhance productivity.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs text-gray-600"} -->
+    <p class="text-xs text-gray-600"><strong>Prerequisites:</strong> Basic Computer Literacy</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"className":"flex justify-between pt-4 mt-4 border-t border-gray-200"} -->
+    <div class="wp-block-group flex justify-between pt-4 mt-4 border-t border-gray-200"><!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🕐 5 Months</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">🏫 Hybrid</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"text-xs"} -->
+    <p class="text-xs">📝 Tool-Based Practical</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end"><!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="http://siloamxperience.local/courses/automation-basics">Enroll</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column --></div>
+    <!-- /wp:columns --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"tab-content tab-internships"} -->
+    <div class="wp-block-group tab-content tab-internships"><!-- wp:heading {"level":1,"className":"text-4xl font-bold mb-4"} -->
+    <h1 class="wp-block-heading text-4xl font-bold mb-4">Internships and Job Opportunities</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"className":"text-base mb-8"} -->
+    <p class="text-base mb-8">Looking for real-world experience? Browse opportunities to gain hands-on skills.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:group {"className":"search-filters flex flex-wrap gap-4 mb-8"} -->
+    <div class="wp-block-group search-filters flex flex-wrap gap-4 mb-8"><!-- wp:group {"className":"border border-gray-300 rounded-lg px-5 py-3"} -->
+    <div class="wp-block-group border border-gray-300 rounded-lg px-5 py-3"><!-- wp:paragraph {"className":"text-xs font-semibold mb-1"} -->
+    <p class="text-xs font-semibold mb-1">Discipline</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:html -->
+    <select id="discipline-filter" class="border-0 bg-transparent text-sm outline-none cursor-pointer p-0">
+      <option value="">All</option>
+      <option value="consulting">Consulting</option>
+      <option value="hospitality">Hospitality</option>
+      <option value="maritime">Maritime</option>
+      <option value="tourism">Tourism</option>
+    </select>
+    <!-- /wp:html --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"border border-gray-300 rounded-lg px-5 py-3"} -->
+    <div class="wp-block-group border border-gray-300 rounded-lg px-5 py-3"><!-- wp:paragraph {"className":"text-xs font-semibold mb-1"} -->
+    <p class="text-xs font-semibold mb-1">Job Type</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:html -->
+    <select id="job-type-filter" class="border-0 bg-transparent text-sm outline-none cursor-pointer p-0">
+      <option value="">All</option>
+      <option value="part-time">Part-time Intern</option>
+      <option value="full-time">Full-time Intern</option>
+      <option value="fresh-graduate">Fresh Graduate Jobs</option>
+    </select>
+    <!-- /wp:html --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"border border-gray-300 rounded-lg px-5 py-3"} -->
+    <div class="wp-block-group border border-gray-300 rounded-lg px-5 py-3"><!-- wp:paragraph {"className":"text-xs font-semibold mb-1"} -->
+    <p class="text-xs font-semibold mb-1">Location</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:html -->
+    <input type="text" id="location-filter" placeholder="Search location..." class="border-0 bg-transparent text-sm outline-none p-0 w-36">
+    <!-- /wp:html --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:buttons -->
+    <div class="wp-block-buttons"><!-- wp:button {"className":"search-btn rounded-3xl"} -->
+    <div class="wp-block-button search-btn"><a class="wp-block-button__link wp-element-button rounded-3xl" href="#search">Search</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:columns {"className":"internship-grid gap-6"} -->
+    <div class="wp-block-columns internship-grid gap-6"><!-- wp:column -->
+    <div class="wp-block-column internship-item" data-discipline="consulting" data-job-type="full-time" data-location="clarke quay">
+    <!-- wp:group {"className":"internship-card bg-white border border-gray-300 rounded-xl p-6","backgroundColor":"white","borderColor":"contrast"} -->
+    <div class="wp-block-group internship-card bg-white border border-gray-300 rounded-xl p-6 has-border-color has-contrast-border-color has-white-background-color has-background">
+    <!-- wp:heading {"level":3,"className":"text-xl font-semibold mb-3"} -->
+    <h3 class="wp-block-heading text-xl font-semibold mb-3">Tour Product Development Intern</h3>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-sm mb-4"} -->
+    <p class="text-sm mb-4">Good research &amp; writing skills, passion for new travel concepts, basic Photoshop/Canva knowledge</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:group {"className":"flex flex-wrap gap-4 mb-2"} -->
+    <div class="wp-block-group flex flex-wrap gap-4 mb-2">
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">🏢 WanderLink</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">📍 Clarke Quay</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:group {"className":"flex flex-wrap gap-4 mb-4"} -->
+    <div class="wp-block-group flex flex-wrap gap-4 mb-4">
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💵 850/month</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">📅 6 Months</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end">
+    <!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/tour-product-development-intern">Learn More</a></div>
+    <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+    </div>
+    <!-- /wp:group -->
+    </div>
+    <!-- /wp:column -->
+
+    <!-- wp:column -->
+    <div class="wp-block-column internship-item" data-discipline="consulting" data-job-type="full-time" data-location="bugis">
+    <!-- wp:group {"className":"internship-card bg-white border border-gray-300 rounded-xl p-6","backgroundColor":"white","borderColor":"contrast"} -->
+    <div class="wp-block-group internship-card bg-white border border-gray-300 rounded-xl p-6 has-border-color has-contrast-border-color has-white-background-color has-background">
+    <!-- wp:heading {"level":3,"className":"text-xl font-semibold mb-3"} -->
+    <h3 class="wp-block-heading text-xl font-semibold mb-3">Marketing Intern</h3>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-sm mb-4"} -->
+    <p class="text-sm mb-4">Strong interest in travel planning and tour operations. Familiarity with social media marketing tools (e.g., Canva, Instagram)</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:group {"className":"flex flex-wrap gap-4 mb-2"} -->
+    <div class="wp-block-group flex flex-wrap gap-4 mb-2">
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">🏢 WanderLink</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">📍 Bugis</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:group {"className":"flex flex-wrap gap-4 mb-4"} -->
+    <div class="wp-block-group flex flex-wrap gap-4 mb-4">
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💵 900/month</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">📅 6 Months</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end">
+    <!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">Learn More</a></div>
+    <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+    </div>
+    <!-- /wp:group -->
+    </div>
+    <!-- /wp:column -->
+
+    <!-- wp:column -->
+    <div class="wp-block-column internship-item" data-discipline="hospitality" data-job-type="full-time" data-location="orchard">
+    <!-- wp:group {"className":"internship-card bg-white border border-gray-300 rounded-xl p-6","backgroundColor":"white","borderColor":"contrast"} -->
+    <div class="wp-block-group internship-card bg-white border border-gray-300 rounded-xl p-6 has-border-color has-contrast-border-color has-white-background-color has-background">
+    <!-- wp:heading {"level":3,"className":"text-xl font-semibold mb-3"} -->
+    <h3 class="wp-block-heading text-xl font-semibold mb-3">Hospitality &amp; Guest Relations Intern</h3>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-sm mb-4"} -->
+    <p class="text-sm mb-4">Strong communication skills in English (Japanese proficiency is a plus). Customer service mindset and positive attitude. Hospitality or Tourism students preferred.</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:group {"className":"flex flex-wrap gap-4 mb-2"} -->
+    <div class="wp-block-group flex flex-wrap gap-4 mb-2">
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">🏢 Himawari</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">📍 Orchard</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:group {"className":"flex flex-wrap gap-4 mb-4"} -->
+    <div class="wp-block-group flex flex-wrap gap-4 mb-4">
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💵 1000/month</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">📅 6 Months</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end">
+    <!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">Learn More</a></div>
+    <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+    </div>
+    <!-- /wp:group -->
+    </div>
+    <!-- /wp:column --></div>
+    <!-- /wp:columns -->
+
+    <!-- wp:columns {"className":"internship-grid gap-6 mt-6"} -->
+    <div class="wp-block-columns internship-grid gap-6 mt-6"><!-- wp:column -->
+    <div class="wp-block-column internship-item" data-discipline="maritime" data-job-type="part-time" data-location="harbourfront">
+    <!-- wp:group {"className":"internship-card bg-white border border-gray-300 rounded-xl p-6","backgroundColor":"white","borderColor":"contrast"} -->
+    <div class="wp-block-group internship-card bg-white border border-gray-300 rounded-xl p-6 has-border-color has-contrast-border-color has-white-background-color has-background">
+    <!-- wp:heading {"level":3,"className":"text-xl font-semibold mb-3"} -->
+    <h3 class="wp-block-heading text-xl font-semibold mb-3">Cruise Operations Intern</h3>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-sm mb-4"} -->
+    <p class="text-sm mb-4">Hospitality or maritime management major, able to work flexible hours. Passionate about being onboard.</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:group {"className":"flex flex-wrap gap-4 mb-2"} -->
+    <div class="wp-block-group flex flex-wrap gap-4 mb-2">
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">🏢 Sunset Voyages</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">📍 HarbourFront</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:group {"className":"flex flex-wrap gap-4 mb-4"} -->
+    <div class="wp-block-group flex flex-wrap gap-4 mb-4">
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">💵 1000/month</p>
+    <!-- /wp:paragraph -->
+    <!-- wp:paragraph {"className":"text-sm"} -->
+    <p class="text-sm">📅 3-5 Months</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:buttons {"className":"flex justify-end"} -->
+    <div class="wp-block-buttons flex justify-end">
+    <!-- wp:button {"className":"is-style-outline"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button">Learn More</a></div>
+    <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+    </div>
+    <!-- /wp:group -->
+    </div>
+    <!-- /wp:column -->
+
+    <!-- wp:column -->
+    <div class="wp-block-column"></div>
+    <!-- /wp:column -->
+
+    <!-- wp:column -->
+    <div class="wp-block-column"></div>
+    <!-- /wp:column --></div>
+    <!-- /wp:columns -->
+
+    <!-- wp:buttons {"className":"flex justify-end mt-8"} -->
+    <div class="wp-block-buttons flex justify-end mt-8"><!-- wp:button {"className":"rounded-3xl"} -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button rounded-3xl" href="/add-new-listing">I'm an Employer</a></div>
+    <!-- /wp:button --></div>
+    <!-- /wp:buttons --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"className":"tab-content tab-life-skills mt-0"} -->
+    <div class="wp-block-group tab-content tab-life-skills mt-0">
+    <!-- wp:heading {"level":1,"className":"text-4xl font-bold mb-4"} -->
+    <h1 class="wp-block-heading text-4xl font-bold mb-4">Life Skills</h1>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-base mb-12"} -->
+    <p class="text-base mb-12">Developing life skills is essential for both personal and professional growth. These courses are designed to help learners build practical abilities that improve communication, problem-solving, and adaptability in everyday situations. By strengthening these competencies, learners position themselves not just as skilled workers, but as well-rounded individuals prepared for long-term success.</p>
+    <!-- /wp:paragraph -->
+    <!-- Life Skills Section 1: Communication -->
+    <!-- wp:columns {"className":"gap-8 mb-12"} -->
+    <div class="wp-block-columns gap-8 mb-12">
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column w-1/2">
+    <!-- wp:heading {"level":2,"className":"text-3xl font-semibold mb-4"} -->
+    <h2 class="wp-block-heading text-3xl font-semibold mb-4">Effective Communication Skills</h2>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-base"} -->
+    <p class="text-base">Learn how to express ideas clearly, listen actively, and adapt your communication style to different audiences. This course equips you with tools to improve workplace interactions and strengthen personal relationships.</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:column -->
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column w-1/2">
+    <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"rounded-xl"} -->
+    <figure class="wp-block-image size-large rounded-xl"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&amp;h=500&amp;fit=crop" alt="Business meeting communication"/></figure>
+    <!-- /wp:image -->
+    </div>
+    <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+    <!-- Life Skills Section 2: Time Management -->
+    <!-- wp:columns {"className":"gap-8 mb-12"} -->
+    <div class="wp-block-columns gap-8 mb-12">
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column w-1/2">
+    <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"rounded-xl"} -->
+    <figure class="wp-block-image size-large rounded-xl"><img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?w=800&amp;h=500&amp;fit=crop" alt="Time management hourglass"/></figure>
+    <!-- /wp:image -->
+    </div>
+    <!-- /wp:column -->
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column w-1/2">
+    <!-- wp:heading {"level":2,"className":"text-3xl font-semibold mb-4"} -->
+    <h2 class="wp-block-heading text-3xl font-semibold mb-4">Time Management &amp; Productivity</h2>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-base"} -->
+    <p class="text-base">Master practical techniques to prioritize tasks, manage deadlines, and overcome procrastination. This course helps you create a balanced schedule that boosts efficiency without burnout.</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+    <!-- Life Skills Section 3: Emotional Intelligence -->
+    <!-- wp:columns {"className":"gap-8 mb-12"} -->
+    <div class="wp-block-columns gap-8 mb-12">
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column w-1/2">
+    <!-- wp:heading {"level":2,"className":"text-3xl font-semibold mb-4"} -->
+    <h2 class="wp-block-heading text-3xl font-semibold mb-4">Emotional Intelligence &amp; Resilience</h2>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-base"} -->
+    <p class="text-base">Build awareness of your emotions and learn how to manage stress, empathy, and relationships effectively. This course strengthens your ability to adapt and thrive in both personal and professional settings.</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:column -->
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column w-1/2">
+    <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"rounded-xl"} -->
+    <figure class="wp-block-image size-large rounded-xl"><img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&amp;h=500&amp;fit=crop" alt="Emotional intelligence concept"/></figure>
+    <!-- /wp:image -->
+    </div>
+    <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+    <!-- Life Skills Section 4: Critical Thinking -->
+    <!-- wp:columns {"className":"gap-8"} -->
+    <div class="wp-block-columns gap-8">
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column w-1/2">
+    <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"rounded-xl"} -->
+    <figure class="wp-block-image size-large rounded-xl"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&amp;h=500&amp;fit=crop" alt="Problem solving brainstorming"/></figure>
+    <!-- /wp:image -->
+    </div>
+    <!-- /wp:column -->
+    <!-- wp:column {"width":"50%"} -->
+    <div class="wp-block-column w-1/2">
+    <!-- wp:heading {"level":2,"className":"text-3xl font-semibold mb-4"} -->
+    <h2 class="wp-block-heading text-3xl font-semibold mb-4">Critical Thinking &amp; Problem Solving</h2>
+    <!-- /wp:heading -->
+    <!-- wp:paragraph {"className":"text-base"} -->
+    <p class="text-base">Develop analytical thinking, decision-making, and creative problem-solving strategies. Through real-world scenarios, you'll learn to evaluate situations, identify solutions, and take confident action.</p>
+    <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+    </div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column --></div>
+    <!-- /wp:columns -->
+
+    <!-- wp:html -->
+    <script>
+    (function() {
+        'use strict';
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // ===== TAB NAVIGATION =====
+            var tabLinks = document.querySelectorAll('.tab-link a');
+            var tabContents = document.querySelectorAll('.tab-content');
+
+            // Initialize - show courses tab by default
+            if (tabContents.length > 0) {
                 tabContents.forEach(function(content) {
-                    content.classList.add('hidden');
-                    content.classList.remove('block');
+                    content.style.display = 'none';
                 });
-                
-                var targetTab = null;
-                if (targetId === 'courses') {
-                    targetTab = document.querySelector('.tab-courses');
-                } else if (targetId === 'internships') {
-                    targetTab = document.querySelector('.tab-internships');
-                } else if (targetId === 'life-skills') {
-                    targetTab = document.querySelector('.tab-life-skills');
+                var coursesTab = document.querySelector('.tab-courses');
+                if (coursesTab) {
+                    coursesTab.style.display = 'block';
                 }
-                
-                if (targetTab) {
-                    targetTab.classList.remove('hidden');
-                    targetTab.classList.add('block');
-                }
-            });
-        });
-        
-        // ===== COURSE FILTER FUNCTIONALITY =====
-        var filterButtons = document.querySelectorAll('.filter-btn a');
-        
-        filterButtons.forEach(function(button) {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                var href = this.getAttribute('href');
-                var category = href.replace('#', '');
-                
-                document.querySelectorAll('.filter-btn').forEach(function(btn) {
-                    btn.classList.remove('active');
-                });
-                
-                var parentBtn = this.closest('.filter-btn');
-                if (parentBtn) {
-                    parentBtn.classList.add('active');
-                }
-                
-                var courseItems = document.querySelectorAll('.course-item');
-                
-                courseItems.forEach(function(item) {
-                    if (category === 'all') {
-                        item.classList.remove('hidden', 'opacity-0');
-                        item.classList.add('flex', 'opacity-100');
-                    } else if (item.classList.contains(category)) {
-                        item.classList.remove('hidden', 'opacity-0');
-                        item.classList.add('flex', 'opacity-100');
-                    } else {
-                        item.classList.remove('opacity-100');
-                        item.classList.add('opacity-0');
-                        setTimeout(function() {
-                            item.classList.add('hidden');
-                            item.classList.remove('flex');
-                        }, 300);
+            }
+
+            // Add click handlers to tab links
+            tabLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    var href = this.getAttribute('href');
+                    var targetId = href.replace('#', '');
+
+                    document.querySelectorAll('.tab-link').forEach(function(tab) {
+                        tab.classList.remove('active');
+                    });
+
+                    var parentTab = this.closest('.tab-link');
+                    if (parentTab) {
+                        parentTab.classList.add('active');
+                    }
+
+                    tabContents.forEach(function(content) {
+                        content.style.display = 'none';
+                    });
+
+                    var targetTab = null;
+                    if (targetId === 'courses') {
+                        targetTab = document.querySelector('.tab-courses');
+                    } else if (targetId === 'internships') {
+                        targetTab = document.querySelector('.tab-internships');
+                    } else if (targetId === 'life-skills') {
+                        targetTab = document.querySelector('.tab-life-skills');
+                    }
+
+                    if (targetTab) {
+                        targetTab.style.display = 'block';
                     }
                 });
             });
+
+            // ===== COURSE FILTER FUNCTIONALITY =====
+            var filterButtons = document.querySelectorAll('.filter-btn a');
+
+            filterButtons.forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    var href = this.getAttribute('href');
+                    var category = href.replace('#', '');
+
+                    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+                        btn.classList.remove('active');
+                    });
+
+                    var parentBtn = this.closest('.filter-btn');
+                    if (parentBtn) {
+                        parentBtn.classList.add('active');
+                    }
+
+                    var courseItems = document.querySelectorAll('.course-item');
+
+                    courseItems.forEach(function(item) {
+                        if (category === 'all') {
+                            item.style.display = 'flex';
+                            item.style.opacity = '0';
+                            setTimeout(function() {
+                                item.style.opacity = '1';
+                            }, 10);
+                        } else if (item.classList.contains(category)) {
+                            item.style.display = 'flex';
+                            item.style.opacity = '0';
+                            setTimeout(function() {
+                                item.style.opacity = '1';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            setTimeout(function() {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            var courseItems = document.querySelectorAll('.course-item');
+            courseItems.forEach(function(item) {
+                item.style.transition = 'opacity 0.3s ease';
+            });
         });
-        
+
         // ===== INTERNSHIP FILTER FUNCTIONALITY =====
         const searchBtn = document.querySelector('.search-btn a');
 
         if (searchBtn) {
             searchBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                    
+
                 const disciplineFilter = document.getElementById('discipline-filter');
                 const jobTypeFilter = document.getElementById('job-type-filter');
                 const locationFilter = document.getElementById('location-filter');
-                    
+
                 if (!disciplineFilter || !jobTypeFilter || !locationFilter) return;
-                    
+
                 const selectedDiscipline = disciplineFilter.value.toLowerCase();
                 const selectedJobType = jobTypeFilter.value.toLowerCase();
                 const searchLocation = locationFilter.value.toLowerCase().trim();
-                    
+
                 const internshipItems = document.querySelectorAll('.internship-item');
-                    
+
                 internshipItems.forEach(function(item) {
                     const itemDiscipline = (item.getAttribute('data-discipline') || '').toLowerCase();
                     const itemJobType = (item.getAttribute('data-job-type') || '').toLowerCase();
                     const itemLocation = (item.getAttribute('data-location') || '').toLowerCase();
-                        
+
                     let showItem = true;
-                        
+
                     if (selectedDiscipline && itemDiscipline !== selectedDiscipline) {
                         showItem = false;
                     }
-                        
+
                     if (selectedJobType && itemJobType !== selectedJobType) {
-                        showItem = false;
+                            showItem = false;
                     }
-                        
+
                     if (searchLocation && itemLocation.indexOf(searchLocation) === -1) {
                         showItem = false;
                     }
-                        
+
                     if (showItem) {
-                        item.classList.remove('hidden', 'opacity-0');
-                        item.classList.add('flex', 'opacity-100');
-                    } else {
-                        item.classList.remove('opacity-100');
-                        item.classList.add('opacity-0');
+                        item.style.display = 'flex';
+                        item.style.opacity = '0';
                         setTimeout(function() {
-                            item.classList.add('hidden');
-                            item.classList.remove('flex');
+                            item.style.opacity = '1';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(function() {
+                            item.style.display = 'none';
                         }, 300);
                     }
                 });
             });
         }
-    });
-})();
-</script>
 
-</body>
-</html>
+        const internshipItems = document.querySelectorAll('.internship-item');
+        internshipItems.forEach(function(item) {
+            item.style.transition = 'opacity 0.3s ease';
+        });
+
+    })();
+    </script>
+    <!-- /wp:html -->
+
+    <!-- wp:paragraph -->
+    <p></p>
+    <!-- /wp:paragraph -->
