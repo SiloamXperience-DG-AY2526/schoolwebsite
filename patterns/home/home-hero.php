@@ -1,12 +1,7 @@
 <?php
 /**
  * Title: Hero Section
-<<<<<<< HEAD:patterns/home/home-hero.php
  * Slug: svlti/home-hero
-=======
- * Slug: svlti/hero
- * Categories: featured
->>>>>>> dda249b0aaf73dbcfbb5daa6d5b0659b27614817:patterns/hero.php
  */
 ?>
 
@@ -41,7 +36,7 @@
   <div class="wp-block-buttons">
   <!-- wp:button {"className":"text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]"} -->
   <div class="wp-block-button hero-button text-white font-semibold rounded-md bg-gradient-to-r from-[#2CA585] to-[#2C89A5]">
-    <a class="wp-block-button__link wp-element-button"> Learn more </a>
+    <a class="wp-block-button__link wp-element-button" href= "#mission"> Learn more </a>
   </div>
   <!-- /wp:button -->
   </div>
