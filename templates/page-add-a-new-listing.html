@@ -1,0 +1,286 @@
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","right":"2rem","bottom":"3rem","left":"2rem"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group" style="padding-top:3rem;padding-right:2rem;padding-bottom:3rem;padding-left:2rem"><!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"2.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"2rem"}}}} -->
+    <h1 class="wp-block-heading" style="margin-bottom:2rem;font-size:2.5rem;font-weight:700">Add a New Listing</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:group {"className":"progress-steps","style":{"spacing":{"margin":{"bottom":"2rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group progress-steps" style="margin-bottom:2rem"><!-- wp:paragraph {"className":"step-item active","style":{"typography":{"fontSize":"14px"}}} -->
+    <p class="step-item active" style="font-size:14px">✓ Company Details</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"step-item","style":{"typography":{"fontSize":"14px"}}} -->
+    <p class="step-item" style="font-size:14px">✓ Internship Information</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"step-item","style":{"typography":{"fontSize":"14px"}}} -->
+    <p class="step-item" style="font-size:14px">✓ Description & Responsibilities</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph {"className":"step-item","style":{"typography":{"fontSize":"14px"}}} -->
+    <p class="step-item" style="font-size:14px">Preview and Submission</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:html -->
+    <form id="job-listing-form" method="post" action="/submission-success">
+
+    <!-- SECTION 1: COMPANY DETAILS -->
+    <div class="accordion-section">
+      <button type="button" class="accordion-header active">
+        Company Details
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="accordion-content" style="display:block;">
+        <h3 style="margin-top:1.5rem;margin-bottom:1rem;font-size:1.25rem;font-weight:600;">Company Details</h3>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Company Name *</label>
+            <input type="text" name="company_name" required placeholder="Your Company Name" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Company Address *</label>
+            <input type="text" name="company_address" required placeholder="Your Company Address" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Industry / Sector *</label>
+            <input type="text" name="industry" required placeholder="e.g., Tourism" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Company Website</label>
+            <input type="url" name="company_website" placeholder="Your Company Website" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Brief Description about the Company</label>
+          <textarea name="company_description" rows="4" placeholder="Tell us more..." style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;"></textarea>
+        </div>
+
+        <h3 style="margin-top:2rem;margin-bottom:1rem;font-size:1.25rem;font-weight:600;">PoC Details</h3>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">PoC Name *</label>
+            <input type="text" name="poc_name" required placeholder="Your PoC Name" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">PoC Email Address *</label>
+            <input type="email" name="poc_email" required placeholder="Your PoC Email Address" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">PoC Contact Number *</label>
+            <input type="tel" name="poc_phone" required placeholder="Your PoC Contact Number" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">PoC Designation *</label>
+            <input type="text" name="poc_designation" required placeholder="Your PoC Designation" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: INTERNSHIP DETAILS -->
+    <div class="accordion-section">
+      <button type="button" class="accordion-header">
+        Internship Details
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="accordion-content">
+        <h3 style="margin-top:1.5rem;margin-bottom:1rem;font-size:1.25rem;font-weight:600;">Administrative Internship Details</h3>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Internship Title *</label>
+            <input type="text" name="internship_title" required placeholder="Internship Title" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Location *</label>
+            <input type="text" name="location" required placeholder="Your Company Location" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Internship Mode *</label>
+            <select name="internship_mode" required style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+              <option value="">On-site / Fully remote / Hybrid</option>
+              <option value="onsite">On-site</option>
+              <option value="remote">Fully remote</option>
+              <option value="hybrid">Hybrid</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Allowance *</label>
+            <input type="text" name="allowance" required placeholder="$" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Duration *</label>
+          <input type="text" name="duration" required placeholder="3 months / 4 months / 6 months" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: DESCRIPTION & RESPONSIBILITIES -->
+    <div class="accordion-section">
+      <button type="button" class="accordion-header">
+        Description & Responsibilities
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="accordion-content">
+        <h3 style="margin-top:1.5rem;margin-bottom:1rem;font-size:1.25rem;font-weight:600;">Further Internship Details</h3>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Job Description *</label>
+          <textarea name="job_description" rows="5" required placeholder="Describe the role, background..." style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;"></textarea>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Key Responsibilities *</label>
+          <textarea name="key_responsibilities" rows="5" required placeholder="Use bullet points (one per line)" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;"></textarea>
+        </div>
+
+        <div>
+          <label style="display:block;margin-bottom:0.5rem;font-weight:500;font-size:14px;">Requirements *</label>
+          <textarea name="requirements" rows="5" required placeholder="Use bullet points (one per line)" style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:14px;"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: PREVIEW AND SUBMISSION -->
+    <div class="accordion-section">
+      <button type="button" class="accordion-header">
+        Preview and Submission
+        <span class="accordion-icon">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div id="preview-content" style="padding:2rem;background:#f9f9f9;border-radius:8px;margin-top:1.5rem;">
+          <p style="text-align:center;color:#999;">Fill in the form above to see a preview</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:right;margin-top:2rem;">
+      <button type="submit" style="background:#3eb489;color:white;padding:0.75rem 2rem;border:none;border-radius:24px;font-size:16px;font-weight:600;cursor:pointer;">Submit</button>
+    </div>
+
+    </form>
+    <!-- /wp:html --></div>
+    <!-- /wp:group -->
+
+    <!-- wp:html -->
+    <style>
+    .accordion-section {
+      margin-bottom: 1rem;
+    }
+
+    .accordion-header {
+      width: 100%;
+      background: #3eb489;
+      color: white;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background: #35a077;
+    }
+
+    .accordion-header.active {
+      background: #2d8a66;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 1.5rem;
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 0 0 12px 12px;
+      margin-top: -12px;
+    }
+
+    .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .step-item {
+      flex: 1;
+      padding: 0.75rem;
+      background: #f0f0f0;
+      border-radius: 8px;
+      text-align: center;
+      color: #999;
+    }
+
+    .step-item.active {
+      background: #3eb489;
+      color: white;
+    }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Accordion functionality
+      const headers = document.querySelectorAll('.accordion-header');
+
+      headers.forEach(function(header) {
+        header.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const isActive = this.classList.contains('active');
+
+          // Close all accordions
+          document.querySelectorAll('.accordion-header').forEach(function(h) {
+            h.classList.remove('active');
+          });
+          document.querySelectorAll('.accordion-content').forEach(function(c) {
+            c.style.display = 'none';
+          });
+
+          // Open clicked accordion if it wasn't active
+          if (!isActive) {
+            this.classList.add('active');
+            content.style.display = 'block';
+          }
+        });
+      });
+
+      // Form submission (prevents actual submission for now)
+      document.getElementById('job-listing-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Redirect to success page
+        window.location.href = '/submission-success';
+      });
+    });
+    </script>
+    <!-- /wp:html -->
+
+    <!-- wp:paragraph -->
+    <p></p>
+    <!-- /wp:paragraph -->
