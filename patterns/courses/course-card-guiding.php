@@ -88,7 +88,7 @@
         <div class="wp-block-buttons mt-auto">
             <!-- wp:button {"className":"is-style-fill"} -->
             <div class="wp-block-button">
-                <a href="#" class="wp-block-button__link wp-element-button bg-[#2b8c77] text-white text-sm font-medium rounded-md hover:bg-[#247565] transition-colors">Enroll</a>
+                <a href="/courses/expanded-course" class="wp-block-button__link wp-element-button bg-[#2b8c77] text-white text-sm font-medium rounded-md hover:bg-[#247565] transition-colors">Enroll</a>
             </div>
             <!-- /wp:button -->
         </div>
