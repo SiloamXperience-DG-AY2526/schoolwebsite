@@ -1,87 +1,56 @@
-<!-- wp:group {"className":"min-h-screen bg-gray-50","layout":{"type":"constrained"}} -->
-<div class="wp-block-group min-h-screen bg-gray-50"><!-- wp:template-part {"slug":"header","theme":"schoolwebsite"} /-->
-
-<!-- wp:group {"className":"max-w-7xl mx-auto px-8 py-8","layout":{"type":"constrained"}} -->
-<div class="wp-block-group max-w-7xl mx-auto px-8 py-8"><!-- wp:columns {"className":"gap-8","layout":{"type":"flex"}} -->
-<div class="wp-block-columns gap-8"><!-- wp:column {"width":"25%","className":"hidden md:block"} -->
-<div class="wp-block-column hidden md:block" style="flex-basis:25%"><!-- wp:group {"className":"bg-white rounded-lg shadow-sm p-6 border border-gray-200","layout":{"type":"constrained"}} -->
-<div class="wp-block-group bg-white rounded-lg shadow-sm p-6 border border-gray-200"><!-- wp:navigation {"className":"flex flex-col gap-0","layout":{"type":"flex","orientation":"vertical"}} -->
-<!-- wp:navigation-link {"label":"Courses","url":"#","kind":"custom","className":"text-[#2b8c77] font-semibold py-2 px-0 border-b border-gray-200"} /-->
-
-<!-- wp:navigation-link {"label":"Internship and Job Opportunities","url":"#","kind":"custom","className":"text-gray-600 hover:text-[#2b8c77] py-2 px-0 border-b border-gray-200"} /-->
-
-<!-- wp:navigation-link {"label":"Life Skills","url":"#","kind":"custom","className":"text-gray-600 hover:text-[#2b8c77] py-2 px-0"} /-->
-<!-- /wp:navigation --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"width":"75%"} -->
-<div class="wp-block-column" style="flex-basis:75%"></div><!-- wp:heading {"level":1,"className":"text-3xl md:text-4xl font-bold text-[#2b8c77] m-0"} -->
-<h1 class="wp-block-heading text-3xl md:text-4xl font-bold text-[#2b8c77] m-0">Courses</h1>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"32px"} -->
-        <div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
-        <!-- /wp:spacer -->
-
-<!-- wp:group {"className":"flex flex-wrap items-center gap-2 mb-8","layout":{"type":"constrained"}} -->
-<div class="wp-block-group flex flex-wrap items-center gap-2 mb-8"><!-- wp:html -->
-<button class="px-4 py-2 rounded-full text-sm font-medium bg-[#2b8c77] text-white">
-    All
-  </button>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<button class="px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50">
-    Tourism & Hospitality
-  </button>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<button class="px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50">
-    Computer
-  </button>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<button class="px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50">
-    English Competencies
-  </button>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<button class="px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50">
-    Empathy & Community
-  </button>
-<!-- /wp:html --></div>
-<!-- /wp:group -->
-
-        
-<!-- wp:group {"className":"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6","layout":{"type":"constrained"}} -->
-<div class="wp-block-group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- wp:group {"className":"bg-gradient-to-b from-white to-light-blue min-h-screen overflow-hidden max-w-screen"} -->
+<div class="wp-block-group bg-gradient-to-b from-white to-light-blue min-h-screen overflow-hidden max-w-screen">
   
-<!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
-<!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
-<!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
-<!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
-<!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
-<!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
-  
-</div>
-<!-- /wp:group -->
+    <!-- wp:template-part {"slug":"header"} /-->
 
-<!-- wp:spacer {"height":"32px"} -->
-<div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
+    <!-- wp:group {"className":"max-w-7xl mx-auto px-8 py-8"} -->
+    <div class="wp-block-group max-w-7xl mx-auto px-8 py-8">
+
+        <!-- wp:group {"className":"gap-8"} -->
+        <div class="wp-block-group flex flex-row gap-8">
+
+            <!-- wp:template-part {"slug":"side-menu-courses","className":"side-menu"} /-->
 
 
-<!-- /wp:group -->
+            <!-- wp:group -->
+            <div class="wp-block-group">
 
-</div>
-<!-- /wp:column -->
+                <!-- wp:heading {"level":2,"className":"text-3xl md:text-4xl font-bold text-[#2b8c77] mb-5"} -->
+                <h2 class="wp-block-heading text-3xl md:text-4xl font-bold text-[#2b8c77] mb-5">Courses</h2>
+                <!-- /wp:heading -->
 
-</div>
-<!-- /wp:columns -->
+                <!-- wp:html -->
+                <div class="flex flex-wrap items-center gap-2 mb-8">
+                    <button class="px-4 py-2 rounded-full text-sm font-medium bg-[#2b8c77] text-white">All</button>
+                    <button class="px-4 py-2 rounded-full text-sm font-medium bg-white border border-gray-300 hover:bg-gray-50">Tourism & Hospitality</button>
+                    <button class="px-4 py-2 rounded-full text-sm font-medium bg-white border border-gray-300 hover:bg-gray-50">Computer</button>
+                    <button class="px-4 py-2 rounded-full text-sm font-medium bg-white border border-gray-300 hover:bg-gray-50">English Competencies</button>
+                    <button class="px-4 py-2 rounded-full text-sm font-medium bg-white border border-gray-300 hover:bg-gray-50">Empathy & Community</button>
+                </div>
+                <!-- /wp:html -->
+
+
+                <!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-3 gap-6"} -->
+                <div class="wp-block-group grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
+                    <!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
+                    <!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
+                    <!-- wp:pattern {"slug":"svlti/course-card-guiding"} /-->
+
+                </div>
+                <!-- /wp:group -->
+
+
+
+            </div>
+            <!-- /wp:group -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </div>
+    <!-- /wp:group -->
 
 </div>
 <!-- /wp:group -->

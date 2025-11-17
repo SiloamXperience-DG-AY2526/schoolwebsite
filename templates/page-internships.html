@@ -1,132 +1,119 @@
-<!-- wp:group {"className":"min-h-screen bg-gray-50","layout":{"type":"constrained"}} -->
-<div class="wp-block-group min-h-screen bg-gray-50">
+<!-- wp:group {"className":"bg-gradient-to-b from-white to-light-blue min-h-screen overflow-hidden max-w-screen"} -->
+<div class="wp-block-group bg-gradient-to-b from-white to-light-blue min-h-screen overflow-hidden max-w-screen">
   
-  <!-- wp:template-part {"slug":"header"} /-->
-  
-  <!-- wp:group {"className":"max-w-7xl mx-auto px-8 py-8","layout":{"type":"constrained"}} -->
-  <div class="wp-block-group max-w-7xl mx-auto px-8 py-8">
-    
-    <!-- wp:columns {"className":"gap-8","layout":{"type":"flex"}} -->
-    <div class="wp-block-columns gap-8">
-      
-      <!-- wp:column {"width":"25%","className":"hidden md:block"} -->
-      <div class="wp-block-column hidden md:block" style="flex-basis:25%">
-        
-        <!-- wp:group {"className":"bg-white rounded-lg shadow-sm p-6 border border-gray-200","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-          
-          <!-- wp:navigation {"className":"flex flex-col gap-0","layout":{"type":"flex","orientation":"vertical"}} -->
-          <!-- wp:navigation-link {"label":"Courses","url":"#","kind":"custom","className":"text-gray-600 hover:text-[#2b8c77] py-2 px-0 border-b border-gray-200"} /-->
-          <!-- wp:navigation-link {"label":"Internship and Job Opportunities","url":"#","kind":"custom","className":"text-[#2b8c77] font-semibold py-2 px-0 border-b border-gray-200"} /-->
-          <!-- wp:navigation-link {"label":"Life Skills","url":"#","kind":"custom","className":"text-gray-600 hover:text-[#2b8c77] py-2 px-0"} /-->
-          <!-- /wp:navigation -->
-          
-        </div>
-        <!-- /wp:group -->
-        
-      </div>
-      <!-- /wp:column -->
-      
-      <!-- wp:column {"width":"75%"} -->
-      <div class="wp-block-column" style="flex-basis:75%">
-        
-        <!-- wp:heading {"level":1,"className":"text-4xl font-bold text-[#2b8c77] text-left mb-6"} -->
-        <h1 class="wp-block-heading text-4xl font-bold text-[#2b8c77] text-left mb-6">Internships and Job Opportunities</h1>
-        <!-- /wp:heading -->
-        
-        <!-- wp:group {"className":"bg-white p-6 rounded-lg shadow-sm border border-gray-200 mb-8","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group bg-white p-6 rounded-lg shadow-sm border border-gray-200 mb-8">
-          
-          <!-- wp:paragraph {"className":"text-lg font-medium text-gray-800 mb-4"} -->
-          <p class="text-lg font-medium text-gray-800 mb-4">Looking for ...</p>
-          <!-- /wp:paragraph -->
-          
-          <!-- wp:group {"className":"flex flex-col md:flex-row gap-4 mb-4","layout":{"type":"flex","flexWrap":"wrap"}} -->
-          <div class="wp-block-group flex flex-col md:flex-row gap-4 mb-4">
-            
-            <!-- wp:group {"className":"flex-1"} -->
-            <div class="wp-block-group flex-1">
-              <!-- wp:html -->
-              <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2b8c77] focus:border-transparent">
-                <option value="">Discipline</option>
-                <option value="tourism">Tourism &amp; Hospitality</option>
-                <option value="marketing">Marketing</option>
-                <option value="operations">Operations</option>
-                <option value="it">Information Technology</option>
-              </select>
-              <!-- /wp:html -->
+    <!-- wp:template-part {"slug":"header"} /-->
+
+    <!-- wp:group {"className":"max-w-7xl mx-auto px-8 py-8"} -->
+    <div class="wp-block-group max-w-7xl mx-auto px-8 py-8">
+
+        <!-- wp:group {"className":"gap-8"} -->
+        <div class="wp-block-group flex flex-row gap-8">
+
+            <!-- wp:template-part {"slug":"side-menu-courses","className":"side-menu"} /-->
+
+
+            <!-- wp:group -->
+            <div class="wp-block-group">
+
+              <!-- wp:heading {"level":1,"className":"text-4xl font-bold text-[#2b8c77] text-left mb-6"} -->
+              <h1 class="wp-block-heading text-4xl font-bold text-[#2b8c77] text-left mb-6">Internships and Job Opportunities</h1>
+              <!-- /wp:heading -->
+              
+              <!-- wp:group {"className":"bg-white p-6 rounded-lg shadow-sm border border-gray-200 mb-8","layout":{"type":"constrained"}} -->
+              <div class="wp-block-group bg-white p-6 rounded-lg shadow-sm border border-gray-200 mb-8">
+                
+                <!-- wp:paragraph {"className":"text-lg font-medium text-gray-800 mb-4"} -->
+                <p class="text-lg font-medium text-gray-800 mb-4">Looking for ...</p>
+                <!-- /wp:paragraph -->
+                
+                <!-- wp:group {"className":"flex flex-col md:flex-row gap-4 mb-4","layout":{"type":"flex","flexWrap":"wrap"}} -->
+                <div class="wp-block-group flex flex-col md:flex-row gap-4 mb-4">
+                  
+                  <!-- wp:group {"className":"flex-1"} -->
+                  <div class="wp-block-group flex-1">
+                    <!-- wp:html -->
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2b8c77] focus:border-transparent">
+                      <option value="">Discipline</option>
+                      <option value="tourism">Tourism &amp; Hospitality</option>
+                      <option value="marketing">Marketing</option>
+                      <option value="operations">Operations</option>
+                      <option value="it">Information Technology</option>
+                    </select>
+                    <!-- /wp:html -->
+                  </div>
+                  <!-- /wp:group -->
+                  
+                  <!-- wp:group {"className":"flex-1"} -->
+                  <div class="wp-block-group flex-1">
+                    <!-- wp:html -->
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2b8c77] focus:border-transparent">
+                      <option value="">Job Type</option>
+                      <option value="internship">Internship</option>
+                      <option value="full-time">Full-time</option>
+                      <option value="part-time">Part-time</option>
+                      <option value="contract">Contract</option>
+                    </select>
+                    <!-- /wp:html -->
+                  </div>
+                  <!-- /wp:group -->
+                  
+                  <!-- wp:group {"className":"flex-1"} -->
+                  <div class="wp-block-group flex-1">
+                    <!-- wp:html -->
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2b8c77] focus:border-transparent">
+                      <option value="">Location</option>
+                      <option value="clarke-quay">Clarke Quay</option>
+                      <option value="orchard">Orchard</option>
+                      <option value="marina-bay">Marina Bay</option>
+                      <option value="sentosa">Sentosa</option>
+                    </select>
+                    <!-- /wp:html -->
+                  </div>
+                  <!-- /wp:group -->
+                  
+                </div>
+                <!-- /wp:group -->
+                
+                <!-- wp:buttons {"className":"flex flex-col sm:flex-row gap-3"} -->
+                <div class="wp-block-buttons flex flex-col sm:flex-row gap-3">
+                  <!-- wp:button {"className":"bg-[#2b8c77] text-white hover:bg-[#237a66]"} -->
+                  <div class="wp-block-button">
+                    <a class="wp-block-button__link wp-element-button bg-[#2b8c77] text-white hover:bg-[#237a66]">Search</a>
+                  </div>
+                  <!-- /wp:button -->
+                  
+                  <!-- wp:button {"className":"bg-[#2b8c77] text-white hover:bg-[#237a66]"} -->
+                  <div class="wp-block-button">
+                    <a class="wp-block-button__link wp-element-button bg-[#2b8c77] text-white hover:bg-[#237a66]">I'm an Employer</a>
+                  </div>
+                  <!-- /wp:button -->
+                </div>
+                <!-- /wp:buttons -->
+                
+              </div>
+              <!-- /wp:group -->
+              
+              <!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6","layout":{"type":"constrained"}} -->
+              <div class="wp-block-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- wp:pattern {"slug":"svlti/internship-card-tour-product"} /-->
+                <!-- wp:pattern {"slug":"svlti/internship-card-marketing"} /-->
+                <!-- wp:pattern {"slug":"svlti/internship-card-hospitality"} /-->
+                <!-- wp:pattern {"slug":"svlti/internship-card-cruise"} /-->
+                
+              </div>
+              <!-- /wp:group -->
+
             </div>
             <!-- /wp:group -->
-            
-            <!-- wp:group {"className":"flex-1"} -->
-            <div class="wp-block-group flex-1">
-              <!-- wp:html -->
-              <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2b8c77] focus:border-transparent">
-                <option value="">Job Type</option>
-                <option value="internship">Internship</option>
-                <option value="full-time">Full-time</option>
-                <option value="part-time">Part-time</option>
-                <option value="contract">Contract</option>
-              </select>
-              <!-- /wp:html -->
-            </div>
-            <!-- /wp:group -->
-            
-            <!-- wp:group {"className":"flex-1"} -->
-            <div class="wp-block-group flex-1">
-              <!-- wp:html -->
-              <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2b8c77] focus:border-transparent">
-                <option value="">Location</option>
-                <option value="clarke-quay">Clarke Quay</option>
-                <option value="orchard">Orchard</option>
-                <option value="marina-bay">Marina Bay</option>
-                <option value="sentosa">Sentosa</option>
-              </select>
-              <!-- /wp:html -->
-            </div>
-            <!-- /wp:group -->
-            
-          </div>
-          <!-- /wp:group -->
-          
-          <!-- wp:buttons {"className":"flex flex-col sm:flex-row gap-3"} -->
-          <div class="wp-block-buttons flex flex-col sm:flex-row gap-3">
-            <!-- wp:button {"className":"bg-[#2b8c77] text-white hover:bg-[#237a66]"} -->
-            <div class="wp-block-button">
-              <a class="wp-block-button__link wp-element-button bg-[#2b8c77] text-white hover:bg-[#237a66]">Search</a>
-            </div>
-            <!-- /wp:button -->
-            
-            <!-- wp:button {"className":"bg-[#2b8c77] text-white hover:bg-[#237a66]"} -->
-            <div class="wp-block-button">
-              <a class="wp-block-button__link wp-element-button bg-[#2b8c77] text-white hover:bg-[#237a66]">I'm an Employer</a>
-            </div>
-            <!-- /wp:button -->
-          </div>
-          <!-- /wp:buttons -->
-          
+
         </div>
         <!-- /wp:group -->
-        
-        <!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- wp:pattern {"slug":"svlti/internship-card-tour-product"} /-->
-          <!-- wp:pattern {"slug":"svlti/internship-card-marketing"} /-->
-          <!-- wp:pattern {"slug":"svlti/internship-card-hospitality"} /-->
-          <!-- wp:pattern {"slug":"svlti/internship-card-cruise"} /-->
-          
-        </div>
-        <!-- /wp:group -->
-        
-      </div>
-      <!-- /wp:column -->
-      
+
     </div>
-    <!-- /wp:columns -->
-    
-  </div>
-  <!-- /wp:group -->
-  
+    <!-- /wp:group -->
+
 </div>
 <!-- /wp:group -->
+
+
