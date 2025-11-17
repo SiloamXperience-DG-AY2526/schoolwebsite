@@ -237,6 +237,14 @@ html {
   height: auto; 
 }
 
+.life-skills-img img {
+  width: 75%;
+  height: auto; 
+  display: block;     /* Required for margin auto centering */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* blog */
 
 .blogNav .wp-block-navigation ul li>ul {
