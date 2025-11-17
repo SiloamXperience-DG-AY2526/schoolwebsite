@@ -1,8 +1,18 @@
 <?php
+// Register block pattern categories
+function svlti_register_pattern_categories() {
+    register_block_pattern_category(
+        'internship',
+        array( 'label' => __( 'Internship Cards', 'svlti' ) )
+    );
+}
+add_action( 'init', 'svlti_register_pattern_categories' );
+
 function svlti_setup() {
   add_theme_support('title-tag');
   add_theme_support('align-wide');
   add_theme_support('editor-styles');
+  add_theme_support('block-template-parts');
   add_editor_style([
     'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap',
     'assets/css/main.css',
