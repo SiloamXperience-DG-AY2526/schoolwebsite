@@ -17,7 +17,7 @@
 
 
   <!-- wp:group {"className":"w-full max-w-5xl bg-white rounded-3xl shadow-lg px-6 md:px-10 lg:px-12 py-8 md:py-10","layout":{"type":"constrained"}} -->
-  <div class="wp-block-group w-full max-w-5xl bg-white rounded-3xl shadow-lg px-6 md:px-10 lg:px-12 py-8 md:py-10">
+  <div class="wp-block-group w-full bg-white rounded-3xl shadow-lg px-6 md:px-10 lg:px-12 py-8 md:py-10">
 
     <!-- wp:html -->
     <form class="space-y-6">
