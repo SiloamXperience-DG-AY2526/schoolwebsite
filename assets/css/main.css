@@ -1935,6 +1935,10 @@ video {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .align-bottom {
   vertical-align: bottom;
 }
@@ -2140,6 +2144,10 @@ video {
 
 .text-\[36px\] {
   font-size: 36px;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
 }
 
 .font-bold {
@@ -2774,6 +2782,11 @@ video {
     padding-bottom: 5rem;
   }
 
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2797,6 +2810,22 @@ video {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .md\:text-\[24px\] {
+    font-size: 24px;
+  }
+
+  .md\:text-\[36px\] {
+    font-size: 36px;
+  }
+
+  .md\:text-\[2px\] {
+    font-size: 2px;
   }
 }
 
@@ -3038,6 +3067,11 @@ video {
     width: 100px;
   }
 
+  .\32xl\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
   .\32xl\:text-\[30px\] {
     font-size: 30px;
   }
@@ -3083,5 +3117,17 @@ video {
 
   .\32xl\:text-\[40px\] {
     font-size: 40px;
+  }
+
+  .\32xl\:text-\[44px\] {
+    font-size: 44px;
+  }
+
+  .\32xl\:text-\[66px\] {
+    font-size: 66px;
+  }
+
+  .\32xl\:text-\[35px\] {
+    font-size: 35px;
   }
 }
