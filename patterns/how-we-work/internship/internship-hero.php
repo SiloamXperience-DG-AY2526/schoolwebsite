@@ -34,8 +34,8 @@
     <!-- /wp:group -->
 
     <!-- wp:image {"sizeSlug":"large","className":"shadow-lg z-10"} -->
-    <figure class="wp-block-image size-large absolute -top-4 left-4 w-[10rem] lg:w-[18rem] xl:w-[22rem] 2xl:w-[38rem] shadow-lg z-10">
-        <img class="w-full h-auto object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/internship.png" alt="Children in classroom" />
+    <figure class="wp-block-image size-large corner-images absolute -top-4 left-4 w-[10rem] lg:w-[18rem] xl:w-[22rem] 2xl:w-[38rem] shadow-lg z-10">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/internship.png" alt="Children in classroom" />
     </figure>
     <!-- /wp:image -->
 

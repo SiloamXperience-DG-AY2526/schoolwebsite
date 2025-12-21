@@ -34,8 +34,8 @@
             <!-- wp:group {"className":"flex items-center gap-3","layout":{"type":"flex"}} -->
             <div class="wp-block-group flex items-center gap-3">
                 <!-- wp:image {"sizeSlug":"thumbnail","className":"policy-icon rounded-lg"} -->
-                <figure class="wp-block-image policy-icon rounded-lg">
-                    <img class="w-full h-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/safeguard-icon.png" alt="Teacher helping students" />
+                <figure class="wp-block-image corner-images policy-icon rounded-lg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/safeguard-icon.png" alt="Teacher helping students" />
                 </figure>
                 <!-- /wp:image -->
 
@@ -81,8 +81,8 @@
             <!-- wp:group {"className":"flex items-center gap-3","layout":{"type":"flex"}} -->
             <div class="wp-block-group flex items-center gap-3">
                 <!-- wp:image {"sizeSlug":"thumbnail","className":"policy-icon rounded-lg"} -->
-                <figure class="wp-block-image policy-icon rounded-lg">
-                    <img class="w-full h-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/uniform-icon.png" alt="Teacher helping students" />
+                <figure class="wp-block-image corner-images  policy-icon rounded-lg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/uniform-icon.png" alt="Teacher helping students" />
                 </figure>
                 <!-- /wp:image -->
 
@@ -115,8 +115,8 @@
             <!-- wp:group {"className":"flex items-center gap-3","layout":{"type":"flex"}} -->
             <div class="wp-block-group flex items-center gap-3">
                 <!-- wp:image {"sizeSlug":"thumbnail","className":"policy-icon rounded-lg"} -->
-                <figure class="wp-block-image policy-icon rounded-lg">
-                    <img class="w-full h-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/inclusion-icon.png" alt="Teacher helping students" />
+                <figure class="wp-block-image corner-images policy-icon rounded-lg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/how-we-work/inclusion-icon.png" alt="Teacher helping students" />
                 </figure>
                 <!-- /wp:image -->
 

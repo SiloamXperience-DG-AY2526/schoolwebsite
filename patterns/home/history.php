@@ -46,7 +46,7 @@
                 <!-- /wp:html -->
 
                 <!-- wp:image {"sizeSlug":"large","className":"relative overflow-hidden shadow-md h-auto w-full 2xl:w-[120%] z-20"} -->
-                <figure class="wp-block-image size-large relative overflow-hidden shadow-md h-auto w-full 2xl:w-[120%] z-20">
+                <figure class="wp-block-image size-large relative corner-images overflow-hidden shadow-md h-auto w-full 2xl:w-[120%] z-20">
                     <img
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/home/history-1.png"
                         alt="Students learning computers" />
@@ -83,7 +83,7 @@
                 <!-- /wp:html -->
 
                 <!-- wp:image {"sizeSlug":"large","className":"relative shadow-md h-auto w-full 2xl:w-[120%] z-20"} -->
-                <figure class="wp-block-image size-large relative shadow-md h-auto w-full 2xl:w-[120%] z-20">
+                <figure class="wp-block-image size-large corner-images relative shadow-md h-auto w-full 2xl:w-[120%] z-20">
                     <img
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/home/history-2.png"
                         alt="Community engagement" />

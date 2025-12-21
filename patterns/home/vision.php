@@ -17,11 +17,10 @@
     <!-- wp:group {"className":"flex justify-center items-center flex-1 min-w-[280px] md:w-[45%] z-20","layout":{"type":"constrained"}} -->
     <div class="wp-block-group flex justify-center items-center flex-1 min-w-[280px] md:w-[45%] z-20">
         <!-- wp:image {"sizeSlug":"large","className":"w-[25rem] 2xl:w-[35rem] shadow-lg"} -->
-        <figure class="wp-block-image size-large w-[25rem] 2xl:size-full shadow-lg">
+        <figure class="wp-block-image size-large corner-images w-[25rem] 2xl:size-full shadow-lg">
             <img
                 src="<?php echo get_template_directory_uri(); ?>/assets/images/home/vision.png"
                 alt="Children at The Learners' Village"
-                class="object-cover w-full"
                 />
         </figure>
         <!-- /wp:image -->
