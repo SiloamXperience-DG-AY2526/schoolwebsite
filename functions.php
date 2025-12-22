@@ -70,7 +70,7 @@ function svlti_seed_event_audience() {
     }
   }
 }
-add_action('after_switch_theme', 'svlti_seed_event_audience');
+add_action('acf/init', 'svlti_seed_event_audience');
 
 // Register default terms for 'course-pillar' taxonomy
 function svlti_seed_course_pillars() {
@@ -94,6 +94,6 @@ function svlti_seed_course_pillars() {
     }
   }
 }
-add_action('after_switch_theme', 'svlti_seed_course_pillars');
+add_action('acf/init', 'svlti_seed_course_pillars');
 
 
