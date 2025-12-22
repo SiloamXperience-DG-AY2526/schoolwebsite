@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Course Page Feature Info
- * Slug: svlti/single-course
+ * Slug: svlti/course
  */
 ?>
 
@@ -10,7 +10,7 @@
 $post_id = get_queried_object_id();
 if (!$post_id) {
   echo '<p>No course found.</p>';
-  exit;
+  return;
 }
 
 // ACF & WP fields
