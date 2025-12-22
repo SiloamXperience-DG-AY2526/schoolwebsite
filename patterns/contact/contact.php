@@ -22,6 +22,7 @@
             <!-- wp:column {"className":"flex-1"} -->
             <div class="wp-block-column flex-1">
 
+
                 <!-- wp:heading {"level":2,"className":"text-header-xxl text-eucalyptus-100 mb-6"} -->
                 <h2 class="wp-block-heading text-header-xxl text-eucalyptus-100 mb-6">Contact Us</h2>
                 <!-- /wp:heading -->

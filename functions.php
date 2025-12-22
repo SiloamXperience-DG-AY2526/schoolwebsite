@@ -83,6 +83,59 @@ function svlti_seed_tax() {
       }
     }
   }
+
+  // Seed project-categories
+  $tax = 'project-category';
+  if (taxonomy_exists($tax)) {
+    $terms = [
+      'Teaching'             => 'teaching',
+      'Training & Programmes'=> 'training-programmes',
+      'Farming'              => 'farming',
+      'Admin'                => 'admin',
+      'Social Media'         => 'social-media',
+    ];
+
+    foreach ($terms as $name => $slug) {
+      if (!term_exists($slug, $tax)) {
+        wp_insert_term($name, $tax, ['slug' => $slug]);
+      }
+    }
+  }
+
+  // Job Function
+  $tax = 'job-function';
+  if (taxonomy_exists($tax)) {
+    $terms = [
+      'Accounting'                 => 'accounting',
+      'Banks'                      => 'banks',
+      'Chemicals'                  => 'chemicals',
+      'Consulting'                 => 'consulting',
+      'Distribution and Logistics' => 'distribution-and-logistics',
+      'Education'                  => 'education',
+    ];
+
+  foreach ($terms as $name => $slug) {
+      if (!term_exists($slug, $tax)) {
+        wp_insert_term($name, $tax, ['slug' => $slug]);
+      }
+    }
+  }
+
+  // Job Type
+  $tax = 'job-type';
+  if (taxonomy_exists($tax)) {
+    $terms = [
+      'Part-time Intern'        => 'part-time-intern',
+      'Full-time Intern'        => 'full-time-intern',
+      'Fresh Graduate Jobs'     => 'fresh-graduate-jobs',
+    ];
+
+    foreach ($terms as $name => $slug) {
+      if (!term_exists($slug, $tax)) {
+        wp_insert_term($name, $tax, ['slug' => $slug]);
+      }
+    }
+  }
 }
 add_action('init', 'svlti_seed_tax');
 
