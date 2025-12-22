@@ -49,51 +49,40 @@ function svlti_scripts() {
 }
 add_action('wp_enqueue_scripts', 'svlti_scripts');
 
-// Register default terms for 'event-audience' taxonomy
-function svlti_seed_event_audience() {
-  $taxonomy = 'event-audience';
+// Register default terms for all taxonomies
+function svlti_seed_tax() {
+  // Seed event-audience
+  $tax = 'event-audience';
+  if (taxonomy_exists($tax)) {
+    $terms = [
+      'All'      => 'all',
+      'Parents'  => 'parents',
+      'Students' => 'students',
+    ];
 
-  // If ACF (or code) hasn't registered the taxonomy yet, do nothing.
-  if ( !taxonomy_exists($taxonomy) ) {
-    return;
+    foreach ($terms as $name => $slug) {
+      if (!term_exists($slug, $tax)) {
+        wp_insert_term($name, $tax, ['slug' => $slug]);
+      }
+    }
   }
 
-  $terms = [
-    'All' => 'all',
-    'Parents' => 'parents',
-    'Students' => 'students',
-  ];
+  // Seed course-pillar
+  $tax = 'course-pillar';
+  if (taxonomy_exists($tax)) {
+    $terms = [
+      'Computer'             => 'computer',
+      'Empathy & Community'  => 'empathy-community',
+      'English Competencies' => 'english-competencies',
+      'Tourism & Hospitality'=> 'tourism-hospitality',
+    ];
 
-  foreach ($terms as $name => $slug) {
-    if (!term_exists($slug, $taxonomy)) {
-      wp_insert_term($name, $taxonomy, ['slug' => $slug]);
+    foreach ($terms as $name => $slug) {
+      if (!term_exists($slug, $tax)) {
+        wp_insert_term($name, $tax, ['slug' => $slug]);
+      }
     }
   }
 }
-add_action('after_switch_theme', 'svlti_seed_event_audience');
-
-// Register default terms for 'course-pillar' taxonomy
-function svlti_seed_course_pillars() {
-  $taxonomy = 'course-pillar';
-
-  // If ACF (or code) hasn't registered the taxonomy yet, do nothing.
-  if ( !taxonomy_exists($taxonomy) ) {
-    return;
-  }
-
-  $terms = [
-    'Computer' => 'computer',
-    'Empathy & Community' => 'empathy-community',
-    'English Competencies' => 'english-competencies',
-    'Tourism & Hospitality' => 'tourism-hospitality',
-  ];
-
-  foreach ($terms as $name => $slug) {
-    if (!term_exists($slug, $taxonomy)) {
-      wp_insert_term($name, $taxonomy, ['slug' => $slug]);
-    }
-  }
-}
-add_action('after_switch_theme', 'svlti_seed_course_pillars');
-
+add_action('init', 'svlti_seed_tax');
 
