@@ -7,10 +7,16 @@
 
 <?php
 
+// Admin guard
+if (is_admin()) {
+  return;
+}
+
 $post_id = get_queried_object_id();
 if (!$post_id) {
   echo '<p>No course found.</p>';
-  exit;
+  // Dont exit
+  return;
 }
 
 // ACF & WP fields
