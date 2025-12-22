@@ -49,3 +49,51 @@ function svlti_scripts() {
 }
 add_action('wp_enqueue_scripts', 'svlti_scripts');
 
+// Register default terms for 'event-audience' taxonomy
+function svlti_seed_event_audience() {
+  $taxonomy = 'event-audience';
+
+  // If ACF (or code) hasn't registered the taxonomy yet, do nothing.
+  if ( !taxonomy_exists($taxonomy) ) {
+    return;
+  }
+
+  $terms = [
+    'All' => 'all',
+    'Parents' => 'parents',
+    'Students' => 'students',
+  ];
+
+  foreach ($terms as $name => $slug) {
+    if (!term_exists($slug, $taxonomy)) {
+      wp_insert_term($name, $taxonomy, ['slug' => $slug]);
+    }
+  }
+}
+add_action('after_switch_theme', 'svlti_seed_event_audience');
+
+// Register default terms for 'course-pillar' taxonomy
+function svlti_seed_course_pillars() {
+  $taxonomy = 'course-pillar';
+
+  // If ACF (or code) hasn't registered the taxonomy yet, do nothing.
+  if ( !taxonomy_exists($taxonomy) ) {
+    return;
+  }
+
+  $terms = [
+    'Computer' => 'computer',
+    'Empathy & Community' => 'empathy-community',
+    'English Competencies' => 'english-competencies',
+    'Tourism & Hospitality' => 'tourism-hospitality',
+  ];
+
+  foreach ($terms as $name => $slug) {
+    if (!term_exists($slug, $taxonomy)) {
+      wp_insert_term($name, $taxonomy, ['slug' => $slug]);
+    }
+  }
+}
+add_action('after_switch_theme', 'svlti_seed_course_pillars');
+
+
