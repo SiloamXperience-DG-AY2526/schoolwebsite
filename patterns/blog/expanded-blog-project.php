@@ -42,19 +42,19 @@
             <div class="wp-block-group w-3/5">
 
                 <!-- wp:heading {"level":2,"className":"text-header-xl text-eucalyptus-110 mb-8 py-3"} -->
-                <h2 class="wp-block-heading text-header-xl text-eucalyptus-110 mb-8 py-3">
+                <h2 class="wp-block-heading text-header-xl text-eucalyptus-110 mb-8 py-3 2xl:text-6xl">
                     Empowering Teachers in Phnom Penh
                 </h2>
                 <!-- /wp:heading -->
 
                 <!-- wp:paragraph {"className":"mb-4"} -->
-                <p class="mb-4">
+                <p class="mb-4 2xl:text-2xl">
                     A Fruitful Train-the-Trainer- learning that transfers, and transforms.
                 </p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"mb-4"} -->
-                <p class="mb-4">
+                <p class="mb-4 2xl:text-2xl">
                     2 years ago, I stood in a small classroom in Phnom Penh, surrounded by eager faces
                     ready to learn how to use a computer for the first time. Together with a team from
                     Siloam Xperience Singapore, we ran a 4-day Computer Literacy for the Workplace course.
@@ -64,7 +64,7 @@
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"mb-4"} -->
-                <p class="mb-4">
+                <p class="mb-4 2xl:text-2xl">
                     Months later, we recruited the same trainees to train others. They initiated a 3-month
                     course in Khmer and basic English for their peers. As they kept going, their confidence grew.
                     The real fruit wasn't in the replication but in the ownership.
@@ -72,7 +72,7 @@
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"mb-4"} -->
-                <p class="mb-4">
+                <p class="mb-4 2xl:text-2xl">
                     It taught me a hard truth. In any learning initiative, no idea—no matter how
                     innovative—will ever lead to lasting transformation unless one question is answered:
                     Are there people willing to journey with the learner?
@@ -84,7 +84,7 @@
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"mb-4"} -->
-                <p class="mb-4">
+                <p class="mb-4 2xl:text-2xl">
                     This experience affirms one belief I hold dearly: Beyond certificates,
                     fluency or background, a learning disposition enables anyone to grow and perform—when
                     supported with the right relationships.
@@ -92,7 +92,7 @@
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph -->
-                <p>
+                <p class="2xl:text-2xl">
                     Let's co-create something that doesn't just teach—but transforms lives.
                 </p>
                 <!-- /wp:paragraph -->
