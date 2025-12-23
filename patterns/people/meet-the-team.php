@@ -9,7 +9,7 @@
 <div class="wp-block-group py-12 sm:py-16 lg:py-20">
 
     <!-- wp:group {"className":"max-w-6xl mx-auto px-4 sm:px-6","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="wp-block-group max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6">
 
         <!-- wp:group {"className":"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-14 lg:gap-16 mb-12 sm:mb-16 lg:mb-20 justify-items-center"} -->
         <div class="wp-block-group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-14 lg:gap-16 mb-12 sm:mb-16 lg:mb-20 justify-items-center">

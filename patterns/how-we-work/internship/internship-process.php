@@ -9,19 +9,19 @@
 <div class="wp-block-group text-center">
 
   <!-- wp:heading {"level":2,"className":"text-3xl md:text-4xl font-bold text-gray-800"} -->
-  <h2 class="wp-block-heading text-3xl font-bold text-gray-800">
+  <h2 class="wp-block-heading text-3xl 2xl:text-[40px] 2xl:mb-5 font-bold text-gray-800">
     Guiding Students Through
   </h2>
   <!-- /wp:heading -->
 
   <!-- wp:paragraph {"align":"center","className":"text-3xl md:text-4xl text-dark-green font-bold mb-10"} -->
-  <p class="has-text-align-center text-3xl text-dark-green font-bold mb-10">
+  <p class="has-text-align-center text-3xl 2xl:text-[40px] text-dark-green font-bold mb-10">
     Real-World Learning
   </p>
   <!-- /wp:paragraph -->
 
   <!-- wp:group {"className":"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6 auto-rows-[18rem] items-stretch","layout":{"type":"constrained"}} -->
-  <div class="wp-block-group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6 auto-rows-[18rem] items-stretch">
+  <div class="wp-block-group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-6 gap-6 max-w-screen mx-auto px-6 auto-rows-[18rem] items-stretch">
 
     <!-- wp:group {"className":"relative group bg-eucalyptus-110 text-white rounded-xl shadow-md overflow-hidden h-full w-full hover:scale-105 transition-transform duration-300","layout":{"type":"constrained"}} -->
     <div class="wp-block-group relative group bg-eucalyptus-110 text-white rounded-xl shadow-md overflow-hidden h-full w-full hover:scale-105 transition-transform duration-300">
