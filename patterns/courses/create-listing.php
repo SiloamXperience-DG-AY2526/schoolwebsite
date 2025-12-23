@@ -12,15 +12,13 @@
 
     <!-- wp:heading {"className":"text-[56px] font-semibold"} -->
     <h2 class="wp-block-heading text-header-xxl text-left font-semibold">
-        <span class="drop-shadow text-dark-green">Add a New Listing</span>
+        <span class="drop-shadow">Add a New Listing</span>
 
     </h2>
     <!-- /wp:heading -->
-
     <!-- wp:group {"className":"flex items-center gap-3 mb-8 flex-wrap","layout":{"type":"flex","flexWrap":"wrap"}} -->
-    <div class="wp-block-group flex items-center gap-3 mb-8 flex-wrap py-8">
+    <div class="wp-block-group flex justify-evenly items-center gap-4 mb-8 py-8 flex-wrap w-full">
 
-        <!-- STEP -->
         <div class="flex items-center gap-2.5">
             <svg width="35" height="35" viewBox="0 0 35 35" fill="none">
                 <circle cx="17.5" cy="17.5" r="17" stroke="#5AD3B3" />
@@ -333,7 +331,7 @@
         </div>
         <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
             <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
-               Preview and Submission
+                Preview and Submission
                 <span class="icon text-2xl leading-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                         <path d="M18 23.1L9 14.1L11.1 12L18 18.9L24.9 12L27 14.1L18 23.1Z" fill="#1D1B20" />
@@ -342,52 +340,60 @@
             </button>
             <div class="accordion-content bg-white rounded-b-2xl shadow-lg p-7">
 
-                
-                    
-
-                </div>
-
             </div>
-
         </div>
-
 
     </div>
 
+    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
+    <div class="wp-block-buttons flex justify-end pt-8">
+        <!-- wp:button {"className":"join-button"} -->
+        <div class="wp-block-button submit-button cursor-pointer 2xl:text-xl">
+            <a href="/" class="wp-block-button__link">
+                Submit
+            </a>
+        </div>
+        <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const accordions = document.querySelectorAll(".accordion-toggle");
 
-            accordions.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const content = btn.nextElementSibling;
-                    const parent = btn.parentElement;
-                    const icon = btn.querySelector(".icon");
-                    const expanded = !content.classList.contains("hidden");
+</div>
 
-                    // Reset all accordions
-                    document.querySelectorAll(".accordion-content").forEach(el => el.classList.add("hidden"));
-                    document.querySelectorAll(".accordion-item").forEach(item => {
-                        item.classList.remove("bg-eucalyptus-100");
-                        item.classList.add("bg-eucalyptus-70");
-                    });
-                    document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate-180"));
-                    document.querySelectorAll(".accordion-toggle").forEach(t => t.classList.remove("text-white"));
 
-                    // Expand current accordion
-                    if (!expanded) {
-                        content.classList.remove("hidden");
-                        parent.classList.remove("bg-eucalyptus-70");
-                        parent.classList.add("bg-eucalyptus-100");
-                        btn.classList.add("text-white");
-                        icon.classList.add("rotate-180")
-                    }
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const accordions = document.querySelectorAll(".accordion-toggle");
+
+        accordions.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                const parent = btn.parentElement;
+                const icon = btn.querySelector(".icon");
+                const expanded = !content.classList.contains("hidden");
+
+                // Reset all accordions
+                document.querySelectorAll(".accordion-content").forEach(el => el.classList.add("hidden"));
+                document.querySelectorAll(".accordion-item").forEach(item => {
+                    item.classList.remove("bg-eucalyptus-100");
+                    item.classList.add("bg-eucalyptus-70");
                 });
+                document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate-180"));
+                document.querySelectorAll(".accordion-toggle").forEach(t => t.classList.remove("text-white"));
+
+                // Expand current accordion
+                if (!expanded) {
+                    content.classList.remove("hidden");
+                    parent.classList.remove("bg-eucalyptus-70");
+                    parent.classList.add("bg-eucalyptus-100");
+                    btn.classList.add("text-white");
+                    icon.classList.add("rotate-180")
+                }
             });
         });
-    </script>
-    <!-- /wp:html -->
+    });
+</script>
+<!-- /wp:html -->
 
 </div>
 <!-- /wp:group -->

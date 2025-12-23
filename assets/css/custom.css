@@ -197,6 +197,20 @@ html {
 }
 
 
+.submit-button a {
+    all: unset;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 3rem;
+    border-radius: 0.5rem;
+    background: grey;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+
 .listing-button a {
     background-color: #7EC7DD;
     color: white;
