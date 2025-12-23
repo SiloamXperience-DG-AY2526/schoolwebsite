@@ -136,6 +136,23 @@ function svlti_seed_tax() {
       }
     }
   }
+
+  // Blog Categories 
+  $tax = 'blog-category';
+  if (taxonomy_exists($tax)) {
+    $terms = [
+      'Reflections'        => 'reflections',
+      'Student Projects'   => 'student-projects',
+      'Community Service'  => 'community-service',
+      'Learning Journeys'  => 'learning-journeys',
+    ];
+
+    foreach ($terms as $name => $slug) {
+      if (!term_exists($slug, $tax)) {
+        wp_insert_term($name, $tax, ['slug' => $slug]);
+      }
+    }
+  }
 }
 add_action('init', 'svlti_seed_tax');
 

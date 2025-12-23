@@ -870,10 +870,6 @@ video {
   height: 24rem;
 }
 
-.h-\[199px\] {
-  height: 199px;
-}
-
 .h-\[220px\] {
   height: 220px;
 }
@@ -1083,10 +1079,6 @@ video {
   max-width: 1000px;
 }
 
-.max-w-\[1400px\] {
-  max-width: 1400px;
-}
-
 .max-w-\[420px\] {
   max-width: 420px;
 }
@@ -1115,8 +1107,8 @@ video {
   max-width: 36rem;
 }
 
-.max-w-6 {
-  max-width: 1.5rem;
+.max-w-none {
+  max-width: none;
 }
 
 .flex-1 {
@@ -1443,6 +1435,11 @@ video {
   border-color: currentColor;
 }
 
+.border-emerald-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(167 243 208 / var(--tw-border-opacity, 1));
+}
+
 .border-emerald-500 {
   --tw-border-opacity: 1;
   border-color: rgb(16 185 129 / var(--tw-border-opacity, 1));
@@ -1484,6 +1481,10 @@ video {
 
 .border-white {
   border-color: var(--wp--preset--color--white);
+}
+
+.border-dark-green {
+  border-color: var(--wp--preset--color--dark-green);
 }
 
 .bg-\[\#2b8c77\] {
@@ -1567,6 +1568,11 @@ video {
 .bg-emerald-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(52 211 153 / var(--tw-bg-opacity, 1));
+}
+
+.bg-emerald-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 253 245 / var(--tw-bg-opacity, 1));
 }
 
 .bg-emerald-500 {
@@ -2262,6 +2268,11 @@ video {
   color: rgb(4 120 87 / var(--tw-text-opacity, 1));
 }
 
+.text-emerald-800 {
+  --tw-text-opacity: 1;
+  color: rgb(6 95 70 / var(--tw-text-opacity, 1));
+}
+
 .text-eucalyptus-100 {
   --tw-text-opacity: 1;
   color: rgb(44 165 133 / var(--tw-text-opacity, 1));
@@ -2717,12 +2728,12 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-  
   .md\:order-first {
     order: -9999;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
 
   .md\:block {
@@ -2755,10 +2766,6 @@ video {
 
   .md\:w-\[52\%\] {
     width: 52%;
-  }
-
-  .md\:w-\[55\%\] {
-    width: 55%;
   }
 
   .md\:grid-cols-2 {
@@ -2994,10 +3001,6 @@ video {
 
   .\32xl\:max-w-md {
     max-width: 28rem;
-  }
-
-  .\32xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .\32xl\:grid-cols-6 {
