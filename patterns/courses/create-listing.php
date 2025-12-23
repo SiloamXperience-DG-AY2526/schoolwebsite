@@ -58,7 +58,7 @@
     <!-- wp:html -->
     <div class="accordion-container space-y-4 w-full flex flex-col items-start">
 
-        <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
+        <div class="accordion-item bg-eucalyptus-70 rounded-2xl overflow-hidden w-full transition-colors duration-300">
             <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
                 Company Details
                 <span class="icon text-2xl leading-none">
@@ -191,7 +191,7 @@
 
         </div>
 
-        <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
+        <div class="accordion-item bg-eucalyptus-70 rounded-2xl overflow-hidden w-full transition-colors duration-300">
             <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
                 Internship Details
                 <span class="icon text-2xl leading-none">
@@ -271,7 +271,7 @@
 
         </div>
 
-        <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
+        <div class="accordion-item bg-eucalyptus-70 rounded-2xl overflow-hidden w-full transition-colors duration-300">
             <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
                 Description & Responsibilities
                 <span class="icon text-2xl leading-none">
@@ -329,7 +329,7 @@
             </div>
 
         </div>
-        <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
+        <div class="accordion-item bg-eucalyptus-70 rounded-2xl overflow-hidden w-full transition-colors duration-300">
             <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
                 Preview and Submission
                 <span class="icon text-2xl leading-none">
