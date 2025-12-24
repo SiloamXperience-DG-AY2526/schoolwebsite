@@ -69,21 +69,17 @@ if (!function_exists('svlti_project_card_data')) {
       $excerpt = wp_trim_words(wp_strip_all_tags(get_post_field('post_content', $post_id)), 22);
     }
 
-    // Category badge: first assigned term
+    // Category pills: all assigned terms
     $terms = get_the_terms($post_id, SVLTI_PROJECT_TAXONOMY);
-    $badge = null;
-    if (is_array($terms) && !is_wp_error($terms) && !empty($terms)) {
-      // pick the first term
-      $badge = [
-        'name' => $terms[0]->name,
-        'slug' => $terms[0]->slug,
-      ];
+    if (!is_array($terms) || is_wp_error($terms)) {
+      $terms = [];
     }
+
 
     return [
       'title'      => $title,
       'excerpt'    => $excerpt,
-      'badge'      => $badge,
+      'terms'      => $terms,
       'permalink'  => get_permalink($post_id),
       'has_thumb'  => has_post_thumbnail($post_id),
       'thumb_html' => get_the_post_thumbnail($post_id, 'large', [
@@ -167,13 +163,16 @@ $projects_q = svlti_get_projects_query($current_cat, 9);
               <?= esc_html($p['excerpt']) ?>
             </p>
 
-            <?php if (!empty($p['badge'])) : ?>
-              <div class="mb-5">
-                <span class="inline-block px-3 py-1 rounded-full text-xs font-medium bg-[#CFEFE8] text-[#207860]">
-                  <?= esc_html($p['badge']['name']) ?>
-                </span>
+            <?php if (!empty($p['terms'])) : ?>
+              <div class="mb-5 flex flex-wrap gap-2">
+                <?php foreach ($p['terms'] as $t) : ?>
+                  <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#CFEFE8] text-[#207860]">
+                    <?= esc_html($t->name) ?>
+                  </span>
+                <?php endforeach; ?>
               </div>
             <?php endif; ?>
+
 
             <div class="mt-auto flex justify-end">
               <a href="<?= esc_url($p['permalink']) ?>"
