@@ -109,7 +109,9 @@ $jobs_q = new WP_Query($args);
           <div>
           <!-- wp:button {"className":"bg-[#2b8c77] text-white hover:bg-[#237a66]"} -->
                   <div class="wp-block-button">
-                    <a class="wp-block-button__link wp-element-button bg-[#2b8c77] text-white hover:bg-[#237a66]">I'm an Employer</a>
+                    <a href="/courses/create-listing"
+                      class="wp-block-button__link wp-element-button bg-[#2b8c77] text-white hover:bg-[#237a66]"
+                    >I'm an Employer</a>
                   </div>
                   <!-- /wp:button -->
                   </div>

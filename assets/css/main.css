@@ -886,6 +886,10 @@ video {
   height: 484px;
 }
 
+.h-\[57px\] {
+  height: 57px;
+}
+
 .h-\[75vh\] {
   height: 75vh;
 }
@@ -896,6 +900,10 @@ video {
 
 .h-\[85\%\] {
   height: 85%;
+}
+
+.h-\[94px\] {
+  height: 94px;
 }
 
 .h-\[95\%\] {
@@ -1055,6 +1063,10 @@ video {
   min-width: 280px;
 }
 
+.min-w-\[313px\] {
+  min-width: 313px;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1113,6 +1125,10 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-\[1\.7\] {
+  flex: 1.7;
 }
 
 .flex-shrink-0 {
@@ -1281,6 +1297,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -1299,6 +1319,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-\[72px\] {
+  gap: 72px;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1329,6 +1353,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-\[18px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(18px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(18px * var(--tw-space-y-reverse));
 }
 
 .self-end {
@@ -1387,6 +1417,11 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-b-2xl {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 .rounded-b-lg {
@@ -1473,6 +1508,10 @@ video {
 .border-neutral-40 {
   --tw-border-opacity: 1;
   border-color: rgb(193 193 201 / var(--tw-border-opacity, 1));
+}
+
+.border-neutral-80\/50 {
+  border-color: rgb(116 116 128 / 0.5);
 }
 
 .border-transparent {
@@ -1757,6 +1796,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-7 {
+  padding: 1.75rem;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -1764,6 +1807,11 @@ video {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .px-16 {
@@ -2358,6 +2406,11 @@ video {
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
+.text-slate-700 {
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity, 1));
+}
+
 .text-transparent {
   color: transparent;
 }
@@ -2519,6 +2572,16 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.placeholder\:text-neutral-20::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(224 224 228 / var(--tw-text-opacity, 1));
+}
+
+.placeholder\:text-neutral-20::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(224 224 228 / var(--tw-text-opacity, 1));
 }
 
 .placeholder\:text-neutral-80::-moz-placeholder {
