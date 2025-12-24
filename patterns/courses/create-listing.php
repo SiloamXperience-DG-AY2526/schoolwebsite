@@ -3,7 +3,6 @@
 /**
  * Title: Create Listing Section
  * Slug: svlti/create-listing
- * Categories: svlti, text
  */
 ?>
 
