@@ -336,3 +336,50 @@ html {
     height: auto;
     object-fit: cover;
 }
+
+/* Example: style only forms with this class */
+.svlti-form{
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.svlti-form input[type="text"],
+.svlti-form input[type="email"],
+.svlti-form select,
+.svlti-form textarea{
+  width: 100%;
+  border: 1px solid #d7dde5;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+/* WPForms submit button (matches your screenshot) */
+.svlti-form .wpforms-submit-container{
+  text-align: center;            /* center the button */
+  margin-top: 24px;
+}
+
+.svlti-form button.wpforms-submit{
+  background: var(--wp--preset--color--brand);
+  color: #fff;
+  border: 0;
+  border-radius: 12px;
+  padding: 18px 80px;            /* makes it wide */
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.svlti-form button.wpforms-submit:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.svlti-form button.wpforms-submit:active{
+  transform: translateY(0);
+  filter: brightness(.98);
+}

@@ -33,6 +33,8 @@
                 </p>
                 <!-- /wp:paragraph -->
 
+                <?php echo do_shortcode('[wpforms id="13" title="false" description="false"]'); ?>
+
                 <!-- wp:group {"className":"bg-neutral-0 rounded-2xl shadow-lg p-10","layout":{"type":"constrained"}} -->
                 <div class="wp-block-group bg-neutral-0 rounded-2xl shadow-lg p-10">
 
