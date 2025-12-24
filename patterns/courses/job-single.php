@@ -141,12 +141,5 @@ function svlti_icon($name) {
     </div>
 
   </div>
-
-  <!-- Optional: full job description -->
-  <?php if (trim(wp_strip_all_tags($job_content)) !== '') : ?>
-    <div class="mt-8 prose max-w-none">
-      <?= $job_content ?>
-    </div>
-  <?php endif; ?>
 </div>
 <!-- /wp:html -->
