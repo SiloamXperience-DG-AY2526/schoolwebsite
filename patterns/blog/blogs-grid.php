@@ -97,7 +97,7 @@ $blogs_q = svlti_get_blogs_query($current_category, 9);
 <div class="wp-block-group w-full py-8">
 
   <!-- wp:heading {"level":2,"className":"text-3xl md:text-4xl font-bold text-[#2b8c77] mb-5"} -->
-  <h2 class="wp-block-heading text-3xl md:text-4xl font-bold text-[#2b8c77] mb-5">Blogs</h2>
+  <h2 class="wp-block-heading text-3xl md:text-4xl font-bold text-[#2b8c77] mb-5">Blog</h2>
   <!-- /wp:heading -->
 
   <!-- wp:html -->

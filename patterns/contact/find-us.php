@@ -55,8 +55,14 @@
                                     <!-- /wp:image -->
 
                                     <!-- wp:heading {"level":2,"className":"text-2xl text-header-sm text-elm-120"} -->
-                                    <h2 class="wp-block-heading text-2xl text-header-sm text-elm-120">Address</h2>
+                                    <h2 class="wp-block-heading text-2xl text-header-sm text-elm-120">
+                                        <a href="https://maps.app.goo.gl/Z4azJwuciH6NTg867" target="_blank" rel="noopener noreferrer"
+                                            class="underline hover:no-underline">
+                                            Address
+                                        </a>
+                                    </h2>
                                     <!-- /wp:heading -->
+
                                 </div>
                                 <!-- /wp:group -->
 
@@ -104,7 +110,7 @@
                             <div class="wp-block-group rounded-xl overflow-hidden">
                                 <!-- wp:image {"alt":"School","className":"w-full h-64 object-cover"} -->
                                 <figure class="wp-block-image w-full h-64 object-cover find-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/places/school.png" alt="School" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/places/schoolv2.png" alt="School" />
                                 </figure>
                                 <!-- /wp:image -->
                             </div>
