@@ -5,6 +5,17 @@
  * Slug: svlti/contact
  * Categories: page
  */
+
+if ( ! function_exists('render_wpform_by_title') ) {
+    function render_wpform_by_title( string $title, bool $show_title = false, bool $show_desc = false ): void {
+        if ( ! function_exists('wpforms_display') ) return;
+
+        $form = get_page_by_title( $title, OBJECT, 'wpforms' );
+        if ( ! $form || $form->post_status === 'trash' ) return;
+
+        wpforms_display( (int) $form->ID, $show_title, $show_desc );
+    }
+}
 ?>
 
 <!-- wp:group {"className":"bg-gradient-to-b from-white to-elm-60 min-h-screen font-sans","layout":{"type":"constrained"}} -->
@@ -32,7 +43,9 @@
                     We'd love to hear from you! Whether you're a parent, student, partner, or volunteer, please use the form below and our team will get back to you within 2–3 business days.
                 </p>
                 <!-- /wp:paragraph -->
-                <?php echo do_shortcode('[wpforms id="13" title="false" description="false"]'); ?>
+                <?php render_wpform_by_title('Contact Form'); ?>
+                <?php render_wpform_by_title('Feedback Form'); ?>
+
                 
 
                 <!-- wp:group {"className":"bg-neutral-0 rounded-2xl shadow-lg p-10","layout":{"type":"constrained"}} -->

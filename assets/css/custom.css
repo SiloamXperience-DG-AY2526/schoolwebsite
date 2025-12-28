@@ -369,9 +369,9 @@ html {
   padding: 14px 16px;
 }
 
-/* WPForms submit button (matches your screenshot) */
+/* WPForms submit button */
 .svlti-form .wpforms-submit-container{
-  text-align: center;            /* center the button */
+  text-align: center;            
   margin-top: 24px;
 }
 
@@ -379,10 +379,10 @@ html {
   background: var(--wp--preset--color--brand);
   color: #fff;
   border: 0;
-  border-radius: 12px;
-  padding: 18px 80px;            /* makes it wide */
-  font-size: 22px;
-  font-weight: 700;
+  border-radius: 10px;
+  padding: 18px 60px;            
+  font-size: 18px;
+  font-weight: 600;
   line-height: 1;
   cursor: pointer;
   transition: transform .15s ease, filter .15s ease;
