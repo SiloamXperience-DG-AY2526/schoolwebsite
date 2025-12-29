@@ -78,7 +78,7 @@ if (!function_exists('svlti_blog_card_data')) {
             'has_thumb'     => has_post_thumbnail($post_id),
             'thumb_html'    => get_the_post_thumbnail($post_id, 'large', [
                 'alt'   => esc_attr($blog_title),
-                'class' => 'w-full h-auto object-cover',
+                'class' => 'w-full h-full object-cover',
             ]),
         ];
     }
