@@ -13,7 +13,7 @@
     <div class="wp-block-group flex flex-col items-start justify-center h-[75vh] bg-light-blue flex-1">
 
         <!-- wp:group {"className":"md:w-[52%]","layout":{"type":"flex"}} -->
-        <div class="wp-block-group flex-col items-start p-12 max-w-3xl">
+        <div class="wp-block-group flex-col items-start p-12 w-2/3 2xl:w-1/2 mr-auto">
 
             <!-- wp:heading {"level":2,"align":"left","className":"text-[56px] font-semibold"} -->
             <h2 class="wp-block-heading text-[34px] 2xl:text-[56px] font-semibold">
@@ -22,7 +22,7 @@
             <!-- /wp:heading -->
 
             <!-- wp:paragraph {"className":"text-gray-800 leading-relaxed"} -->
-            <p class="text-gray-800 font-medium text-[18px] 2xl:text-[30px] leading-relaxed">
+            <p class="text-gray-800 font-medium text-[16px] md:text-[16px] lg:text-[18px] 2xl:text-[20px] leading-relaxed">
                 Our approach to conduct and discipline is about learning and restoration.
                 We encourage everyone to take responsibility for their actions, repair harm, and grow together as a community.
             </p>

@@ -13,7 +13,7 @@
     <div class="wp-block-group flex flex-col items-start justify-center h-[75vh] bg-light-blue flex-1">
 
         <!-- wp:group {"className":"max-w-3xl","layout":{"type":"flex"}} -->
-        <div class="wp-block-group flex-col items-start p-12 max-w-3xl">
+        <div class="wp-block-group flex-col items-start p-12 w-2/3 2xl:w-1/2 mr-auto">
 
             <!-- wp:heading {"className":"text-[56px] font-semibold mb-6"} -->
             <h2 class="wp-block-heading text-[34px] 2xl:text-[56px] text-left font-semibold mb-6">
