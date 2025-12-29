@@ -143,7 +143,7 @@ $courses_q = svlti_get_courses_query($current_pillar, 9);
       ?>
         <div class="bg-white rounded-lg border border-gray-200 overflow-hidden flex flex-col h-full">
 
-          <figure class="wp-block-image size-large">
+          <figure class="wp-block-image size-large h-full overflow-hidden">
             <?php if ($c['has_thumb']) : ?>
               <?= $c['thumb_html']; ?>
             <?php else : ?>
