@@ -98,8 +98,8 @@
                 <h2 class="wp-block-heading text-header-lg text-eucalyptus-110">Near by landmarks</h2>
                 <!-- /wp:heading -->
 
-                <!-- wp:columns {"className":"grid grid-cols-2 gap-10"} -->
-                <div class="wp-block-columns grid grid-cols-2 gap-10">
+                <!-- wp:columns {"className":"grid w-1/2 gap-10"} -->
+                <div class="wp-block-columns grid w-1/2 gap-10">
 
                     <!-- wp:column {"className":"bg-white rounded-2xl shadow-lg overflow-hidden w-full"} -->
                     <div class="wp-block-column bg-white rounded-2xl shadow-lg overflow-hidden w-full h-full">
@@ -132,39 +132,7 @@
 
                     </div>
                     <!-- /wp:column -->
-
-                    <!-- wp:column {"className":"bg-white rounded-2xl shadow-lg overflow-hidden w-full"} -->
-                    <div class="wp-block-column bg-white rounded-2xl shadow-lg overflow-hidden w-full">
-
-                        <!-- wp:group {"className":"","layout":{"type":"constrained"}} -->
-                        <div class="wp-block-group">
-                            <!-- wp:group {"className":"rounded-xl overflow-hidden","layout":{"type":"constrained"}} -->
-                            <div class="wp-block-group rounded-xl overflow-hidden">
-                                <!-- wp:image {"alt":"School","className":"w-full h-64 object-cover"} -->
-                                <figure class="wp-block-image w-full h-64 object-cover find-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/places/school.png" alt="School" />
-                                </figure>
-                                <!-- /wp:image -->
-                            </div>
-                            <!-- /wp:group -->
-                        </div>
-                        <!-- /wp:group -->
-
-                        <!-- wp:group {"className":"p-6","layout":{"type":"constrained"}} -->
-                        <div class="wp-block-group p-6">
-                            <!-- wp:heading {"level":2,"className":"text-2xl font-bold text-elm-120 mb-2"} -->
-                            <h2 class="wp-block-heading text-2xl font-bold text-elm-120 mb-2">Neak Vang Pagoda</h2>
-                            <!-- /wp:heading -->
-
-                            <!-- wp:paragraph {"className":"text-gray-600 text-base"} -->
-                            <p class="text-gray-600 text-base">About 450M to the right of the institute</p>
-                            <!-- /wp:paragraph -->
-                        </div>
-                        <!-- /wp:group -->
-
-                    </div>
-                    <!-- /wp:column -->
-
+                    
                 </div>
                 <!-- /wp:columns -->
 

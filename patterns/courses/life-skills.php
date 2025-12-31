@@ -69,8 +69,8 @@ $life_skills = [
                     <div class="wp-html absolute -left-5 top-8 w-[95%] h-[95%] bg-[#36A7C9] z-10"></div>
                     <!-- /wp:html -->
 
-                    <!-- wp:image {"sizeSlug":"large","className":"relative overflow-hidden shadow-md h-auto w-full 2xl:w-[120%] z-20"} -->
-                    <figure class="wp-block-image size-large relative corner-images overflow-hidden shadow-md h-auto w-full 2xl:w-[120%] z-20">
+                    <!-- wp:image {"sizeSlug":"large","className":"relative overflow-hidden shadow-md h-auto w-full z-20"} -->
+                    <figure class="wp-block-image size-large relative corner-images overflow-hidden shadow-md h-auto w-full z-20">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/courses/<?php echo esc_attr($skill['image']); ?>" alt="<?php echo esc_attr($skill['title']); ?>" />
                     </figure>
                     <!-- /wp:image -->
@@ -94,8 +94,8 @@ $life_skills = [
                     <div class="wp-html absolute -right-5 top-8 w-[95%] h-[95%] bg-[#A6DCCB] z-10"></div>
                     <!-- /wp:html -->
 
-                    <!-- wp:image {"sizeSlug":"large","className":"relative overflow-hidden shadow-md h-auto w-full 2xl:w-[120%] z-20"} -->
-                    <figure class="wp-block-image size-large relative corner-images overflow-hidden shadow-md h-auto w-full 2xl:w-[120%] z-20">
+                    <!-- wp:image {"sizeSlug":"large","className":"relative overflow-hidden shadow-md h-auto w-full z-20"} -->
+                    <figure class="wp-block-image size-large relative corner-images overflow-hidden shadow-md h-auto w-full z-20">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/courses/<?php echo esc_attr($skill['image']); ?>" alt="<?php echo esc_attr($skill['title']); ?>" />
                     </figure>
                     <!-- /wp:image -->
