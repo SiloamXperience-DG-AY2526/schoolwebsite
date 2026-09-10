@@ -1,0 +1,50 @@
+name: "🔒 Security Finding"
+description: Report a security audit finding
+title: "[Security] "
+labels: ["security"]
+body:
+  - type: input
+    id: page-url
+    attributes:
+      label: Page/URL affected
+      placeholder: "/wp-login.php"
+    validations:
+      required: true
+  - type: textarea
+    id: whats-wrong
+    attributes:
+      label: What's wrong?
+      description: Describe the vulnerability or issue in 1-2 sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: how-found
+    attributes:
+      label: How did you find it?
+      description: Tool used and/or steps to reproduce.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested fix
+    validations:
+      required: false
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag and drop or paste an image, if applicable.
+    validations:
+      required: false
