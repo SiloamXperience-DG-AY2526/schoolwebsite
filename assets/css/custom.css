@@ -453,3 +453,13 @@ html {
     /* ensure it sits above everything */
     z-index: 9999;
 }
+
+/* Footer: undo the header nav's grey link colour and keep focus visible on dark green */
+.site-footer .wp-block-navigation ul li {
+    color: inherit;
+}
+
+.site-footer a:focus-visible {
+    outline: 2px solid var(--wp--preset--color--white);
+    outline-offset: 2px;
+}
