@@ -1,0 +1,164 @@
+{
+    "key": "group_bfc3bf345941d",
+    "title": "Milestone Fields",
+    "fields": [
+        {
+            "key": "field_82d32916ddaa8",
+            "label": "Period label",
+            "name": "period_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown on the timeline, e.g. 2012 to 2014 or 2016.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 40,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6988649504cee",
+            "label": "Start year",
+            "name": "start_year",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Used to sort milestones from earliest to latest.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1900,
+            "max": 2100,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_ca6c32d214995",
+            "label": "End year",
+            "name": "end_year",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Leave empty for a single year.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1900,
+            "max": 2100,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_803e10fa7a99b",
+            "label": "Status",
+            "name": "status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Shown as text on the page. Never mark planned work as Completed.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "completed": "Completed",
+                "in_progress": "In Progress",
+                "disruption": "Period of Disruption",
+                "planned": "Planned"
+            },
+            "default_value": "completed",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_0e83714d940f7",
+            "label": "Short summary",
+            "name": "summary",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "One or two sentences shown under the title on the timeline.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 200,
+            "allow_in_bindings": 0,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_0ab6d2a5089c2",
+            "label": "Highlights",
+            "name": "highlights",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "One highlight per line. Shown in the detail panel.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "milestone"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1793808898
+}
