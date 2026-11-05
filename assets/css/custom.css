@@ -566,7 +566,8 @@ html {
     left: -16px !important;
     transform: none !important;
     text-align: left !important;
-    min-width: 270px;
+    width: max-content;
+    min-width: 230px;
     max-width: 320px;
     padding: 8px !important;
     margin-top: 8px;
@@ -698,6 +699,11 @@ html {
         display: none;
     }
 
+    /* Donate sits next to the menu button on the right */
+    .site-header .site-header__actions {
+        margin-left: auto;
+    }
+
     .site-header .site-header__donate .wp-block-button__link {
         padding: 8px 16px;
     }
@@ -712,29 +718,10 @@ html {
         align-items: flex-start !important;
     }
 
-    /* PROVISIONAL (plan Q2): in the phone menu each group opens on tap, so its
-       aria-expanded state matches what is shown. Chevron sits beside the name. */
-    .site-header .is-menu-open .wp-block-navigation-item.has-child {
-        flex-direction: row !important;
-        flex-wrap: wrap;
-        align-items: center !important;
-    }
-
-    .site-header .is-menu-open .wp-block-navigation-submenu__toggle {
-        min-height: 44px;
-    }
-
+    /* Phone menu: WordPress shows every group open (and tells screen readers so),
+       so chevrons are not needed there */
     .site-header .is-menu-open .wp-block-navigation__submenu-icon {
-        display: inline-flex !important;
-        pointer-events: none;
-    }
-
-    .site-header .is-menu-open .wp-block-navigation-submenu__toggle[aria-expanded="false"] ~ .wp-block-navigation__submenu-container {
         display: none !important;
-    }
-
-    .site-header .is-menu-open .wp-block-navigation__submenu-container {
-        flex-basis: 100%;
     }
 
     .site-header .is-menu-open ul li > ul.wp-block-navigation__submenu-container {
