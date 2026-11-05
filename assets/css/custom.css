@@ -469,7 +469,8 @@ html {
 }
 
 .svlti-acc__item.is-open {
-    background: #2CA585;
+    /* Dark green keeps white text above 4.5:1 contrast (WCAG AA) */
+    background: #195D4B;
 }
 
 .svlti-acc__heading {
@@ -602,4 +603,24 @@ html {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Side menu + content layout: stacked on phones, side by side from 768px */
+.svlti-sidebar-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.svlti-sidebar-layout > * {
+    min-width: 0;
+}
+
+@media (min-width: 768px) {
+    .svlti-sidebar-layout {
+        flex-direction: row;
+        gap: 2.5rem;
+        padding: 2.5rem 2.5rem 2.5rem 1.25rem;
+    }
 }

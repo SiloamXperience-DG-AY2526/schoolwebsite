@@ -32,7 +32,7 @@ $restorative = [
     <!-- /wp:heading -->
 
     <!-- wp:group {"className":"gap-5","layout":{"type":"flex","orientation":"vertical"}} -->
-    <div class="wp-block-group flex flex-col gap-5">
+    <div class="wp-block-group flex flex-col gap-5 w-full">
 
         <!-- wp:heading {"className":"text-2xl font-semibold text-[#1a3b5d]"} -->
         <h2 class="text-[20px] md:text-[24px] 2xl:text-[40px] font-semibold text-[#1a3b5d]">Minor Offences</h2>
@@ -44,7 +44,7 @@ $restorative = [
     <!-- /wp:group -->
 
     <!-- wp:group {"className":"gap-5","layout":{"type":"flex","orientation":"vertical"}} -->
-    <div class="wp-block-group flex flex-col gap-5">
+    <div class="wp-block-group flex flex-col gap-5 w-full">
 
         <!-- wp:heading {"className":"text-2xl font-semibold text-[#1a3b5d]"} -->
         <h2 class="text-[20px] md:text-[24px] 2xl:text-[40px] font-semibold text-[#1a3b5d]">Restorative Practices</h2>
