@@ -528,6 +528,8 @@ html {
 .site-header .wp-block-navigation ul li {
     flex: none !important;
     justify-content: flex-start !important;
+    /* an older global rule gives every li z-index:50, which let later items paint over open dropdowns */
+    z-index: auto;
     color: var(--wp--preset--color--neutral-200, #333333);
 }
 
@@ -579,6 +581,7 @@ html {
     border-top: 2px solid var(--wp--preset--color--eucalyptus-110, #207860) !important;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+    z-index: 10;
 }
 
 .site-header .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
@@ -731,6 +734,18 @@ html {
         display: none !important;
     }
 
+    /* Long or translated names wrap inside the screen instead of scrolling sideways */
+    .site-header .is-menu-open .wp-block-navigation-item {
+        max-width: 100%;
+    }
+
+    .site-header .is-menu-open .wp-block-navigation-submenu__toggle {
+        max-width: 100%;
+        white-space: normal;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
     .site-header .is-menu-open .wp-block-navigation-submenu__toggle {
         display: inline-flex;
         align-items: center;
@@ -760,7 +775,9 @@ html {
 
     .site-header .is-menu-open ul li > ul.wp-block-navigation__submenu-container {
         left: 0 !important;
-        max-width: none;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: 100%;
         border: 0 !important;
         box-shadow: none;
         padding: 4px 0 0 8px !important;
