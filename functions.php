@@ -46,6 +46,15 @@ function svlti_scripts() {
     array(),
     filemtime(get_template_directory() . '/assets/css/custom.css')
   );
+
+  // Header phone menu: keeps Tab inside the open menu (see the file's header comment).
+  wp_enqueue_script(
+    'svlti-header-menu',
+    get_template_directory_uri() . '/assets/js/header-menu.js',
+    array(),
+    filemtime(get_template_directory() . '/assets/js/header-menu.js'),
+    array('in_footer' => true, 'strategy' => 'defer')
+  );
 }
 add_action('wp_enqueue_scripts', 'svlti_scripts');
 

@@ -679,8 +679,9 @@ html {
     }
 }
 
-/* Phone (below 600px): WordPress swaps the menu for a "Menu" button */
-@media (max-width: 599px) {
+/* Phone (below 768px): the menu becomes the menu button. PROVISIONAL (plan Q1): WordPress's own switch is 600px;
+   the block after this one moves it to 768px. To go back to 600px, set this to 599px and delete that block. */
+@media (max-width: 767px) {
     .site-header__inner {
         flex-wrap: nowrap;
         padding: 12px 16px;
@@ -711,9 +712,29 @@ html {
         align-items: flex-start !important;
     }
 
-    /* Groups are always expanded in the phone menu, so chevrons are not needed */
+    /* PROVISIONAL (plan Q2): in the phone menu each group opens on tap, so its
+       aria-expanded state matches what is shown. Chevron sits beside the name. */
+    .site-header .is-menu-open .wp-block-navigation-item.has-child {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        align-items: center !important;
+    }
+
+    .site-header .is-menu-open .wp-block-navigation-submenu__toggle {
+        min-height: 44px;
+    }
+
     .site-header .is-menu-open .wp-block-navigation__submenu-icon {
+        display: inline-flex !important;
+        pointer-events: none;
+    }
+
+    .site-header .is-menu-open .wp-block-navigation-submenu__toggle[aria-expanded="false"] ~ .wp-block-navigation__submenu-container {
         display: none !important;
+    }
+
+    .site-header .is-menu-open .wp-block-navigation__submenu-container {
+        flex-basis: 100%;
     }
 
     .site-header .is-menu-open ul li > ul.wp-block-navigation__submenu-container {
@@ -723,5 +744,17 @@ html {
         box-shadow: none;
         padding: 4px 0 0 8px !important;
         margin-top: 0;
+    }
+}
+
+/* PROVISIONAL (plan Q1): between 600px and 767px also use the menu button,
+   overriding WordPress's fixed 600px switch so the 5 groups never wrap onto 2 lines. */
+@media (min-width: 600px) and (max-width: 767px) {
+    .site-header .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: flex;
+    }
+
+    .site-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
     }
 }
