@@ -11,22 +11,43 @@
     <!-- wp:group {"className":"max-w-6xl mx-auto px-4 sm:px-6","layout":{"type":"constrained"}} -->
     <div class="wp-block-group max-w-6xl mx-auto px-4 sm:px-6">
 
-        <!-- wp:group {"className":"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-14 lg:gap-16 justify-items-center w-fit mx-auto"} -->
-        <div class="wp-block-group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-14 lg:gap-16 justify-items-center w-fit mx-auto">
+        <?php
+        // Tiers come from the Team "Level" field (team_level). Anyone without one is a team member.
+        $tiers = [
+            'head'   => 'Head',
+            'deputy' => 'Deputies',
+            'member' => 'Team Members',
+        ];
+        $grouped = array_fill_keys(array_keys($tiers), []);
 
+        $team_query = new WP_Query([
+            'post_type'      => 'team-member',
+            'post_status'    => 'publish',
+            'posts_per_page' => -1,
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+        ]);
+
+        foreach ($team_query->posts as $member) {
+            $level = get_field('team_level', $member->ID);
+            $grouped[isset($tiers[$level]) ? $level : 'member'][] = $member->ID;
+        }
+        wp_reset_postdata();
+
+        if (!$team_query->have_posts()) :
+            echo '<p class="text-sm opacity-70 text-center">No team members found.</p>';
+        endif;
+
+        foreach ($tiers as $level => $tier_label) :
+            if (empty($grouped[$level])) continue;
+        ?>
+        <section class="team-tier" aria-labelledby="team-tier-<?= esc_attr($level) ?>">
+            <h2 id="team-tier-<?= esc_attr($level) ?>" class="team-tier__title"><?= esc_html($tier_label) ?></h2>
+
+            <div class="team-tier__row">
             <?php
-            $team_query = new WP_Query([
-                'post_type'      => 'team-member',
-                'post_status'    => 'publish',
-                'posts_per_page' => -1,
-                'orderby'        => 'menu_order',
-                'order'          => 'ASC',
-                ]);
-
-            if ($team_query->have_posts()) :
-            while ($team_query->have_posts()) : $team_query->the_post();
-                $post_id = get_the_ID();
-
+            $dialogs = '';
+            foreach ($grouped[$level] as $post_id) :
                 $name  = get_field('name', $post_id) ?: get_the_title($post_id);
                 $role  = get_field('role', $post_id);
                 $image = get_field('profile_image', $post_id); // image return format is Array
@@ -34,51 +55,74 @@
                 $img_alt = $name;
 
                 if (is_array($image) && !empty($image['url'])) {
-                $img_url = $image['url'];
-                $img_alt = !empty($image['alt']) ? $image['alt'] : $name;
+                    $img_url = $image['url'];
+                    $img_alt = !empty($image['alt']) ? $image['alt'] : $name;
                 } elseif (is_int($image)) {
-                // if return format = Image ID
-                $img_url = wp_get_attachment_image_url($image, 'full');
-                $img_alt = get_post_meta($image, '_wp_attachment_image_alt', true) ?: $name;
+                    // if return format = Image ID
+                    $img_url = wp_get_attachment_image_url($image, 'full');
+                    $img_alt = get_post_meta($image, '_wp_attachment_image_alt', true) ?: $name;
                 }
-            ?>
-            <div class="wp-block-group text-left w-50">
-                <div class="wp-block-group mb-8 inline-block relative">
-                <div class="absolute -bottom-5 -right-5 w-48 h-56 bg-elm-120 z-0"></div>
 
-                <figure class="wp-block-image size-full relative z-10 overflow-hidden bg-white w-48 h-56">
-                    <?php if ($img_url) : ?>
-                    <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>" />
-                    <?php else : ?>
-                    <div class="w-48 h-56 flex items-center justify-center text-sm opacity-60">
-                        No image
-                    </div>
+                $bio         = get_field('bio', $post_id);
+                $year_joined = get_field('year_joined', $post_id);
+                $contact     = get_field('work_contact', $post_id);
+                // Contact shows only when SVLTI has approved it (contact_public ticked).
+                $show_contact = get_field('contact_public', $post_id) && is_email($contact);
+                $dialog_id    = 'team-member-' . $post_id;
+                $initial      = mb_strtoupper(mb_substr(trim($name), 0, 1));
+            ?>
+                <button type="button" class="team-card" aria-haspopup="dialog" data-team-dialog="<?= esc_attr($dialog_id) ?>">
+                    <span class="team-card__photo">
+                        <?php if ($img_url) : ?>
+                        <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>" />
+                        <?php else : ?>
+                        <span class="team-card__fallback" aria-hidden="true"><?= esc_html($initial) ?></span>
+                        <?php endif; ?>
+                    </span>
+                    <span class="team-card__name"><?= esc_html($name) ?></span>
+                    <?php if ($role) : ?>
+                    <span class="team-card__role"><?= esc_html($role) ?></span>
                     <?php endif; ?>
-                </figure>
-                </div>
+                </button>
 
-                <h3 class="text-header-normal text-eucalyptus-110 mb-1">
-                <?= esc_html($name) ?>
-                </h3>
+                <?php ob_start(); ?>
+                <dialog id="<?= esc_attr($dialog_id) ?>" class="team-modal" aria-labelledby="<?= esc_attr($dialog_id) ?>-name">
+                    <div class="team-modal__inner">
+                        <button type="button" class="team-modal__close" data-team-close aria-label="Close profile">&times;</button>
 
-                <?php if ($role) : ?>
-                <p class="text-black text-paragraph-normal">
-                    <?= esc_html($role) ?>
-                </p>
-                <?php endif; ?>
+                        <?php if ($img_url) : ?>
+                        <img class="team-modal__photo" src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>" />
+                        <?php else : ?>
+                        <span class="team-modal__photo team-card__fallback" aria-hidden="true"><?= esc_html($initial) ?></span>
+                        <?php endif; ?>
+
+                        <h2 id="<?= esc_attr($dialog_id) ?>-name" class="team-modal__name"><?= esc_html($name) ?></h2>
+
+                        <?php if ($role) : ?>
+                        <p class="team-modal__role"><?= esc_html($role) ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($year_joined) : ?>
+                        <p class="team-modal__meta">Joined <?= esc_html($year_joined) ?></p>
+                        <?php endif; ?>
+
+                        <div class="team-modal__bio">
+                            <?= $bio ? wpautop(esc_html($bio)) : '<p>Profile coming soon.</p>' ?>
+                        </div>
+
+                        <?php if ($show_contact) : ?>
+                        <p class="team-modal__meta">
+                            <a href="mailto:<?= esc_attr($contact) ?>"><?= esc_html($contact) ?></a>
+                        </p>
+                        <?php endif; ?>
+                    </div>
+                </dialog>
+                <?php $dialogs .= ob_get_clean(); ?>
+            <?php endforeach; ?>
             </div>
-
-            <?php
-            endwhile;
-            wp_reset_postdata();
-            else :
-            echo '<p class="text-sm opacity-70">No team members found.</p>';
-            endif;
-            ?>
-
-
-        </div>
-        <!-- /wp:group -->
+            <?= $dialogs ?>
+        </section>
+        <?php endforeach; ?>
 
     </div>
     <!-- /wp:group -->
