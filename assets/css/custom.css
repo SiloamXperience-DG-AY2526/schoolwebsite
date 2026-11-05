@@ -675,8 +675,9 @@ html {
         gap: 12px;
     }
 
+    /* Menu button sits at the far right, after Donate */
     .site-header .site-header__nav {
-        order: 0;
+        order: 3;
         flex: 0 0 auto;
     }
 
