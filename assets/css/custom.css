@@ -566,8 +566,9 @@ html {
     left: -16px !important;
     transform: none !important;
     text-align: left !important;
-    width: max-content;
-    min-width: 230px;
+    /* !important: WordPress's open-dropdown rule (more specific) sets width:auto and min-width:200px */
+    width: max-content !important;
+    min-width: 230px !important;
     max-width: 320px;
     padding: 8px !important;
     margin-top: 8px;
