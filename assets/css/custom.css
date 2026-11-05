@@ -567,6 +567,7 @@ html {
     transform: none !important;
     text-align: left !important;
     min-width: 270px;
+    max-width: 320px;
     padding: 8px !important;
     margin-top: 8px;
     gap: 2px !important;
@@ -580,7 +581,7 @@ html {
 
 .site-header .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     width: 100%;
     padding: 10px 12px !important;
@@ -592,7 +593,8 @@ html {
     border-radius: 8px;
     justify-content: flex-start !important;
     text-decoration: none;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .site-header .wp-block-navigation__submenu-container > li {
@@ -607,6 +609,7 @@ html {
     height: 5px;
     border: 1px solid currentColor;
     border-radius: 1px;
+    margin-top: 0.55em;
 }
 
 .site-header .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
@@ -639,6 +642,15 @@ html {
     background-color: currentColor;
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E") center / contain no-repeat;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Phone Menu and Close buttons: 44x44px tap area, icon stays 24px (NFR-5) */
+.site-header .wp-block-navigation__responsive-container-open,
+.site-header .wp-block-navigation__responsive-container-close {
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Keyboard focus: always visible (NFR-7) */
@@ -706,6 +718,7 @@ html {
 
     .site-header .is-menu-open ul li > ul.wp-block-navigation__submenu-container {
         left: 0 !important;
+        max-width: none;
         border: 0 !important;
         box-shadow: none;
         padding: 4px 0 0 8px !important;
