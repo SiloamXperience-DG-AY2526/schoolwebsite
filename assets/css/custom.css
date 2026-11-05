@@ -476,6 +476,14 @@ html {
     padding: 12px 32px;
 }
 
+/* WordPress adds a 24px top margin between stacked blocks; the header aligns by flexbox instead */
+.site-header .site-header__inner > *,
+.site-header .site-header__brand > *,
+.site-header .site-header__brand-text > *,
+.site-header .site-header__actions > * {
+    margin-block: 0;
+}
+
 /* Logo + name + tagline (left) */
 .site-header__brand {
     display: flex;
@@ -558,9 +566,10 @@ html {
     left: -16px !important;
     transform: none !important;
     text-align: left !important;
-    min-width: 230px;
+    min-width: 270px;
     padding: 8px !important;
     margin-top: 8px;
+    gap: 2px !important;
     background: var(--wp--preset--color--white, #fff) !important;
     color: var(--wp--preset--color--neutral-120, #515160) !important;
     border: 1px solid var(--wp--preset--color--neutral-10, #F0F0F2) !important;
@@ -583,6 +592,11 @@ html {
     border-radius: 8px;
     justify-content: flex-start !important;
     text-decoration: none;
+    white-space: nowrap;
+}
+
+.site-header .wp-block-navigation__submenu-container > li {
+    margin: 0 !important;
 }
 
 /* Small square bullet before each dropdown item */
