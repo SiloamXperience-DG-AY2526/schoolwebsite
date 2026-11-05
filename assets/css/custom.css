@@ -803,3 +803,75 @@ html {
         transition: none !important;
     }
 }
+
+/* =====================================================================
+   PAGE TEMPLATES (Asher) - Accordion page (templates/accordion.html) and
+   the "Accordion section" pattern (patterns/page/accordion-section.php).
+   Uses WordPress's Details block: opens/closes by mouse, touch or keyboard
+   and reports open/closed to screen readers without any script.
+   ===================================================================== */
+.svlti-page {
+    padding: 48px 24px 64px;
+}
+
+.svlti-accordion {
+    margin-block: 12px;
+    background: var(--wp--preset--color--white, #fff);
+    border: 1px solid var(--wp--preset--color--neutral-20, #E0E0E4);
+    border-radius: 12px;
+}
+
+.svlti-accordion > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 44px;
+    padding: 14px 20px;
+    font-weight: 600;
+    color: var(--wp--preset--color--neutral-200, #333333);
+    cursor: pointer;
+    list-style: none;
+}
+
+.svlti-accordion > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Chevron: points down when closed, up when open */
+.svlti-accordion > summary::after {
+    content: "";
+    flex: none;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.svlti-accordion[open] > summary {
+    color: var(--wp--preset--color--eucalyptus-110, #207860);
+}
+
+.svlti-accordion[open] > summary::after {
+    transform: translateY(2px) rotate(-135deg);
+}
+
+.svlti-accordion > summary:focus-visible {
+    outline: 2px solid var(--wp--preset--color--elm-100, #2C89A5);
+    outline-offset: 2px;
+    border-radius: 12px;
+}
+
+.svlti-accordion > :not(summary) {
+    margin: 0;
+    padding: 0 20px 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .svlti-accordion > summary::after {
+        transition: none;
+    }
+}
+

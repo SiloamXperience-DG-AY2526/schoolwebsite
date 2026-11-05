@@ -153,7 +153,9 @@
       "h6": { "typography": { "fontSize": "var(--wp--preset--font-size--paragraph-normal)" } }
     }
   },
-  "customTemplates": true,
+  "customTemplates": [
+    { "name": "accordion", "title": "Accordion page", "postTypes": ["page"] }
+  ],
   "templateParts": [
     { "name": "header", "title": "Header", "area": "header" },
     { "name": "footer", "title": "Footer", "area": "footer" }
