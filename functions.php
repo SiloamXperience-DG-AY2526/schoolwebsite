@@ -22,6 +22,14 @@ function svlti_setup() {
 }
 add_action('after_setup_theme', 'svlti_setup');
 
+// Block templates already render a title; Rank Math must not render a second one.
+function svlti_avoid_duplicate_block_title() {
+  if (false !== has_action('wp_head', '_block_template_render_title_tag')) {
+    remove_action('rank_math/head', '_wp_render_title_tag', 1);
+  }
+}
+add_action('wp_head', 'svlti_avoid_duplicate_block_title', 0);
+
 
 function svlti_scripts() {
   // Google Fonts import
