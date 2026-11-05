@@ -15,8 +15,8 @@
         // Tiers come from the Team "Level" field (team_level). Anyone without one is a team member.
         $tiers = [
             'head'   => 'Head',
-            'deputy' => 'Deputy',
-            'member' => 'Team members',
+            'deputy' => 'Deputies',
+            'member' => 'Team Members',
         ];
         $grouped = array_fill_keys(array_keys($tiers), []);
 
@@ -41,12 +41,10 @@
         foreach ($tiers as $level => $tier_label) :
             if (empty($grouped[$level])) continue;
         ?>
-        <section class="mb-12" aria-labelledby="team-tier-<?= esc_attr($level) ?>">
-            <h2 id="team-tier-<?= esc_attr($level) ?>" class="text-2xl sm:text-3xl text-eucalyptus-110 font-bold text-center mb-8">
-                <?= esc_html($tier_label) ?>
-            </h2>
+        <section class="team-tier" aria-labelledby="team-tier-<?= esc_attr($level) ?>">
+            <h2 id="team-tier-<?= esc_attr($level) ?>" class="team-tier__title"><?= esc_html($tier_label) ?></h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-14 lg:gap-16 justify-items-center w-fit mx-auto">
+            <div class="team-tier__row">
             <?php
             $dialogs = '';
             foreach ($grouped[$level] as $post_id) :
@@ -71,30 +69,19 @@
                 // Contact shows only when SVLTI has approved it (contact_public ticked).
                 $show_contact = get_field('contact_public', $post_id) && is_email($contact);
                 $dialog_id    = 'team-member-' . $post_id;
+                $initial      = mb_strtoupper(mb_substr(trim($name), 0, 1));
             ?>
-                <button type="button" class="team-card text-left w-50" aria-haspopup="dialog" data-team-dialog="<?= esc_attr($dialog_id) ?>">
-                    <div class="wp-block-group mb-8 inline-block relative">
-                        <div class="absolute -bottom-5 -right-5 w-48 h-56 bg-elm-120 z-0"></div>
-
-                        <figure class="wp-block-image size-full relative z-10 overflow-hidden bg-white w-48 h-56">
-                            <?php if ($img_url) : ?>
-                            <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>" />
-                            <?php else : ?>
-                            <div class="w-48 h-56 flex items-center justify-center text-sm opacity-60">
-                                No image
-                            </div>
-                            <?php endif; ?>
-                        </figure>
-                    </div>
-
-                    <h3 class="text-header-normal text-eucalyptus-110 mb-1">
-                        <?= esc_html($name) ?>
-                    </h3>
-
+                <button type="button" class="team-card" aria-haspopup="dialog" data-team-dialog="<?= esc_attr($dialog_id) ?>">
+                    <span class="team-card__photo">
+                        <?php if ($img_url) : ?>
+                        <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>" />
+                        <?php else : ?>
+                        <span class="team-card__fallback" aria-hidden="true"><?= esc_html($initial) ?></span>
+                        <?php endif; ?>
+                    </span>
+                    <span class="team-card__name"><?= esc_html($name) ?></span>
                     <?php if ($role) : ?>
-                    <p class="text-black text-paragraph-normal">
-                        <?= esc_html($role) ?>
-                    </p>
+                    <span class="team-card__role"><?= esc_html($role) ?></span>
                     <?php endif; ?>
                 </button>
 
@@ -105,6 +92,8 @@
 
                         <?php if ($img_url) : ?>
                         <img class="team-modal__photo" src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>" />
+                        <?php else : ?>
+                        <span class="team-modal__photo team-card__fallback" aria-hidden="true"><?= esc_html($initial) ?></span>
                         <?php endif; ?>
 
                         <h2 id="<?= esc_attr($dialog_id) ?>-name" class="team-modal__name"><?= esc_html($name) ?></h2>

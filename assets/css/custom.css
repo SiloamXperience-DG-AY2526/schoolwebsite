@@ -468,8 +468,102 @@ html {
     outline-offset: 8px;
 }
 
-.team-card:hover h3 {
+.team-card:hover .team-card__name {
     text-decoration: underline;
+}
+
+/* Team grid, matching the Meet the Team mockup */
+.team-tier {
+    margin-bottom: 3rem;
+}
+
+.team-tier__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0 0 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #195D4B;
+}
+
+.team-tier__title::before,
+.team-tier__title::after {
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+}
+
+.team-tier__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 2.5rem;
+    max-width: 44rem; /* four cards per row */
+    margin: 0 auto;
+}
+
+.team-card {
+    width: 9rem;
+    text-align: left;
+}
+
+.team-card__photo {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 0.9rem;
+}
+
+.team-card__photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translate(6px, 6px);
+    background: #195D4B;
+}
+
+.team-card__photo img,
+.team-card__photo .team-card__fallback {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card__photo img {
+    display: block;
+}
+
+.team-card__fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A2E7D4;
+    color: #195D4B;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.team-card__name {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #195D4B;
+}
+
+.team-card__role {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 0.75rem;
+    color: #195D4B;
 }
 
 .team-modal {
@@ -512,7 +606,7 @@ html {
 
 .team-modal__photo {
     width: 8rem;
-    height: 9rem;
+    height: 8rem;
     object-fit: cover;
     margin-bottom: 1rem;
 }
