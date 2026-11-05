@@ -47,7 +47,9 @@
             </h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-14 lg:gap-16 justify-items-center w-fit mx-auto">
-            <?php foreach ($grouped[$level] as $post_id) :
+            <?php
+            $dialogs = '';
+            foreach ($grouped[$level] as $post_id) :
                 $name  = get_field('name', $post_id) ?: get_the_title($post_id);
                 $role  = get_field('role', $post_id);
                 $image = get_field('profile_image', $post_id); // image return format is Array
@@ -62,8 +64,15 @@
                     $img_url = wp_get_attachment_image_url($image, 'full');
                     $img_alt = get_post_meta($image, '_wp_attachment_image_alt', true) ?: $name;
                 }
+
+                $bio         = get_field('bio', $post_id);
+                $year_joined = get_field('year_joined', $post_id);
+                $contact     = get_field('work_contact', $post_id);
+                // Contact shows only when SVLTI has approved it (contact_public ticked).
+                $show_contact = get_field('contact_public', $post_id) && is_email($contact);
+                $dialog_id    = 'team-member-' . $post_id;
             ?>
-                <div class="wp-block-group text-left w-50">
+                <button type="button" class="team-card text-left w-50" aria-haspopup="dialog" data-team-dialog="<?= esc_attr($dialog_id) ?>">
                     <div class="wp-block-group mb-8 inline-block relative">
                         <div class="absolute -bottom-5 -right-5 w-48 h-56 bg-elm-120 z-0"></div>
 
@@ -87,9 +96,42 @@
                         <?= esc_html($role) ?>
                     </p>
                     <?php endif; ?>
-                </div>
+                </button>
+
+                <?php ob_start(); ?>
+                <dialog id="<?= esc_attr($dialog_id) ?>" class="team-modal" aria-labelledby="<?= esc_attr($dialog_id) ?>-name">
+                    <div class="team-modal__inner">
+                        <button type="button" class="team-modal__close" data-team-close aria-label="Close profile">&times;</button>
+
+                        <?php if ($img_url) : ?>
+                        <img class="team-modal__photo" src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>" />
+                        <?php endif; ?>
+
+                        <h2 id="<?= esc_attr($dialog_id) ?>-name" class="team-modal__name"><?= esc_html($name) ?></h2>
+
+                        <?php if ($role) : ?>
+                        <p class="team-modal__role"><?= esc_html($role) ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($year_joined) : ?>
+                        <p class="team-modal__meta">Joined <?= esc_html($year_joined) ?></p>
+                        <?php endif; ?>
+
+                        <div class="team-modal__bio">
+                            <?= $bio ? wpautop(esc_html($bio)) : '<p>Profile coming soon.</p>' ?>
+                        </div>
+
+                        <?php if ($show_contact) : ?>
+                        <p class="team-modal__meta">
+                            <a href="mailto:<?= esc_attr($contact) ?>"><?= esc_html($contact) ?></a>
+                        </p>
+                        <?php endif; ?>
+                    </div>
+                </dialog>
+                <?php $dialogs .= ob_get_clean(); ?>
             <?php endforeach; ?>
             </div>
+            <?= $dialogs ?>
         </section>
         <?php endforeach; ?>
 

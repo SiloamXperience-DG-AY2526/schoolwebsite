@@ -453,3 +453,92 @@ html {
     /* ensure it sits above everything */
     z-index: 9999;
 }
+/* MEET THE TEAM: profile card button and modal */
+.team-card {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.team-card:focus-visible {
+    outline: 3px solid #1C8A6A;
+    outline-offset: 8px;
+}
+
+.team-card:hover h3 {
+    text-decoration: underline;
+}
+
+.team-modal {
+    border: 0;
+    padding: 0;
+    border-radius: 1rem;
+    width: min(36rem, calc(100vw - 2rem));
+    max-height: calc(100vh - 2rem);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.team-modal::backdrop {
+    background: rgba(25, 93, 75, 0.6);
+}
+
+.team-modal__inner {
+    position: relative;
+    padding: 2rem;
+}
+
+.team-modal__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 9999px;
+    background: #F0F0F2;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.team-modal__close:hover,
+.team-modal__close:focus-visible {
+    background: #A2E7D4;
+    outline: 2px solid #195D4B;
+}
+
+.team-modal__photo {
+    width: 8rem;
+    height: 9rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.team-modal__name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #207860;
+    margin: 0 3rem 0.25rem 0;
+}
+
+.team-modal__role {
+    font-weight: 500;
+    margin: 0 0 0.25rem;
+}
+
+.team-modal__meta {
+    color: #747480;
+    margin: 0 0 1rem;
+}
+
+.team-modal__meta a {
+    color: #195D4B;
+}
+
+.team-modal__bio p {
+    margin: 0 0 0.75rem;
+    line-height: 1.6;
+}

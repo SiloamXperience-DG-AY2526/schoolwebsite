@@ -49,6 +49,18 @@ function svlti_scripts() {
 }
 add_action('wp_enqueue_scripts', 'svlti_scripts');
 
+// Meet the Team profile modal
+function svlti_team_modal_script() {
+  wp_enqueue_script(
+    'svlti-team-modal',
+    get_template_directory_uri() . '/assets/js/team-modal.js',
+    array(),
+    filemtime(get_template_directory() . '/assets/js/team-modal.js'),
+    array('in_footer' => true, 'strategy' => 'defer')
+  );
+}
+add_action('wp_enqueue_scripts', 'svlti_team_modal_script');
+
 // Register default terms for all taxonomies
 function svlti_seed_tax() {
   // Seed event-audience
