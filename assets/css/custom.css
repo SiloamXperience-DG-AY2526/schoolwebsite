@@ -663,6 +663,12 @@ html {
     border-radius: 4px;
 }
 
+/* Links inside dropdowns and the phone menu: ring drawn just inside the item, because an older
+   global rule sets overflow:hidden on every submenu and would clip it */
+.site-header .wp-block-navigation__submenu-container a:focus-visible {
+    outline-offset: -2px;
+}
+
 /* Hover underline from the old .site-nav rules is not used in the header */
 .site-header li::after {
     content: none !important;
