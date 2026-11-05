@@ -877,8 +877,10 @@ html {
 
 /* Hub page (templates/hub.html) and the "Hub links" pattern (patterns/page/hub-links.php):
    the section's child pages as cards. Uses WordPress's Page List block. */
-.svlti-hub-intro {
+.svlti-page .svlti-hub-intro {
     max-width: 720px;
+    /* WordPress centres narrower blocks in this layout with !important; keep the intro left-aligned */
+    margin-left: 0 !important;
     margin-bottom: 24px;
     font-size: var(--wp--preset--font-size--paragraph-lg, 20px);
     color: var(--wp--preset--color--neutral-120, #515160);
