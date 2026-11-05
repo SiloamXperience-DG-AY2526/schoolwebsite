@@ -681,8 +681,8 @@ html {
     }
 }
 
-/* Phone (below 768px): the menu becomes the menu button. PROVISIONAL (plan Q1): WordPress's own switch is 600px;
-   the block after this one moves it to 768px. To go back to 600px, set this to 599px and delete that block. */
+/* Phone (below 768px): the menu becomes the menu button. Agreed 4 Nov (Q1): menu button below 768px; WordPress's own switch is 600px,
+   so the block at the end of this section covers 600-767px. */
 @media (max-width: 767px) {
     .site-header__inner {
         flex-wrap: nowrap;
@@ -719,10 +719,36 @@ html {
         align-items: flex-start !important;
     }
 
-    /* Phone menu: WordPress shows every group open (and tells screen readers so),
-       so chevrons are not needed there */
+    /* Phone menu: WordPress's own chevron is hidden; the group button draws its own below */
     .site-header .is-menu-open .wp-block-navigation__submenu-icon {
         display: none !important;
+    }
+
+    .site-header .is-menu-open .wp-block-navigation-submenu__toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 44px;
+    }
+
+    /* Groups expand/collapse on tap (agreed Q2). Needs assets/js/header-menu.js, which adds
+       .svlti-menu-accordion; without it every group stays open, as WordPress shows it. */
+    .svlti-menu-accordion .site-header .is-menu-open .has-child:not(.is-expanded) > .wp-block-navigation__submenu-container {
+        display: none !important;
+    }
+
+    .svlti-menu-accordion .site-header .is-menu-open .wp-block-navigation-submenu__toggle::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        transition: transform 0.2s ease;
+    }
+
+    .svlti-menu-accordion .site-header .is-menu-open .wp-block-navigation-submenu__toggle[aria-expanded="true"]::after {
+        transform: translateY(2px) rotate(-135deg);
     }
 
     .site-header .is-menu-open ul li > ul.wp-block-navigation__submenu-container {
@@ -735,7 +761,7 @@ html {
     }
 }
 
-/* PROVISIONAL (plan Q1): between 600px and 767px also use the menu button,
+/* Agreed 4 Nov (Q1): between 600px and 767px also use the menu button,
    overriding WordPress's fixed 600px switch so the 5 groups never wrap onto 2 lines. */
 @media (min-width: 600px) and (max-width: 767px) {
     .site-header .wp-block-navigation__responsive-container-open:not(.always-shown) {
@@ -744,5 +770,12 @@ html {
 
     .site-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
         display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header .wp-block-navigation__submenu-icon,
+    .site-header .wp-block-navigation-submenu__toggle::after {
+        transition: none !important;
     }
 }
