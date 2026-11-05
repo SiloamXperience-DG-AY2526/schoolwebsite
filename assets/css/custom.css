@@ -674,8 +674,9 @@ html {
     content: none !important;
 }
 
-/* Tablet: menu moves to its own full-width row instead of squeezing */
-@media (max-width: 1100px) {
+/* Tablet: menu moves to its own full-width row instead of squeezing.
+   The single row needs about 1130px with the real logo and tagline, so it starts at 1180px. */
+@media (max-width: 1179px) {
     .site-header__inner {
         flex-wrap: wrap;
         row-gap: 4px;
