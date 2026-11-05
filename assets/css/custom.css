@@ -875,3 +875,67 @@ html {
     }
 }
 
+/* Hub page (templates/hub.html) and the "Hub links" pattern (patterns/page/hub-links.php):
+   the section's child pages as cards. Uses WordPress's Page List block. */
+.svlti-hub-intro {
+    max-width: 720px;
+    margin-bottom: 24px;
+    font-size: var(--wp--preset--font-size--paragraph-lg, 20px);
+    color: var(--wp--preset--color--neutral-120, #515160);
+}
+
+ul.svlti-hub-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.svlti-hub-links .wp-block-pages-list__item {
+    margin: 0;
+}
+
+/* Only this section's direct pages: grandchildren are not shown as cards */
+.svlti-hub-links .wp-block-navigation__submenu-container,
+.svlti-hub-links .wp-block-page-list__submenu-icon {
+    display: none;
+}
+
+.svlti-hub-links .wp-block-pages-list__item__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 72px;
+    padding: 20px;
+    font-weight: 600;
+    color: var(--wp--preset--color--neutral-200, #333333);
+    text-decoration: none;
+    background: var(--wp--preset--color--white, #fff);
+    border: 1px solid var(--wp--preset--color--neutral-20, #E0E0E4);
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+.svlti-hub-links .wp-block-pages-list__item__link::after {
+    content: "";
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+}
+
+.svlti-hub-links .wp-block-pages-list__item__link:hover {
+    color: var(--wp--preset--color--eucalyptus-110, #207860);
+    border-color: var(--wp--preset--color--eucalyptus-110, #207860);
+}
+
+.svlti-hub-links .wp-block-pages-list__item__link:focus-visible {
+    outline: 2px solid var(--wp--preset--color--elm-100, #2C89A5);
+    outline-offset: 2px;
+}
+

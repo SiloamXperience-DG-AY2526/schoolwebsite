@@ -154,6 +154,7 @@
     }
   },
   "customTemplates": [
+    { "name": "hub", "title": "Hub page", "postTypes": ["page"] },
     { "name": "accordion", "title": "Accordion page", "postTypes": ["page"] }
   ],
   "templateParts": [
