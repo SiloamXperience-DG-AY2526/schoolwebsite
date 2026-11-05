@@ -699,6 +699,11 @@ html {
         align-items: flex-start !important;
     }
 
+    /* Groups are always expanded in the phone menu, so chevrons are not needed */
+    .site-header .is-menu-open .wp-block-navigation__submenu-icon {
+        display: none !important;
+    }
+
     .site-header .is-menu-open ul li > ul.wp-block-navigation__submenu-container {
         left: 0 !important;
         border: 0 !important;
