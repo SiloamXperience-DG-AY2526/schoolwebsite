@@ -454,11 +454,18 @@ html {
     z-index: 9999;
 }
 
-/* Footer: undo the header nav's grey link colour and keep focus visible on dark green */
+/* =====================================================================
+   SITE FOOTER (Akram) - parts/footer.html, shared by every template that
+   includes the footer part. Scoped to .site-footer so it does not change
+   other menus. The older global navigation rules above (grey links,
+   z-index: 50) were written for the old header; these undo them here.
+   ===================================================================== */
 .site-footer .wp-block-navigation ul li {
     color: inherit;
+    z-index: auto;
 }
 
+/* White ring stays visible on the dark-green background (7.75:1) */
 .site-footer a:focus-visible {
     outline: 2px solid var(--wp--preset--color--white);
     outline-offset: 2px;
