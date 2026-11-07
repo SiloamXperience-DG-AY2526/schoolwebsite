@@ -9,36 +9,15 @@
 const SVLTI_COURSE_POST_TYPE = 'course';
 const SVLTI_PILLAR_TAXONOMY = 'course-pillar';
 
-// Helpers
-if (!function_exists('svlti_courses_build_url')) {
-    function svlti_courses_build_url(array $overrides = []): string
-    {
-        $current = [];
-        foreach ($_GET as $k => $v) {
-            $current[$k] = is_array($v)
-                ? array_map('sanitize_text_field', wp_unslash($v))
-                : sanitize_text_field(wp_unslash($v));
-        }
-
-        $merged = array_merge($current, $overrides);
-
-        // reset pagination if filter changes
-        if (isset($overrides['pillar'])) {
-            $merged['paged'] = 1;
-        }
-
-        return esc_url(add_query_arg($merged));
-    }
-}
-
 if (!function_exists('svlti_get_courses_query')) {
-    function svlti_get_courses_query(array $pillar_slugs = [], int $per_page = 9)
+    function svlti_get_courses_query(array $pillar_slugs = [], int $per_page = 9, string $keyword = '', string $mode = '', array $duration = [], int $page = 1)
     {
         $args = [
             'post_type' => SVLTI_COURSE_POST_TYPE,
             'post_status' => 'publish',
             'posts_per_page' => $per_page,
-            'paged' => max(1, (int) get_query_var('paged', 1)),
+            'paged' => $page,
+            's' => $keyword,
         ];
 
         $filtered = array_filter($pillar_slugs, fn($s) => $s !== '' && $s !== 'all');
@@ -52,6 +31,14 @@ if (!function_exists('svlti_get_courses_query')) {
                     'operator' => 'IN',
                 ],
             ];
+        }
+
+        if ($mode !== '') {
+            $args['meta_query'][] = ['key' => 'learning_mode', 'value' => $mode];
+        }
+        if ($duration) {
+            $args['meta_query'][] = ['key' => 'duration_pt_1', 'value' => $duration[0], 'type' => 'DECIMAL(16,4)'];
+            $args['meta_query'][] = ['key' => 'duration_pt_2', 'value' => $duration[1]];
         }
 
         return new WP_Query($args);
@@ -101,7 +88,7 @@ $raw_pillars = isset($_GET['pillar']) ? wp_unslash($_GET['pillar']) : [];
 if (!is_array($raw_pillars)) {
     $raw_pillars = [$raw_pillars];
 }
-$current_pillars = array_map('sanitize_title', $raw_pillars);
+$current_pillars = array_map('sanitize_title', array_filter($raw_pillars, 'is_string'));
 $current_pillars = array_filter($current_pillars, fn($s) => $s !== '' && $s !== 'all');
 $current_pillars = array_values($current_pillars);
 
@@ -111,8 +98,49 @@ $pillar_terms = get_terms([
     'hide_empty' => false,
 ]);
 
-// Courses query
-$courses_q = svlti_get_courses_query($current_pillars, 9);
+// Keep the page selector as a form field: GET submissions replace the action's query string.
+$catalogue_url = get_permalink(get_queried_object_id());
+$catalogue_args = [];
+parse_str((string) wp_parse_url($catalogue_url, PHP_URL_QUERY), $catalogue_args);
+$form_action = explode('?', $catalogue_url, 2)[0];
+
+$read_filter = static function (string $key): string {
+    return isset($_GET[$key]) && is_string($_GET[$key])
+        ? sanitize_text_field(wp_unslash($_GET[$key]))
+        : '';
+};
+$keyword = $read_filter('course_search');
+$mode_options = ['In Person', 'Online', 'Hybrid'];
+$mode = $read_filter('course_mode');
+$mode = in_array($mode, $mode_options, true) ? $mode : '';
+
+// Offer exact durations from published courses, retaining their stored units.
+global $wpdb;
+$duration_rows = $wpdb->get_results($wpdb->prepare(
+    "SELECT DISTINCT amount.meta_value AS amount, unit.meta_value AS unit
+    FROM {$wpdb->posts} AS course
+    INNER JOIN {$wpdb->postmeta} AS amount ON amount.post_id = course.ID AND amount.meta_key = %s
+    INNER JOIN {$wpdb->postmeta} AS unit ON unit.post_id = course.ID AND unit.meta_key = %s
+    WHERE course.post_type = %s AND course.post_status = %s",
+    'duration_pt_1', 'duration_pt_2', SVLTI_COURSE_POST_TYPE, 'publish'
+));
+$duration_options = [];
+foreach ($duration_rows as $row) {
+    if (is_numeric($row->amount) && (float) $row->amount > 0 && $row->unit !== '') {
+        $duration_options[$row->amount . ' ' . $row->unit] = [$row->amount, $row->unit];
+    }
+}
+uksort($duration_options, 'strnatcasecmp');
+$duration_filter = $read_filter('course_duration');
+$duration = $duration_options[$duration_filter] ?? [];
+$page = max(1, absint($read_filter('course_page')));
+$courses_q = svlti_get_courses_query($current_pillars, 9, $keyword, $mode, $duration, $page);
+$page_args = array_filter([
+    'pillar' => $current_pillars,
+    'course_search' => $keyword,
+    'course_mode' => $mode,
+    'course_duration' => $duration ? $duration_filter : '',
+], static fn($value) => $value !== '' && $value !== []);
 
 // Build label for the button
 if (empty($current_pillars)) {
@@ -148,7 +176,7 @@ if (empty($current_pillars)) {
                 </svg>
             </button>
 
-            <form id="svlti-courses-filter-form" method="get" action="" class="svlti-filter-dropdown hidden" style="
+            <form id="svlti-courses-filter-form" method="get" action="<?= esc_url($form_action) ?>" class="svlti-filter-dropdown hidden" style="
                     position: absolute;
                     top: calc(100% + 8px);
                     right: 0;
@@ -160,7 +188,30 @@ if (empty($current_pillars)) {
                     border: 1px solid rgba(0,0,0,0.08);
                     padding: 8px 0;
                 ">
-                <!-- "All" resets selection -->
+                <?php foreach ($catalogue_args as $key => $value): ?>
+                    <?php if (is_scalar($value)): ?>
+                        <input type="hidden" name="<?= esc_attr($key) ?>" value="<?= esc_attr($value) ?>">
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                <div style="padding:8px 16px;display:grid;gap:8px;">
+                    <label for="svlti-course-search">Search courses</label>
+                    <input id="svlti-course-search" type="search" name="course_search" value="<?= esc_attr($keyword) ?>">
+                    <label for="svlti-course-duration">Duration</label>
+                    <select id="svlti-course-duration" name="course_duration">
+                        <option value="">Any duration</option>
+                        <?php foreach (array_keys($duration_options) as $label): ?>
+                            <option value="<?= esc_attr($label) ?>" <?php selected($duration_filter, $label); ?>><?= esc_html($label) ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <label for="svlti-course-mode">Delivery mode</label>
+                    <select id="svlti-course-mode" name="course_mode">
+                        <option value="">Any mode</option>
+                        <?php foreach ($mode_options as $option): ?>
+                            <option value="<?= esc_attr($option) ?>" <?php selected($mode, $option); ?>><?= esc_html($option) ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <!-- "All" resets pillar selection -->
                 <label class="svlti-filter-item"
                     style="display:flex;align-items:center;gap:10px;padding:9px 16px;cursor:pointer;font-size:0.875rem;color:#374151;transition:background 0.15s;">
                     <input type="checkbox" name="svlti_all_pillars" id="svlti-pillar-all" value="1"
@@ -193,10 +244,10 @@ if (empty($current_pillars)) {
                         style="flex:1;padding:8px 0;background:#2b8c77;color:#fff;border:none;border-radius:8px;font-size:0.8125rem;font-weight:600;cursor:pointer;transition:background 0.2s;"
                         onmouseover="this.style.background='#247565'"
                         onmouseout="this.style.background='#2b8c77'">Apply</button>
-                    <button type="button" onclick="svltiCoursesClearFilter()"
-                        style="flex:1;padding:8px 0;background:#f3f4f6;color:#374151;border:none;border-radius:8px;font-size:0.8125rem;font-weight:600;cursor:pointer;transition:background 0.2s;"
+                    <a href="<?= esc_url($catalogue_url) ?>"
+                        style="flex:1;text-align:center;padding:8px 0;background:#f3f4f6;color:#374151;border:none;border-radius:8px;font-size:0.8125rem;font-weight:600;cursor:pointer;transition:background 0.2s;"
                         onmouseover="this.style.background='#e5e7eb'"
-                        onmouseout="this.style.background='#f3f4f6'">Clear</button>
+                        onmouseout="this.style.background='#f3f4f6'">Clear</a>
                 </div>
             </form>
         </div>
@@ -296,7 +347,7 @@ if (empty($current_pillars)) {
                         <div class="mt-auto">
                             <a href="<?= esc_url($c['permalink']) ?>"
                                 class="block text-center bg-[#2b8c77] text-white text-sm font-medium rounded-md py-2 hover:bg-[#247565] transition-colors">
-                                Enroll
+                                View course details
                             </a>
                         </div>
 
@@ -312,6 +363,16 @@ if (empty($current_pillars)) {
     </div>
     <!-- /wp:group -->
 
+    <?php if ($courses_q->max_num_pages > 1 || $page > 1): ?>
+        <nav class="flex gap-4 mt-6" aria-label="Course catalogue pages">
+            <?php if ($page > 1): ?>
+                <a href="<?= esc_url(add_query_arg(array_merge($page_args, ['course_page' => $page - 1]), $catalogue_url)) ?>">Previous</a>
+            <?php endif; ?>
+            <?php if ($page < $courses_q->max_num_pages): ?>
+                <a href="<?= esc_url(add_query_arg(array_merge($page_args, ['course_page' => $page + 1]), $catalogue_url)) ?>">Next</a>
+            <?php endif; ?>
+        </nav>
+    <?php endif; ?>
 </div>
 <!-- /wp:group -->
 
@@ -346,18 +407,6 @@ if (empty($current_pillars)) {
             }
         };
 
-        window.svltiCoursesClearFilter = function () {
-            var allBox = document.getElementById('svlti-pillar-all');
-            if (allBox) allBox.checked = true;
-            document.querySelectorAll('#svlti-courses-filter-form input[name="pillar[]"]')
-                .forEach(function (cb) { cb.checked = false; });
-            var url = new URL(window.location.href);
-            url.searchParams.delete('pillar');
-            url.searchParams.delete('pillar[]');
-            url.searchParams.delete('paged');
-            window.location.href = url.toString();
-        };
-
         document.addEventListener('click', function (e) {
             var wrap = document.querySelector('.svlti-courses-filter-wrap');
             if (wrap && !wrap.contains(e.target)) {
@@ -374,10 +423,5 @@ if (empty($current_pillars)) {
             }
         });
 
-        document.getElementById('svlti-courses-filter-form').addEventListener('submit', function () {
-            var url = new URL(window.location.href);
-            url.searchParams.delete('paged');
-            this.action = url.pathname + (url.search ? url.search : '');
-        });
     })();
 </script>
