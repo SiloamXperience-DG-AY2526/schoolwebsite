@@ -1,9 +1,11 @@
-<!-- wp:template-part {"slug":"header"} /-->
+<!-- wp:group {"className":"flex flex-col min-h-screen"} -->
+<div class="wp-block-group flex flex-col min-h-screen"><!-- wp:template-part {"slug":"header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"svlti-page svlti-page--accordion","layout":{"type":"constrained","contentSize":"880px"}} -->
-<main class="wp-block-group svlti-page svlti-page--accordion"><!-- wp:post-title {"level":1} /-->
+<!-- wp:group {"tagName":"main","className":"svlti-page svlti-page--accordion flex-1 w-full","layout":{"type":"constrained","contentSize":"880px"}} -->
+<main class="wp-block-group svlti-page svlti-page--accordion flex-1 w-full"><!-- wp:post-title {"level":1} /-->
 
 <!-- wp:post-content {"layout":{"type":"constrained","contentSize":"880px"}} /--></main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer"} /-->
+<!-- wp:template-part {"slug":"footer"} /--></div>
+<!-- /wp:group -->
