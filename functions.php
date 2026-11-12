@@ -30,6 +30,34 @@ function svlti_avoid_duplicate_block_title() {
 }
 add_action('wp_head', 'svlti_avoid_duplicate_block_title', 0);
 
+// These home-page pattern images sit below the hero and bypass content image optimisation.
+function svlti_lazy_load_home_images($block_content) {
+  if (!is_front_page()) {
+    return $block_content;
+  }
+
+  $image = new WP_HTML_Tag_Processor($block_content);
+  if (!$image->next_tag('IMG')) {
+    return $block_content;
+  }
+
+  $base = get_template_directory_uri() . '/assets/images/home/';
+  $sources = array('mission-1.png', 'mission-1.webp', 'mission-2.png', 'vision.png', 'vision.webp');
+  $src = $image->get_attribute('src');
+  if (!in_array($src, array_map(static function ($name) use ($base) {
+    return $base . $name;
+  }, $sources), true) || $image->get_attribute('loading') !== null || $image->get_attribute('fetchpriority') === 'high') {
+    return $block_content;
+  }
+
+  $image->set_attribute('loading', 'lazy');
+  if ($image->get_attribute('decoding') === null) {
+    $image->set_attribute('decoding', 'async');
+  }
+  return $image->get_updated_html();
+}
+add_filter('render_block_core/image', 'svlti_lazy_load_home_images');
+
 
 function svlti_scripts() {
   // Google Fonts import
