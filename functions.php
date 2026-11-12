@@ -22,6 +22,14 @@ function svlti_setup() {
 }
 add_action('after_setup_theme', 'svlti_setup');
 
+// Block templates already render a title; Rank Math must not render a second one.
+function svlti_avoid_duplicate_block_title() {
+  if (false !== has_action('wp_head', '_block_template_render_title_tag')) {
+    remove_action('rank_math/head', '_wp_render_title_tag', 1);
+  }
+}
+add_action('wp_head', 'svlti_avoid_duplicate_block_title', 0);
+
 
 function svlti_scripts() {
   // Google Fonts import
@@ -45,6 +53,15 @@ function svlti_scripts() {
     get_template_directory_uri() . '/assets/css/custom.css',
     array(),
     filemtime(get_template_directory() . '/assets/css/custom.css')
+  );
+
+  // Header phone menu: tap-to-expand groups and Tab looping (see the file's header comment).
+  wp_enqueue_script(
+    'svlti-header-menu',
+    get_template_directory_uri() . '/assets/js/header-menu.js',
+    array(),
+    filemtime(get_template_directory() . '/assets/js/header-menu.js'),
+    array('in_footer' => true, 'strategy' => 'defer')
   );
 }
 add_action('wp_enqueue_scripts', 'svlti_scripts');
