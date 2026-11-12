@@ -59,7 +59,21 @@ if (!$excerpt) {
 }
 
 // Courses index link (adjust if needed)
-$courses_index_url = home_url('/courses');
+$courses_page = get_page_by_path('courses');
+$courses_index_url = $courses_page ? get_permalink($courses_page) : home_url('/courses');
+$summary = [
+  'Registration status' => get_field('course_registration_status', $post_id),
+  'Schedule' => get_field('course_schedule', $post_id),
+  'Location' => get_field('course_location', $post_id),
+  'Availability' => get_field('course_availability', $post_id),
+  'Fees' => get_field('course_fees', $post_id),
+];
+$tabs = [
+  'about' => ['About', $content ? apply_filters('the_content', $content) : ''],
+  'topics' => ['Course Topics', get_field('course_topics', $post_id)],
+  'assessment' => ['Assessment', get_field('course_assessment_details', $post_id)],
+  'resources' => ['Learning Resources', get_field('course_resources', $post_id)],
+];
 ?>
 
 
@@ -91,10 +105,16 @@ $courses_index_url = home_url('/courses');
         </p>
       <?php endif; ?>
 
-      <?php if ($content) : ?>
-        <p class="text-white text-base mt-4 mb-6">
-          <?php echo apply_filters('the_content', $content); ?>
-        </p>
+      <?php if ($excerpt) : ?>
+        <p class="text-white text-base mt-4 mb-6"><?php echo esc_html($excerpt); ?></p>
+      <?php endif; ?>
+
+      <?php if (array_filter($summary)) : ?>
+        <dl class="text-white flex flex-wrap gap-6 mt-6">
+          <?php foreach (array_filter($summary) as $label => $value) : ?>
+            <div><dt><?php echo esc_html($label); ?></dt><dd><strong><?php echo esc_html($value); ?></strong></dd></div>
+          <?php endforeach; ?>
+        </dl>
       <?php endif; ?>
 
       <?php if ($prereq) : ?>
@@ -139,3 +159,71 @@ $courses_index_url = home_url('/courses');
   </div>
 </div>
 <!-- /wp:cover -->
+
+<section class="max-w-6xl mx-auto px-8 py-8" id="svlti-course-tabs" aria-label="Course information">
+  <div class="mb-6" data-tab-list hidden>
+    <?php foreach ($tabs as $id => [$label, $body]) : ?>
+      <button type="button" id="course-tab-<?php echo esc_attr($id); ?>" class="px-2 py-2 border-b-2"
+        data-panel="course-panel-<?php echo esc_attr($id); ?>"><?php echo esc_html($label); ?></button>
+    <?php endforeach; ?>
+  </div>
+  <?php foreach ($tabs as $id => [$label, $body]) : ?>
+    <section class="p-6 mb-4 bg-gray-100 rounded-lg" id="course-panel-<?php echo esc_attr($id); ?>">
+      <h2 class="text-xl font-bold mb-3"><?php echo esc_html($label); ?></h2>
+      <?php if ($body) : ?>
+        <?php echo $id === 'about' ? $body : wpautop(esc_html($body)); ?>
+      <?php endif; ?>
+      <?php if ($id === 'about') : ?>
+        <?php foreach (['course_outcomes' => 'What You’ll Learn', 'course_skills' => 'Skills You’ll Gain'] as $field => $heading) :
+          $value = get_field($field, $post_id);
+          if (!$value) continue; ?>
+          <h3 class="font-bold mt-4"><?php echo esc_html($heading); ?></h3>
+          <?php echo wpautop(esc_html($value)); ?>
+        <?php endforeach; ?>
+      <?php elseif ($id === 'assessment' && !$body && $assessment) : ?>
+        <p><?php echo esc_html($assessment); ?></p>
+      <?php elseif ($id === 'resources' && $brochure_url) : ?>
+        <a href="<?php echo esc_url($brochure_url); ?>">Download brochure</a>
+      <?php elseif (!$body) : ?>
+        <p>Details to be confirmed.</p>
+      <?php endif; ?>
+    </section>
+  <?php endforeach; ?>
+</section>
+<script>
+(function () {
+  const list = document.querySelector('#svlti-course-tabs [data-tab-list]');
+  const tabs = Array.from(list.querySelectorAll('button'));
+  list.setAttribute('role', 'tablist');
+  list.setAttribute('aria-label', 'Course information');
+  list.hidden = false;
+  function activate(index, focus = false) {
+    tabs.forEach((tab, i) => {
+      const panel = document.getElementById(tab.dataset.panel);
+      const active = i === index;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+      tab.style.borderColor = active ? '#2b8c77' : 'transparent';
+      panel.hidden = !active;
+    });
+    if (focus) tabs[index].focus();
+  }
+  tabs.forEach((tab, index) => {
+    const panel = document.getElementById(tab.dataset.panel);
+    tab.setAttribute('role', 'tab');
+    tab.setAttribute('aria-controls', panel.id);
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', tab.id);
+    panel.tabIndex = 0;
+    tab.addEventListener('click', () => activate(index));
+    tab.addEventListener('keydown', (event) => {
+      const last = tabs.length - 1;
+      const next = {ArrowLeft: index ? index - 1 : last, ArrowRight: index === last ? 0 : index + 1, Home: 0, End: last}[event.key];
+      if (next === undefined) return;
+      event.preventDefault();
+      activate(next, true);
+    });
+  });
+  activate(0);
+})();
+</script>

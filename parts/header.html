@@ -1,76 +1,56 @@
-<!-- wp:group {"tagName":"header","className":"site-header border flex items-center justify-between max-w-7xl mx-auto px-16 py-1"} -->
-<header
-  class="wp-block-group site-header border flex items-center justify-between max-w-7xl mx-auto px-16 py-1"
->
-  <!-- wp:group {"className":"relative flex items-center justify-center gap-4 py-4"} -->
-  <div
-    class="wp-block-group relative flex items-center justify-center gap-4 py-4"
-  >
-    <!-- wp:site-logo {"width":80,"shouldSyncIcon":true,"className":"w-20"} /-->
+<!-- wp:group {"className":"site-header"} -->
+<div class="wp-block-group site-header"><!-- wp:group {"className":"site-header__inner"} -->
+<div class="wp-block-group site-header__inner"><!-- wp:group {"className":"site-header__brand"} -->
+<div class="wp-block-group site-header__brand"><!-- wp:site-logo {"width":48,"shouldSyncIcon":true,"className":"site-header__logo"} /-->
 
-    <!-- wp:site-title {"level":0,"className":"text-brand text-2xl font-bold"} /-->
-  </div>
-  <!-- /wp:group -->
+<!-- wp:group {"className":"site-header__brand-text"} -->
+<div class="wp-block-group site-header__brand-text"><!-- wp:site-title {"level":0,"className":"site-header__title"} /-->
 
-  <!-- wp:navigation {"overlayMenu":"never","className":"site-nav relative flex flex-1 justify-center px-8 gap-10 text-brand font-medium text-base mx-auto"} -->
-  <!-- wp:navigation-submenu {"label":"Home","type":"page","url":"/","kind":"post-type","className":"relative group font-semibold rounded-b-lg duration-200 "} -->
+<!-- wp:site-tagline {"className":"site-header__tagline"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
 
-  <!-- wp:navigation-link {"label":"Our Mission","type":"page","url":"/#mission","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Our Vision","url":"#vision","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Our History","url":"#history","kind":"custom"} /-->
+<!-- wp:navigation {"overlayMenu":"mobile","openSubmenusOnClick":true,"showSubmenuIcon":true,"className":"site-header__nav"} -->
+<!-- wp:navigation-submenu {"label":"About Us","kind":"custom"} -->
+<!-- wp:navigation-link {"label":"Our Story","url":"/about/our-story","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Mission, Vision and Values","url":"/about/mission-vision-values","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Milestones","url":"/about/milestones","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Our People","url":"/about/our-people","kind":"custom"} /-->
+<!-- /wp:navigation-submenu -->
 
-  <!-- /wp:navigation-submenu -->
+<!-- wp:navigation-submenu {"label":"Get Involved","kind":"custom"} -->
+<!-- wp:navigation-link {"label":"Donate","url":"/get-involved/donate","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Volunteer","url":"/get-involved/volunteer","kind":"custom"} /-->
+<!-- /wp:navigation-submenu -->
 
-  <!-- wp:navigation-submenu {"label":"About","url":"/about/our-story","kind":"custom","className":"relative group font-semibold hover:text-[#2C89A5] rounded-b-lg duration-200 "} -->
+<!-- wp:navigation-submenu {"label":"Student Curriculum","kind":"custom"} -->
+<!-- wp:navigation-link {"label":"Course Catalogue","url":"/curriculum/courses","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Policies","url":"/curriculum/policies","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Student Conduct","url":"/curriculum/student-conduct","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Assessments","url":"/curriculum/assessments","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Fees","url":"/curriculum/fees","kind":"custom"} /-->
+<!-- /wp:navigation-submenu -->
 
-  <!-- wp:navigation-link {"label":"Our Story","url":"/about/our-story","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Mission, Vision \u0026 Values","url":"/about/mission-vision-values","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Our People","url":"/about/our-people","kind":"custom"} /-->
+<!-- wp:navigation-submenu {"label":"Resources","kind":"custom"} -->
+<!-- wp:navigation-link {"label":"Internship Opportunities","url":"/resources/internships","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Events","url":"/resources/events","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"News","url":"/resources/news","kind":"custom"} /-->
+<!-- /wp:navigation-submenu -->
 
-  <!-- /wp:navigation-submenu -->
+<!-- wp:navigation-submenu {"label":"Contact Us","kind":"custom"} -->
+<!-- wp:navigation-link {"label":"General Inquiries","url":"/contact/general-inquiries","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Our Location","url":"/contact/location","kind":"custom"} /-->
+<!-- /wp:navigation-submenu -->
+<!-- /wp:navigation -->
 
-  <!-- wp:navigation-submenu {"label":"Get Involved","url":"/people/projects","kind":"custom","className":"relative group font-semibold hover:text-[#2C89A5] rounded-b-lg duration-200 "} -->
+<!-- wp:group {"className":"site-header__actions"} -->
+<div class="wp-block-group site-header__actions"><!-- wp:pattern {"slug":"svlti/translate-button"} /-->
 
-  <!-- wp:navigation-link {"label":"Join Us","url":"/people/projects","kind":"custom"} /-->
-
-  <!-- /wp:navigation-submenu -->
-
-  <!-- wp:navigation-submenu {"label":"Courses","url":"/courses/life-skills","kind":"custom","className":"relative group font-semibold hover:text-[#2C89A5] rounded-b-lg duration-200 "} -->
-
-  <!-- wp:navigation-link {"label":"Life Skills","url":"/courses/life-skills","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Course List","url":"/courses","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Careers","url":"/courses/jobs","kind":"custom"} /-->
-
-  <!-- /wp:navigation-submenu -->
-
-  <!-- wp:navigation-submenu {"label":"Guidelines","type":"page","url":"/how-we-work","kind":"custom","className":"relative group font-semibold hover:text-[#2C89A5] rounded-b-lg duration-200 "} -->
-
-  <!-- wp:navigation-link {"label":"Our Policies","url":"/how-we-work","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Assessments and Progression","url":"/how-we-work/assessments","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Conduct and Discipline","url":"/how-we-work/conduct","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Fees and Payment Procedure","url":"/how-we-work/fees","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Internship Process","url":"/how-we-work/internship","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Feedback Procedure","url":"/how-we-work/feedback","kind":"custom"} /-->
-
-  <!-- /wp:navigation-submenu -->
-
-  <!-- wp:navigation-submenu {"label":"Happenings","url":"/blog","kind":"custom","className":"relative group font-semibold hover:text-[#2C89A5] rounded-b-lg duration-200 "} -->
-
-  <!-- wp:navigation-link {"label":"Blog","url":"/blog","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Upcoming Events","url":"/blog/upcoming-events","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Announcements","url":"/blog/announcements","kind":"custom"} /-->
-
-  <!-- /wp:navigation-submenu --> 
-
-  <!-- wp:navigation-submenu {"label":"Contact","url":"/contact","kind":"custom","className":"relative group font-semibold hover:text-[#2C89A5] rounded-b-lg duration-200 "} -->
-
-  <!-- wp:navigation-link {"label":"Contact Us","url":"/contact","kind":"custom"} /-->
-  <!-- wp:navigation-link {"label":"Find Us","url":"/contact/find-us","kind":"custom"} /-->
-  
-  <!-- /wp:navigation-submenu --> 
-
-  <!-- /wp:navigation -->
-
-  <!-- wp:pattern {"slug":"svlti/translate-button"} /-->
-</header>
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"site-header__donate"} -->
+<div class="wp-block-button site-header__donate"><a class="wp-block-button__link wp-element-button" href="/get-involved/donate">Donate</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
