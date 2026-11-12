@@ -69,6 +69,119 @@
             "mime_types": "",
             "allow_in_bindings": 0,
             "preview_size": "medium"
+        },
+        {
+            "key": "field_79e0f3242f5d6",
+            "label": "Level",
+            "name": "team_level",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Which tier of the team page this person appears in. Placeholder tiers until SVLTI approves the hierarchy.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "head": "Head",
+                "deputy": "Deputy",
+                "member": "Team member"
+            },
+            "default_value": "member",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_cfd8e0bfedc76",
+            "label": "Bio",
+            "name": "bio",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Short profile shown when the card is opened.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 5,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_484d8992ea1af",
+            "label": "Year joined",
+            "name": "year_joined",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1900,
+            "max": 2100,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_2b17cd003f21c",
+            "label": "Work contact",
+            "name": "work_contact",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "Work email only. Shown only if the box below is ticked.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6fd5a1e8495af",
+            "label": "Show work contact publicly",
+            "name": "contact_public",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Tick only if SVLTI has approved showing this contact.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -90,5 +203,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1765870899
+    "modified": 1793808898
 }
