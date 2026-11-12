@@ -589,6 +589,424 @@ html {
 @media (prefers-reduced-motion: reduce) {
     .svlti-acc__item,
     .svlti-acc__icon {
+
+/* =====================================================================
+   SITE HEADER (Asher) - matches PRD "Toggle Improvement" Figures 1-5.
+   Everything is scoped to .site-header so it does not change other menus.
+   !important is only used where older global rules above also use it.
+   ===================================================================== */
+.site-header {
+    position: relative;
+    z-index: 100;
+    background: var(--wp--preset--color--white, #fff);
+    border-bottom: 1px solid var(--wp--preset--color--neutral-20, #E0E0E4);
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 12px 32px;
+}
+
+/* WordPress adds a 24px top margin between stacked blocks; the header aligns by flexbox instead */
+.site-header .site-header__inner > *,
+.site-header .site-header__brand > *,
+.site-header .site-header__brand-text > *,
+.site-header .site-header__actions > * {
+    margin-block: 0;
+}
+
+/* Logo + name + tagline (left) */
+.site-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.site-header__brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.site-header .site-header__title,
+.site-header .site-header__title a {
+    margin: 0;
+    font-size: var(--wp--preset--font-size--header-sm, 20px);
+    font-weight: 700;
+    color: var(--wp--preset--color--eucalyptus-120, #195D4B);
+    text-decoration: none;
+}
+
+.site-header .site-header__tagline {
+    margin: 0;
+    font-size: var(--wp--preset--font-size--paragraph-xsm, 12px);
+    color: var(--wp--preset--color--neutral-80, #747480);
+}
+
+/* Main menu (centre) */
+.site-header .site-header__nav {
+    flex: 1 1 auto;
+    justify-content: center;
+    font-size: var(--wp--preset--font-size--paragraph-normal, 16px);
+    font-weight: 500;
+}
+
+.site-header .site-header__nav > .wp-block-navigation__responsive-container .wp-block-navigation__container {
+    gap: 8px 28px;
+}
+
+.site-header .wp-block-navigation ul li {
+    flex: none !important;
+    justify-content: flex-start !important;
+    /* an older global rule gives every li z-index:50, which let later items paint over open dropdowns */
+    z-index: auto;
+    color: var(--wp--preset--color--neutral-200, #333333);
+}
+
+.site-header .wp-block-navigation-submenu__toggle {
+    padding: 8px 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+/* Open group, hover and current section turn green (Figures 1-5) */
+.site-header .wp-block-navigation-item.has-child:hover > .wp-block-navigation-submenu__toggle,
+.site-header .wp-block-navigation-submenu__toggle[aria-expanded="true"],
+.site-header .wp-block-navigation-item.current-menu-ancestor > .wp-block-navigation-submenu__toggle {
+    color: var(--wp--preset--color--eucalyptus-110, #207860);
+}
+
+/* Chevrons: shown, and flipped while the group is open */
+.site-header .wp-block-navigation__submenu-icon {
+    display: inline-flex !important;
+    margin-left: 4px;
+    width: 10px;
+    height: 10px;
+    transition: transform 0.2s ease;
+}
+
+.site-header .wp-block-navigation-submenu__toggle[aria-expanded="true"] + .wp-block-navigation__submenu-icon,
+.site-header .wp-block-navigation-submenu__toggle[aria-expanded="true"] .wp-block-navigation__submenu-icon {
+    transform: rotate(180deg);
+}
+
+/* Dropdown card: white, rounded, shadow, green top bar */
+.site-header .wp-block-navigation ul li > ul.wp-block-navigation__submenu-container {
+    left: -16px !important;
+    transform: none !important;
+    text-align: left !important;
+    /* !important: WordPress's open-dropdown rule (more specific) sets width:auto and min-width:200px */
+    width: max-content !important;
+    min-width: 230px !important;
+    max-width: 320px;
+    padding: 8px !important;
+    margin-top: 8px;
+    gap: 2px !important;
+    background: var(--wp--preset--color--white, #fff) !important;
+    color: var(--wp--preset--color--neutral-120, #515160) !important;
+    border: 1px solid var(--wp--preset--color--neutral-10, #F0F0F2) !important;
+    border-top: 2px solid var(--wp--preset--color--eucalyptus-110, #207860) !important;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+    z-index: 10;
+}
+
+.site-header .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px !important;
+    font-size: var(--wp--preset--font-size--paragraph-sm, 14px);
+    font-weight: 500;
+    color: var(--wp--preset--color--neutral-120, #515160);
+    background: transparent !important;
+    border-bottom: 0 !important;
+    border-radius: 8px;
+    justify-content: flex-start !important;
+    text-decoration: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.site-header .wp-block-navigation__submenu-container > li {
+    margin: 0 !important;
+}
+
+/* Small square bullet before each dropdown item */
+.site-header .wp-block-navigation__submenu-container .wp-block-navigation-item__content::before {
+    content: "";
+    flex: none;
+    width: 5px;
+    height: 5px;
+    border: 1px solid currentColor;
+    border-radius: 1px;
+    margin-top: 0.55em;
+}
+
+.site-header .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
+.site-header .wp-block-navigation__submenu-container .wp-block-navigation-item__content:focus-visible,
+.site-header .wp-block-navigation__submenu-container .current-menu-item > .wp-block-navigation-item__content {
+    background: var(--wp--preset--color--neutral-10, #F0F0F2) !important;
+    color: var(--wp--preset--color--eucalyptus-110, #207860);
+}
+
+/* Right side: language switcher + Donate */
+.site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.site-header .site-header__donate .wp-block-button__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+/* Heart icon before "Donate" (decorative) */
+.site-header .site-header__donate .wp-block-button__link::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Phone Menu and Close buttons: 44x44px tap area, icon stays 24px (NFR-5) */
+.site-header .wp-block-navigation__responsive-container-open,
+.site-header .wp-block-navigation__responsive-container-close {
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Keyboard focus: always visible (NFR-7) */
+.site-header a:focus-visible,
+.site-header button:focus-visible {
+    outline: 2px solid var(--wp--preset--color--elm-100, #2C89A5);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Links inside dropdowns and the phone menu: ring drawn just inside the item, because an older
+   global rule sets overflow:hidden on every submenu and would clip it */
+.site-header .wp-block-navigation__submenu-container a:focus-visible {
+    outline-offset: -2px;
+}
+
+/* Hover underline from the old .site-nav rules is not used in the header */
+.site-header li::after {
+    content: none !important;
+}
+
+/* Tablet: menu moves to its own full-width row instead of squeezing.
+   The single row needs about 1130px with the real logo and tagline, so it starts at 1180px. */
+@media (max-width: 1179px) {
+    .site-header__inner {
+        flex-wrap: wrap;
+        row-gap: 4px;
+    }
+
+    .site-header .site-header__nav {
+        order: 3;
+        flex-basis: 100%;
+    }
+}
+
+/* Phone (below 768px): the menu becomes the menu button. Agreed 4 Nov (Q1): menu button below 768px; WordPress's own switch is 600px,
+   so the block at the end of this section covers 600-767px. */
+@media (max-width: 767px) {
+    .site-header__inner {
+        flex-wrap: nowrap;
+        padding: 12px 16px;
+        gap: 12px;
+    }
+
+    /* Menu button sits at the far right, after Donate */
+    .site-header .site-header__nav {
+        order: 3;
+        flex: 0 0 auto;
+    }
+
+    .site-header .site-header__tagline {
+        display: none;
+    }
+
+    /* Donate sits next to the menu button on the right */
+    .site-header .site-header__actions {
+        margin-left: auto;
+    }
+
+    .site-header .site-header__donate .wp-block-button__link {
+        padding: 8px 16px;
+    }
+
+    /* Inside the full-screen menu: groups are listed open, left aligned */
+    .site-header .wp-block-navigation__responsive-container.is-menu-open {
+        padding: 24px;
+    }
+
+    .site-header .is-menu-open .wp-block-navigation__container {
+        gap: 20px !important;
+        align-items: flex-start !important;
+    }
+
+    /* Phone menu: WordPress's own chevron is hidden; the group button draws its own below */
+    .site-header .is-menu-open .wp-block-navigation__submenu-icon {
+        display: none !important;
+    }
+
+    /* Long or translated names wrap inside the screen instead of scrolling sideways */
+    .site-header .is-menu-open .wp-block-navigation-item {
+        max-width: 100%;
+    }
+
+    .site-header .is-menu-open .wp-block-navigation-submenu__toggle {
+        max-width: 100%;
+        white-space: normal;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    .site-header .is-menu-open .wp-block-navigation-submenu__toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 44px;
+    }
+
+    /* Groups expand/collapse on tap (agreed Q2). Needs assets/js/header-menu.js, which adds
+       .svlti-menu-accordion; without it every group stays open, as WordPress shows it. */
+    .svlti-menu-accordion .site-header .is-menu-open .has-child:not(.is-expanded) > .wp-block-navigation__submenu-container {
+        display: none !important;
+    }
+
+    .svlti-menu-accordion .site-header .is-menu-open .wp-block-navigation-submenu__toggle::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        transition: transform 0.2s ease;
+    }
+
+    .svlti-menu-accordion .site-header .is-menu-open .wp-block-navigation-submenu__toggle[aria-expanded="true"]::after {
+        transform: translateY(2px) rotate(-135deg);
+    }
+
+    .site-header .is-menu-open ul li > ul.wp-block-navigation__submenu-container {
+        left: 0 !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: 100%;
+        border: 0 !important;
+        box-shadow: none;
+        padding: 4px 0 0 8px !important;
+        margin-top: 0;
+    }
+}
+
+/* Agreed 4 Nov (Q1): between 600px and 767px also use the menu button,
+   overriding WordPress's fixed 600px switch so the 5 groups never wrap onto 2 lines. */
+@media (min-width: 600px) and (max-width: 767px) {
+    .site-header .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: flex;
+    }
+
+    .site-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header .wp-block-navigation__submenu-icon,
+    .site-header .wp-block-navigation-submenu__toggle::after {
+        transition: none !important;
+    }
+}
+
+/* =====================================================================
+   PAGE TEMPLATES (Asher) - Accordion page (templates/accordion.html) and
+   the "Accordion section" pattern (patterns/page/accordion-section.php).
+   Uses WordPress's Details block: opens/closes by mouse, touch or keyboard
+   and reports open/closed to screen readers without any script.
+   ===================================================================== */
+.svlti-page {
+    padding: 48px 24px 64px;
+}
+
+.svlti-accordion {
+    margin-block: 12px;
+    background: var(--wp--preset--color--white, #fff);
+    border: 1px solid var(--wp--preset--color--neutral-20, #E0E0E4);
+    border-radius: 12px;
+}
+
+.svlti-accordion > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 44px;
+    padding: 14px 20px;
+    font-weight: 600;
+    color: var(--wp--preset--color--neutral-200, #333333);
+    cursor: pointer;
+    list-style: none;
+}
+
+.svlti-accordion > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Chevron: points down when closed, up when open */
+.svlti-accordion > summary::after {
+    content: "";
+    flex: none;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.svlti-accordion[open] > summary {
+    color: var(--wp--preset--color--eucalyptus-110, #207860);
+}
+
+.svlti-accordion[open] > summary::after {
+    transform: translateY(2px) rotate(-135deg);
+}
+
+.svlti-accordion > summary:focus-visible {
+    outline: 2px solid var(--wp--preset--color--elm-100, #2C89A5);
+    outline-offset: 2px;
+    border-radius: 12px;
+}
+
+.svlti-accordion > :not(summary) {
+    margin: 0;
+    padding: 0 20px 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .svlti-accordion > summary::after {
         transition: none;
     }
 }
@@ -624,3 +1042,69 @@ html {
         padding: 2.5rem 2.5rem 2.5rem 1.25rem;
     }
 }
+/* Hub page (templates/hub.html) and the "Hub links" pattern (patterns/page/hub-links.php):
+   the section's child pages as cards. Uses WordPress's Page List block. */
+.svlti-page .svlti-hub-intro {
+    max-width: 720px;
+    /* WordPress centres narrower blocks in this layout with !important; keep the intro left-aligned */
+    margin-left: 0 !important;
+    margin-bottom: 24px;
+    font-size: var(--wp--preset--font-size--paragraph-lg, 20px);
+    color: var(--wp--preset--color--neutral-120, #515160);
+}
+
+ul.svlti-hub-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.svlti-hub-links .wp-block-pages-list__item {
+    margin: 0;
+}
+
+/* Only this section's direct pages: grandchildren are not shown as cards */
+.svlti-hub-links .wp-block-navigation__submenu-container,
+.svlti-hub-links .wp-block-page-list__submenu-icon {
+    display: none;
+}
+
+.svlti-hub-links .wp-block-pages-list__item__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 72px;
+    padding: 20px;
+    font-weight: 600;
+    color: var(--wp--preset--color--neutral-200, #333333);
+    text-decoration: none;
+    background: var(--wp--preset--color--white, #fff);
+    border: 1px solid var(--wp--preset--color--neutral-20, #E0E0E4);
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+.svlti-hub-links .wp-block-pages-list__item__link::after {
+    content: "";
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+}
+
+.svlti-hub-links .wp-block-pages-list__item__link:hover {
+    color: var(--wp--preset--color--eucalyptus-110, #207860);
+    border-color: var(--wp--preset--color--eucalyptus-110, #207860);
+}
+
+.svlti-hub-links .wp-block-pages-list__item__link:focus-visible {
+    outline: 2px solid var(--wp--preset--color--elm-100, #2C89A5);
+    outline-offset: 2px;
+}
+

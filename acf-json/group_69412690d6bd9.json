@@ -214,6 +214,76 @@
             "bidirectional": 0,
             "multiple": 0,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_svlti_course_registration_status",
+            "label": "Registration Status",
+            "name": "course_registration_status",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_schedule",
+            "label": "Schedule",
+            "name": "course_schedule",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_location",
+            "label": "Location",
+            "name": "course_location",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_availability",
+            "label": "Availability",
+            "name": "course_availability",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_fees",
+            "label": "Fees",
+            "name": "course_fees",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_outcomes",
+            "label": "Learning Outcomes",
+            "name": "course_outcomes",
+            "type": "textarea",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_skills",
+            "label": "Skills Gained",
+            "name": "course_skills",
+            "type": "textarea",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_topics",
+            "label": "Course Topics",
+            "name": "course_topics",
+            "type": "textarea",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_assessment_details",
+            "label": "Assessment Details",
+            "name": "course_assessment_details",
+            "type": "textarea",
+            "required": 0
+        },
+        {
+            "key": "field_svlti_course_resources",
+            "label": "Learning Resources",
+            "name": "course_resources",
+            "type": "textarea",
+            "required": 0
         }
     ],
     "location": [
@@ -235,5 +305,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1766373083
+    "modified": 1794038400
 }
