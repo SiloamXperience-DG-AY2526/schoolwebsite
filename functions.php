@@ -173,3 +173,60 @@ function svlti_seed_tax() {
 }
 add_action('init', 'svlti_seed_tax');
 
+
+// Accordion script (Policies, Conduct, Assessments, Fees)
+function svlti_accordion_script() {
+  wp_enqueue_script(
+    'svlti-accordion',
+    get_template_directory_uri() . '/assets/js/accordion.js',
+    array(),
+    filemtime(get_template_directory() . '/assets/js/accordion.js'),
+    array('in_footer' => true, 'strategy' => 'defer')
+  );
+}
+add_action('wp_enqueue_scripts', 'svlti_accordion_script');
+
+/**
+ * Print an accessible accordion.
+ *
+ * @param array  $items         List of [title, body]. Body may contain basic HTML.
+ * @param string $id            Unique id for this accordion on the page.
+ * @param int    $heading_level Heading level wrapping each toggle button.
+ */
+function svlti_accordion(array $items, string $id, int $heading_level = 3) {
+  $h = max(2, min(6, $heading_level));
+  echo '<div class="svlti-acc" id="' . esc_attr($id) . '" data-svlti-accordion>';
+  foreach (array_values($items) as $i => $item) {
+    [$title, $body] = $item;
+    $item_id = $id . '-' . ($i + 1);
+    echo '<div class="svlti-acc__item" data-svlti-acc-item>';
+    printf(
+      '<h%1$d class="svlti-acc__heading"><button type="button" class="svlti-acc__toggle" id="%2$s-button" aria-expanded="false" aria-controls="%2$s-panel"><span>%3$s</span>'
+      . '<svg class="svlti-acc__icon" aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 36 36"><path d="M18 23.1L9 14.1L11.1 12L18 18.9L24.9 12L27 14.1L18 23.1Z" fill="currentColor"/></svg>'
+      . '</button></h%1$d>',
+      $h,
+      esc_attr($item_id),
+      esc_html($title)
+    );
+    printf(
+      '<div class="svlti-acc__panel" id="%1$s-panel" role="region" aria-labelledby="%1$s-button" hidden>%2$s</div>',
+      esc_attr($item_id),
+      wp_kses_post(wpautop($body))
+    );
+    echo '</div>';
+  }
+  echo '</div>';
+}
+
+/**
+ * Print a search box that filters the accordion with the given id.
+ */
+function svlti_accordion_search(string $target_id, string $label) {
+  printf(
+    '<div class="svlti-acc-search"><label for="%1$s-search">%2$s</label>'
+    . '<input type="search" id="%1$s-search" data-svlti-acc-search="%1$s" autocomplete="off" />'
+    . '<p class="svlti-acc-search__status" id="%1$s-status" role="status" aria-live="polite"></p></div>',
+    esc_attr($target_id),
+    esc_html($label)
+  );
+}

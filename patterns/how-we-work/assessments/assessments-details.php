@@ -4,6 +4,14 @@
  * Title: Understanding Child Progress Section
  * Slug: svlti/assessments-details
  */
+
+$assessment_types = [
+    ['Quizzes and Tests', 'Short checks that show what your child has learned in class. These guide teachers on what to review and help you see where your child is gaining confidence.'],
+    ['Projects', 'Hands-on tasks where students create or build something. Projects show how your child can apply ideas in real ways, not just remember them.'],
+    ['Presentations', 'Opportunities for students to explain or share their learning with others. These build confidence, communication, and the ability to express ideas clearly — skills important for life beyond the classroom.'],
+    ['Reflections', 'Short written or spoken responses where your child thinks about what they learned and how they felt. Reflections help students take ownership of their learning and allow parents to see their personal growth.'],
+    ['Peer Feedback', 'Students give and receive kind, constructive comments. This builds listening skills, respect for others, and teamwork — qualities that matter both in school and at home.'],
+];
 ?>
 
 <!-- wp:group {"className":"relative w-full","layout":{"type":"flex"}} -->
@@ -26,18 +34,7 @@
                 Types of Assessments
             </h3>
 
-            <p class="text-gray-800 font-medium
-                      text-[16px] md:text-[18px] 2xl:text-[20px]">
-                <strong>Quizzes and Tests:</strong> Short checks that show what your child has learned in class. These guide teachers on what to review and help you see where your child is gaining confidence.<br><br>
-
-                <strong>Projects:</strong> Hands-on tasks where students create or build something. Projects show how your child can apply ideas in real ways, not just remember them.<br><br>
-
-                <strong>Presentations:</strong> Opportunities for students to explain or share their learning with others. These build confidence, communication, and the ability to express ideas clearly — skills important for life beyond the classroom.<br><br>
-
-                <strong>Reflections:</strong> Short written or spoken responses where your child thinks about what they learned and how they felt. Reflections help students take ownership of their learning and allow parents to see their personal growth.<br><br>
-
-                <strong>Peer Feedback:</strong> Students give and receive kind, constructive comments. This builds listening skills, respect for others, and teamwork — qualities that matter both in school and at home.
-            </p>
+            <?php svlti_accordion($assessment_types, 'svlti-assessment-types', 4); ?>
 
         </div>
 

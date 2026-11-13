@@ -3,6 +3,25 @@
  * Title: Fees Section
  * Slug: svlti/fees
  */
+
+// [Placeholder] Real fees, schedule and funding details to come from SVLTI (content due 20 Nov).
+$fee_rows = [
+    ['[Course name]', '[TBC]', '[Tuition, materials, certification]'],
+    ['[Course name]', '[TBC]', '[Tuition, materials, certification]'],
+];
+
+$schedule_rows = [
+    ['[First instalment]', '[Start of term, TBC]'],
+    ['[Second instalment]', '[Mid-term, TBC]'],
+];
+
+$fee_faqs = [
+    ['How can I make a payment?', 'Payments can be made via bank transfer, cheque, or through the school’s online payment portal.'],
+    ['Can fees be paid in instalments?', 'Yes, instalment plans are available upon request. Please contact our administration office to arrange a schedule that suits your family.'],
+    ['When are school fees due?', 'School fees are usually due at the start of each term. Paying on time helps the school plan for resources and activities for all children.'],
+    ['What should I do if I have difficulty paying on time?', 'Please contact the school’s finance team as soon as possible. We aim to support families by finding flexible arrangements where needed.'],
+    ['Are there additional costs besides school fees?', 'Additional costs may include uniforms, field trips, and optional extracurricular activities. These will be communicated in advance.'],
+];
 ?>
 
 <!-- wp:group {"className":"relative w-full","layout":{"type":"flex","orientation":"vertical"}} -->
@@ -24,112 +43,48 @@
   <!-- /wp:paragraph -->
 
   <!-- wp:html -->
-  <div class="accordion-container space-y-4 w-full flex flex-col items-start">
+  <div class="flex flex-col gap-10 w-full">
 
-    <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
-      <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
-        How can I make a payment?
-        <span class="icon text-2xl leading-none">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <path d="M18 23.1L9 14.1L11.1 12L18 18.9L24.9 12L27 14.1L18 23.1Z" fill="#1D1B20"/>
-          </svg>
-        </span>
-      </button>
-      <div class="accordion-content hidden px-6 py-5 bg-[#F6F7F8] text-gray-800">
-        Payments can be made via bank transfer, cheque, or through the school’s online payment portal.
+    <section aria-labelledby="fees-breakdown">
+      <h3 id="fees-breakdown" class="text-[20px] md:text-[24px] font-semibold text-[#1a3b5d] mb-4">Fee breakdown</h3>
+      <div class="svlti-table-wrap">
+        <table class="svlti-table">
+          <caption class="sr-only">Fees per course</caption>
+          <thead>
+            <tr><th scope="col">Course</th><th scope="col">Fee</th><th scope="col">What it covers</th></tr>
+          </thead>
+          <tbody>
+            <?php foreach ($fee_rows as [$course, $fee, $covers]) : ?>
+            <tr><td><?= esc_html($course) ?></td><td><?= esc_html($fee) ?></td><td><?= esc_html($covers) ?></td></tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
       </div>
-    </div>
+    </section>
 
-    <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
-      <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
-        Can fees be paid in instalments?
-        <span class="icon text-2xl leading-none">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <path d="M18 23.1L9 14.1L11.1 12L18 18.9L24.9 12L27 14.1L18 23.1Z" fill="#1D1B20"/>
-          </svg>
-        </span>
-      </button>
-      <div class="accordion-content hidden px-6 py-5 bg-[#F6F7F8] text-gray-800">
-        Yes, instalment plans are available upon request. Please contact our administration office to arrange a schedule that suits your family.
+    <section aria-labelledby="fees-schedule">
+      <h3 id="fees-schedule" class="text-[20px] md:text-[24px] font-semibold text-[#1a3b5d] mb-4">Payment schedule</h3>
+      <div class="svlti-table-wrap">
+        <table class="svlti-table">
+          <caption class="sr-only">When payments are due</caption>
+          <thead>
+            <tr><th scope="col">Instalment</th><th scope="col">Due</th></tr>
+          </thead>
+          <tbody>
+            <?php foreach ($schedule_rows as [$instalment, $due]) : ?>
+            <tr><td><?= esc_html($instalment) ?></td><td><?= esc_html($due) ?></td></tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
       </div>
-    </div>
+    </section>
 
-    <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
-      <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
-        When are school fees due?
-        <span class="icon text-2xl leading-none">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <path d="M18 23.1L9 14.1L11.1 12L18 18.9L24.9 12L27 14.1L18 23.1Z" fill="#1D1B20"/>
-          </svg>
-        </span>
-      </button>
-      <div class="accordion-content hidden px-6 py-5 bg-[#F6F7F8] text-gray-800">
-        School fees are usually due at the start of each term. Paying on time helps the school plan for resources and activities for all children.
-      </div>
-    </div>
-
-    <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
-      <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
-        What should I do if I have difficulty paying on time?
-        <span class="icon text-2xl leading-none">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <path d="M18 23.1L9 14.1L11.1 12L18 18.9L24.9 12L27 14.1L18 23.1Z" fill="#1D1B20"/>
-          </svg>
-        </span>
-      </button>
-      <div class="accordion-content hidden px-6 py-5 bg-[#F6F7F8] text-gray-800">
-        Please contact the school’s finance team as soon as possible. We aim to support families by finding flexible arrangements where needed.
-      </div>
-    </div>
-
-    <div class="accordion-item bg-eucalyptus-70 rounded-lg overflow-hidden w-full transition-colors duration-300">
-      <button class="accordion-toggle w-full text-left font-semibold text-lg py-4 px-6 flex justify-between items-center text-black">
-        Are there additional costs besides school fees?
-        <span class="icon text-2xl leading-none">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <path d="M18 23.1L9 14.1L11.1 12L18 18.9L24.9 12L27 14.1L18 23.1Z" fill="#1D1B20"/>
-          </svg>
-        </span>
-      </button>
-      <div class="accordion-content hidden px-6 py-5 bg-[#F6F7F8] text-gray-800">
-        Additional costs may include uniforms, field trips, and optional extracurricular activities. These will be communicated in advance.
-      </div>
-    </div>
+    <section aria-labelledby="fees-faq">
+      <h3 id="fees-faq" class="text-[20px] md:text-[24px] font-semibold text-[#1a3b5d] mb-4">Payments and financial help</h3>
+      <?php svlti_accordion($fee_faqs, 'svlti-fee-faqs', 4); ?>
+    </section>
 
   </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const accordions = document.querySelectorAll(".accordion-toggle");
-
-      accordions.forEach(btn => {
-        btn.addEventListener("click", () => {
-          const content = btn.nextElementSibling;
-          const parent = btn.parentElement;
-          const icon = btn.querySelector(".icon");
-          const expanded = !content.classList.contains("hidden");
-
-          // Reset all accordions
-          document.querySelectorAll(".accordion-content").forEach(el => el.classList.add("hidden"));
-          document.querySelectorAll(".accordion-item").forEach(item => {
-            item.classList.remove("bg-eucalyptus-100");
-            item.classList.add("bg-eucalyptus-70");
-          });
-          document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate-180"));
-          document.querySelectorAll(".accordion-toggle").forEach(t => t.classList.remove("text-white"));
-
-          // Expand current accordion
-          if (!expanded) {
-            content.classList.remove("hidden");
-            parent.classList.remove("bg-eucalyptus-70");
-            parent.classList.add("bg-eucalyptus-100");
-            btn.classList.add("text-white");
-            icon.classList.add("rotate-180")          
-          }
-        });
-      });
-    });
-  </script>
   <!-- /wp:html -->
 
 </div>
