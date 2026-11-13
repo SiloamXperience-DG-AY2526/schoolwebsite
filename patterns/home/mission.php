@@ -45,7 +45,7 @@
 
             <!-- wp:image {"sizeSlug":"large","className":"absolute -top-10 -left-10 w-[30rem] 2xl:w-[40rem] shadow-lg z-10"} -->
             <figure class="wp-block-image size-large absolute -top-10 -left-10 w-[30rem] 2xl:w-[40rem] shadow-lg z-10">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/mission-1.png" alt="Students smiling" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/mission-1.webp" alt="Students smiling" />
             </figure>
             <!-- /wp:image -->
 

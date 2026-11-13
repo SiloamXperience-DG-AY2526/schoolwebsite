@@ -19,7 +19,7 @@
         <!-- wp:image {"sizeSlug":"large","className":"w-[25rem] 2xl:w-[35rem] shadow-lg"} -->
         <figure class="wp-block-image size-large corner-images w-[25rem] 2xl:size-full shadow-lg">
             <img
-                src="<?php echo get_template_directory_uri(); ?>/assets/images/home/vision.png"
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/home/vision.webp"
                 alt="Children at The Learners' Village"
                 />
         </figure>
