@@ -470,6 +470,8 @@ html {
     outline: 2px solid var(--wp--preset--color--white);
     outline-offset: 2px;
 }
+
+/* =====================================================================
    SITE HEADER (Asher) - matches PRD "Toggle Improvement" Figures 1-5.
    Everything is scoped to .site-header so it does not change other menus.
    !important is only used where older global rules above also use it.
