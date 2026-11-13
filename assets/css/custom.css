@@ -489,12 +489,19 @@ html {
     display: flex;
     align-items: center;
     gap: 12px;
+    /* Shrinks so a long site title wraps instead of pushing Donate and the menu button off screen */
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.site-header .site-header__logo {
     flex-shrink: 0;
 }
 
 .site-header__brand-text {
     display: flex;
     flex-direction: column;
+    min-width: 0;
     line-height: 1.2;
 }
 
@@ -505,6 +512,7 @@ html {
     font-weight: 700;
     color: var(--wp--preset--color--eucalyptus-120, #195D4B);
     text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
 .site-header .site-header__tagline {
@@ -568,10 +576,6 @@ html {
     left: -16px !important;
     transform: none !important;
     text-align: left !important;
-    /* !important: WordPress's open-dropdown rule (more specific) sets width:auto and min-width:200px */
-    width: max-content !important;
-    min-width: 230px !important;
-    max-width: 320px;
     padding: 8px !important;
     margin-top: 8px;
     gap: 2px !important;
@@ -582,6 +586,23 @@ html {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
     z-index: 10;
+}
+
+/* Width only while open (tablet/desktop). Closed, WordPress keeps the card at width 0;
+   a fixed width on the closed card made the page scroll sideways at 768px.
+   !important: WordPress's open-dropdown rule (more specific) sets width:auto and min-width:200px */
+@media (min-width: 768px) {
+    .site-header .wp-block-navigation-submenu__toggle[aria-expanded="true"] ~ ul.wp-block-navigation__submenu-container {
+        width: max-content !important;
+        min-width: 230px !important;
+        max-width: 320px;
+    }
+
+    /* Last group (Contact Us) opens leftwards so its card stays on screen at 768px */
+    .site-header .wp-block-navigation__container > li:last-child > ul.wp-block-navigation__submenu-container {
+        left: auto !important;
+        right: -16px;
+    }
 }
 
 .site-header .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
@@ -691,13 +712,27 @@ html {
     }
 }
 
+/* Desktop (1180px and up): the 5 groups stay on one row; a long site title wraps instead */
+@media (min-width: 1180px) {
+    .site-header .site-header__nav {
+        flex-shrink: 0;
+    }
+
+    .site-header .site-header__nav .wp-block-navigation__container {
+        flex-wrap: nowrap;
+    }
+}
+
 /* Phone (below 768px): the menu becomes the menu button. Agreed 4 Nov (Q1): menu button below 768px; WordPress's own switch is 600px,
    so the block at the end of this section covers 600-767px. */
 @media (max-width: 767px) {
+    /* One row normally; a site title too long to fit beside Donate and the menu button
+       takes the first row and they move to a second row, right aligned */
     .site-header__inner {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         padding: 12px 16px;
-        gap: 12px;
+        /* 8px between items: at 320px logo, name, Donate and the menu button need it to share one row */
+        gap: 4px 8px;
     }
 
     /* Menu button sits at the far right, after Donate */
