@@ -63,8 +63,37 @@ function svlti_scripts() {
     filemtime(get_template_directory() . '/assets/js/header-menu.js'),
     array('in_footer' => true, 'strategy' => 'defer')
   );
+
+  // Milestones page: styles and detail dialog script (only on the Milestones page)
+  if (is_page('milestones')) {
+    wp_enqueue_style(
+      'svlti-milestones',
+      get_template_directory_uri() . '/assets/css/milestones.css',
+      array('svlti-main'),
+      filemtime(get_template_directory() . '/assets/css/milestones.css')
+    );
+    wp_enqueue_script(
+      'svlti-milestones',
+      get_template_directory_uri() . '/assets/js/milestones.js',
+      array(),
+      filemtime(get_template_directory() . '/assets/js/milestones.js'),
+      array('in_footer' => true, 'strategy' => 'defer')
+    );
+  }
 }
 add_action('wp_enqueue_scripts', 'svlti_scripts');
+
+// Milestones: end year cannot be earlier than start year
+add_filter('acf/validate_value/name=end_year', function ($valid, $value, $field, $input_name) {
+  if ($valid !== true || $value === '' || $value === null) {
+    return $valid;
+  }
+  $start = isset($_POST['acf']['field_6988649504cee']) ? $_POST['acf']['field_6988649504cee'] : '';
+  if ($start !== '' && (int) $value < (int) $start) {
+    return 'End year cannot be earlier than the start year.';
+  }
+  return $valid;
+}, 10, 4);
 
 // Register default terms for all taxonomies
 function svlti_seed_tax() {
