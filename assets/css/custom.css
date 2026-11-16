@@ -637,6 +637,15 @@ html {
     line-height: 1.6;
 }
 
+/* Join Us photo on phones: fixed 484px circle was wider than the screen */
+@media (max-width: 639px) {
+    .svlti-join-photo {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1;
+    }
+}
+
 /* =====================================================================
    SITE FOOTER (Akram) - parts/footer.html, shared by every template that
    includes the footer part. Scoped to .site-footer so it does not change

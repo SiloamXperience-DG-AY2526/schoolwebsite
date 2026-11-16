@@ -101,8 +101,8 @@
 
             <!-- wp:group {"className":"flex justify-center","layout":{"type":"constrained"}} -->
             <div class="wp-block-group flex justify-center">
-                <!-- wp:image {"sizeSlug":"large","className":"w-[484px] h-[484px] rounded-full overflow-hidden border-4 border-white shadow-2xl"} -->
-                <figure class="wp-block-image size-large w-[484px] h-[484px] 2xl:w-[580px] 2xl:h-[580px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                <!-- wp:image {"sizeSlug":"large","className":"svlti-join-photo w-[484px] h-[484px] rounded-full overflow-hidden border-4 border-white shadow-2xl"} -->
+                <figure class="wp-block-image size-large svlti-join-photo w-[484px] h-[484px] 2xl:w-[580px] 2xl:h-[580px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/team.png" alt="SVLTI Volunteers" />
                 </figure>
                 <!-- /wp:image -->
