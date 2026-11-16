@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Restore heading defaults from theme.json, which Tailwind's reset (preflight) otherwise flattens.
+   Tailwind text-* classes on a heading still win over these. (Fix from Asher, 5 Nov.) */
+@layer base {
+  h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; }
+  h1 { font-size: var(--wp--preset--font-size--header-xxl); }
+  h2 { font-size: var(--wp--preset--font-size--header-xl); }
+  h3 { font-size: var(--wp--preset--font-size--header-lg); }
+  h4 { font-size: var(--wp--preset--font-size--header-normal); }
+  h5 { font-size: var(--wp--preset--font-size--header-sm); }
+  h6 { font-size: var(--wp--preset--font-size--paragraph-normal); }
+}
