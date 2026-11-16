@@ -586,10 +586,6 @@ html {
     font-weight: 600;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .svlti-acc__item,
-    .svlti-acc__icon {
-
 /* =====================================================================
    SITE HEADER (Asher) - matches PRD "Toggle Improvement" Figures 1-5.
    Everything is scoped to .site-header so it does not change other menus.
@@ -1007,6 +1003,13 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
     .svlti-accordion > summary::after {
+        transition: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .svlti-acc__item,
+    .svlti-acc__icon {
         transition: none;
     }
 }
