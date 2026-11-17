@@ -99,11 +99,11 @@ $values = [
         <h2 class="wp-block-heading text-3xl md:text-4xl 2xl:text-5xl font-bold text-brand mb-6 text-center">Our Values</h2>
         <!-- /wp:heading -->
 
-        <!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"} -->
-        <div class="wp-block-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- wp:group {"className":"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6","style":{"spacing":{"margin":{"top":"0"}}}} -->
+        <div class="wp-block-group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style="margin-top:0">
             <?php foreach ($values as $value => $meaning) : ?>
-                <!-- wp:group {"className":"bg-white rounded-2xl p-6 shadow-md"} -->
-                <div class="wp-block-group bg-white rounded-2xl p-6 shadow-md">
+                <!-- wp:group {"className":"bg-white rounded-2xl p-6 shadow-md","style":{"spacing":{"margin":{"top":"0"}}}} -->
+                <div class="wp-block-group bg-white rounded-2xl p-6 shadow-md" style="margin-top:0">
                     <h3 class="text-xl font-semibold text-dark-green mb-2"><?php echo esc_html($value); ?></h3>
                     <p class="text-gray-800 2xl:text-xl"><?php echo esc_html($meaning); ?></p>
                 </div>

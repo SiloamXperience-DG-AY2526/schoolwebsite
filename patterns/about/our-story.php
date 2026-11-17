@@ -78,10 +78,10 @@
         <h2 class="wp-block-heading text-3xl md:text-4xl 2xl:text-5xl font-bold text-brand">What Makes Us Different</h2>
         <!-- /wp:heading -->
 
-        <!-- wp:group {"className":"grid grid-cols-1 lg:grid-cols-3 gap-6"} -->
-        <div class="wp-block-group grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- wp:group {"className":"bg-white rounded-2xl p-6 shadow-md"} -->
-            <div class="wp-block-group bg-white rounded-2xl p-6 shadow-md">
+        <!-- wp:group {"className":"grid grid-cols-1 lg:grid-cols-3 gap-6","style":{"spacing":{"margin":{"top":"0"}}}} -->
+        <div class="wp-block-group grid grid-cols-1 lg:grid-cols-3 gap-6" style="margin-top:0">
+            <!-- wp:group {"className":"bg-white rounded-2xl p-6 shadow-md","style":{"spacing":{"margin":{"top":"0"}}}} -->
+            <div class="wp-block-group bg-white rounded-2xl p-6 shadow-md" style="margin-top:0">
                 <!-- wp:heading {"level":3,"className":"text-xl font-semibold text-dark-green mb-2"} -->
                 <h3 class="wp-block-heading text-xl font-semibold text-dark-green mb-2">Skills for real jobs</h3>
                 <!-- /wp:heading -->
@@ -92,8 +92,8 @@
             </div>
             <!-- /wp:group -->
 
-            <!-- wp:group {"className":"bg-white rounded-2xl p-6 shadow-md"} -->
-            <div class="wp-block-group bg-white rounded-2xl p-6 shadow-md">
+            <!-- wp:group {"className":"bg-white rounded-2xl p-6 shadow-md","style":{"spacing":{"margin":{"top":"0"}}}} -->
+            <div class="wp-block-group bg-white rounded-2xl p-6 shadow-md" style="margin-top:0">
                 <!-- wp:heading {"level":3,"className":"text-xl font-semibold text-dark-green mb-2"} -->
                 <h3 class="wp-block-heading text-xl font-semibold text-dark-green mb-2">Growing the whole person</h3>
                 <!-- /wp:heading -->
@@ -104,8 +104,8 @@
             </div>
             <!-- /wp:group -->
 
-            <!-- wp:group {"className":"bg-white rounded-2xl p-6 shadow-md"} -->
-            <div class="wp-block-group bg-white rounded-2xl p-6 shadow-md">
+            <!-- wp:group {"className":"bg-white rounded-2xl p-6 shadow-md","style":{"spacing":{"margin":{"top":"0"}}}} -->
+            <div class="wp-block-group bg-white rounded-2xl p-6 shadow-md" style="margin-top:0">
                 <!-- wp:heading {"level":3,"className":"text-xl font-semibold text-dark-green mb-2"} -->
                 <h3 class="wp-block-heading text-xl font-semibold text-dark-green mb-2">Families and community</h3>
                 <!-- /wp:heading -->
