@@ -471,6 +471,14 @@ html {
     outline-offset: 2px;
 }
 
+/* Course detail Enroll button (patterns/courses/course.php). Adding the
+   header part to single-course loads core's button CSS on this page, and its
+   word-break: break-word split "Enroll" into "Enrol / l" on phones. This
+   restores the browser default so it matches the page before the header. */
+.single-course .wp-block-buttons .wp-block-button__link {
+    word-break: normal;
+}
+
 /* =====================================================================
    SITE HEADER (Asher) - matches PRD "Toggle Improvement" Figures 1-5.
    Everything is scoped to .site-header so it does not change other menus.
