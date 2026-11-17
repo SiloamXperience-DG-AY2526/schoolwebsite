@@ -34,8 +34,8 @@ if ( ! function_exists('render_wpform_by_title') ) {
             <div class="wp-block-column flex-1">
 
 
-                <!-- wp:heading {"level":2,"className":"text-header-xxl text-eucalyptus-100 mb-6"} -->
-                <h2 class="wp-block-heading text-header-xxl text-eucalyptus-100 mb-6">Contact Us</h2>
+                <!-- wp:heading {"level":1,"className":"text-header-xxl text-eucalyptus-100 mb-6"} -->
+                <h1 class="wp-block-heading text-header-xxl text-eucalyptus-100 mb-6">Contact Us</h1>
                 <!-- /wp:heading -->
 
                 <!-- wp:paragraph {"className":"text-neutral-120 text-paragraph-lg mb-8 max-w-3xl"} -->

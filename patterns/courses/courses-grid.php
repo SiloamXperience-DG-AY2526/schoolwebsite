@@ -161,7 +161,7 @@ if (empty($current_pillars)) {
 
     <!-- wp:html -->
     <div class="flex flex-wrap justify-between items-center mb-8 w-full">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#2b8c77]">Courses</h2>
+        <h1 class="text-3xl md:text-4xl font-bold text-[#2b8c77]">Courses</h1>
 
         <!-- Multi-select filter dropdown -->
         <div class="svlti-courses-filter-wrap" style="position:relative; display:inline-block;">
@@ -276,9 +276,9 @@ if (empty($current_pillars)) {
 
                     <div class="p-6 flex flex-col h-full">
 
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                        <h2 class="text-xl font-bold text-gray-900 mb-3">
                             <?= esc_html($c['title']) ?>
-                        </h3>
+                        </h2>
 
                         <?php if ($c['pillars']): ?>
                             <p class="text-sm text-gray-600 mb-3">
