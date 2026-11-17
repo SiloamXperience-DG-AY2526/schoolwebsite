@@ -52,7 +52,7 @@
             "name": "end_year",
             "aria-label": "",
             "type": "number",
-            "instructions": "Leave empty for a single year.",
+            "instructions": "Leave empty for a single year. Must not be earlier than the start year.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
