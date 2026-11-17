@@ -1,0 +1,505 @@
+/* Milestones page. Plain CSS so it never touches the compiled Tailwind file. */
+
+.ms {
+    --ms-line: #207860;
+    --ms-ink: #195d4b;
+    --ms-muted: #515160;
+    --ms-danger: #b3261e;
+    --ms-danger-ink: #8c1d18;
+    --ms-soft: #e0e0e4;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 24px;
+    color: #333333;
+}
+
+.ms-intro {
+    border-left: 6px solid var(--ms-line);
+    padding-left: 16px;
+    margin-bottom: 40px;
+}
+
+.ms-title {
+    margin: 0 0 8px;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    font-weight: 700;
+    color: var(--ms-ink);
+}
+
+.ms-lede {
+    margin: 0;
+    max-width: 60ch;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--ms-muted);
+}
+
+.ms-lede strong {
+    color: var(--ms-ink);
+}
+
+.ms-empty {
+    padding: 48px 0;
+    text-align: center;
+    color: var(--ms-muted);
+}
+
+/* Desktop: horizontal timeline */
+.ms-scroll {
+    overflow-x: auto;
+    padding: 8px 0 24px;
+}
+
+.ms-scroll:focus-visible {
+    outline: 3px solid var(--ms-line);
+    outline-offset: 2px;
+}
+
+.ms-track {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(168px, 1fr);
+}
+
+.ms-item {
+    position: relative;
+    padding-top: 40px;
+    margin: 0;
+}
+
+.ms-item::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--ms-line);
+}
+
+.ms-item:first-child::before {
+    left: 50%;
+}
+
+.ms-item:last-child::before {
+    right: 50%;
+}
+
+/* Markers. The status is also written as text under each title. */
+.ms-marker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--ms-line);
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 0 2px var(--ms-line);
+    z-index: 1;
+}
+
+.ms-in_progress .ms-marker {
+    background: #ffffff;
+    border: 7px solid var(--ms-line);
+    box-shadow: none;
+}
+
+.ms-planned .ms-marker {
+    background: #ffffff;
+    border: 4px solid var(--ms-line);
+    box-shadow: none;
+}
+
+.ms-disruption .ms-marker {
+    border-radius: 6px;
+    background: var(--ms-danger);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 2px var(--ms-danger);
+}
+
+.ms-disruption .ms-marker::after {
+    content: "\00d7";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Card (a button, so a detail panel can attach to it later) */
+.ms-card {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    padding: 12px 10px 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ms-card:hover,
+.ms-card:focus-visible {
+    background: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(25, 93, 75, 0.15);
+}
+
+.ms-card:focus-visible {
+    outline: 3px solid var(--ms-line);
+    outline-offset: 2px;
+}
+
+.ms-period {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ms-ink);
+}
+
+.ms-name {
+    min-height: 3.9em;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--ms-ink);
+}
+
+.ms-status {
+    display: inline-block;
+    padding: 2px 10px;
+    border: 1px solid var(--ms-line);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ms-ink);
+}
+
+.ms-disruption .ms-period,
+.ms-disruption .ms-name {
+    color: var(--ms-danger-ink);
+}
+
+.ms-disruption .ms-status {
+    border-color: var(--ms-danger);
+    color: var(--ms-danger-ink);
+}
+
+.ms-planned .ms-status {
+    border-style: dashed;
+    color: var(--ms-muted);
+    border-color: var(--ms-muted);
+}
+
+.ms-thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin-top: 6px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--ms-soft);
+}
+
+.ms-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ms-thumb--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--ms-muted);
+}
+
+.ms-summary {
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--ms-muted);
+}
+
+/* What's next band */
+.ms-next {
+    margin-top: 24px;
+    padding: 56px 24px;
+    text-align: center;
+    background: #195d4b;
+    color: #ffffff;
+}
+
+.ms-next-eyebrow {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.ms-next-title {
+    margin: 8px 0 12px;
+    font-size: clamp(26px, 3.5vw, 36px);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ms-next-text {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.ms-next-btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #195d4b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ms-next-btn:hover,
+.ms-next-btn:focus-visible {
+    background: #c2f0fd;
+}
+
+/* Narrow screens: simple vertical fallback. The full mobile timeline is a later task. */
+@media (max-width: 767px) {
+    .ms {
+        padding: 32px 16px 16px;
+    }
+
+    .ms-scroll {
+        overflow: visible;
+    }
+
+    .ms-track {
+        grid-auto-flow: row;
+        grid-auto-columns: auto;
+    }
+
+    .ms-item {
+        padding: 0 0 8px 44px;
+    }
+
+    .ms-item::before,
+    .ms-item:first-child::before,
+    .ms-item:last-child::before {
+        top: 0;
+        bottom: 0;
+        left: 12px;
+        right: auto;
+        width: 4px;
+        height: auto;
+    }
+
+    .ms-item:first-child::before {
+        top: 14px;
+    }
+
+    .ms-item:last-child::before {
+        bottom: auto;
+        height: 14px;
+    }
+
+    .ms-marker {
+        left: 0;
+        top: 12px;
+        transform: none;
+    }
+
+    .ms-card {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .ms-name {
+        min-height: 0;
+    }
+
+    .ms-thumb {
+        max-width: 320px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ms-card {
+        transition: none;
+    }
+
+    .ms-card:hover,
+    .ms-card:focus-visible {
+        transform: none;
+    }
+}
+
+/* Detail dialog (native <dialog>) */
+.ms-dialog {
+    width: min(640px, calc(100vw - 32px));
+    max-height: calc(100vh - 48px);
+    padding: 0;
+    border: 0;
+    border-radius: 16px;
+    color: #333333;
+    background: #ffffff;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ms-dialog::backdrop {
+    background: rgba(15, 40, 32, 0.6);
+}
+
+.ms-dialog__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 32px 28px 24px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+}
+
+.ms-dialog__close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: #e8f4ef;
+    color: #195d4b;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.ms-dialog__close:hover,
+.ms-dialog__close:focus-visible {
+    background: #c9e8dd;
+}
+
+.ms-dialog__close:focus-visible,
+.ms-dialog__step:focus-visible {
+    outline: 3px solid #207860;
+    outline-offset: 2px;
+}
+
+.ms-dialog__period {
+    margin: 0;
+    padding-right: 48px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #207860;
+}
+
+.ms-dialog__title {
+    margin: 0;
+    padding-right: 48px;
+    font-size: clamp(22px, 3vw, 28px);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #195d4b;
+}
+
+.ms-dialog .ms-status {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.ms-dialog.ms-disruption .ms-dialog__period,
+.ms-dialog.ms-disruption .ms-dialog__title {
+    color: #8c1d18;
+}
+
+.ms-dialog__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.ms-dialog__body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ms-dialog__body p {
+    margin: 0 0 10px;
+}
+
+.ms-dialog__highlights {
+    list-style: disc;
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.ms-dialog__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 14px;
+    border-top: 1px solid #d6e3de;
+}
+
+.ms-dialog__step {
+    max-width: 48%;
+    padding: 8px 14px;
+    border: 1px solid #207860;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #195d4b;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.ms-dialog__step:hover {
+    background: #e8f4ef;
+}
+
+.ms-dialog__nav .ms-dialog__step:last-child {
+    margin-left: auto;
+    text-align: right;
+}
+
+@media (max-width: 480px) {
+    .ms-dialog__inner {
+        padding: 28px 18px 18px;
+    }
+
+    .ms-dialog__nav {
+        flex-direction: column;
+    }
+
+    .ms-dialog__step,
+    .ms-dialog__nav .ms-dialog__step:last-child {
+        max-width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+}
